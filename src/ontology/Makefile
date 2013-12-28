@@ -14,7 +14,7 @@ release: cteno.obo diff
 # all release files are derived from the editors version.
 # we use the default Oort setup (hermit as reasoner)
 cteno.obo: cteno-edit.owl
-	ontology-release-runner $< --allow-overwrite --asserted --simple
+	ontology-release-runner $< --reasoner elk --allow-overwrite --asserted --simple
 
 # ----------------------------------------
 # Imports
