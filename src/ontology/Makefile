@@ -17,10 +17,10 @@ release: cteno.obo diff
 #	ontology-release-runner $< --reasoner elk --allow-overwrite --asserted --simple
 
 cteno.owl: cteno-edit.owl
-	owltools $< --assert-inferred-subclass-axioms $@
+	owltools --use-catalog $< --assert-inferred-subclass-axioms $@
 
 cteno.obo: cteno.owl
-	owltools $< -o -f obo $@
+	owltools --use-catalog $< -o -f obo $@
 
 # ----------------------------------------
 # Imports
