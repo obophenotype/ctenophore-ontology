@@ -31,6 +31,12 @@ imports/%_import.owl: cteno-edit.owl
 	owltools $< $(OBO)/$*.owl --add-imports-from-supports --extract-module -s $(OBO)/$*.owl -c --extract-mingraph  --set-ontology-id $(OBO)/go/extensions/$@ -o $@
 
 # ----------------------------------------
+# Bridges
+# ----------------------------------------
+core.owl: cteno.owl
+	owltools --use-catalog $< --extract-bridge-ontologies -x -d . -s cteno --remove-imports-declarations -o core.owl
+
+# ----------------------------------------
 # MARKDOWN EXPORT
 # ----------------------------------------
 markdown: cteno.owl
