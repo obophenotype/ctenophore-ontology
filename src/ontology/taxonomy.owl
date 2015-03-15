@@ -1,0 +1,1472 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY tax "http://purl.obolibrary.org/obo/tax#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/tax.owl#"
+     xml:base="http://purl.obolibrary.org/obo/tax.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tax="http://purl.obolibrary.org/obo/tax#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cteno/taxonomy.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#acronym -->
+
+    <owl:AnnotationProperty rdf:about="&tax;acronym">
+        <rdfs:label rdf:datatype="&xsd;string">acronym</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;broad"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#anamorph -->
+
+    <owl:AnnotationProperty rdf:about="&tax;anamorph">
+        <rdfs:label rdf:datatype="&xsd;string">anamorph</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#blast_name -->
+
+    <owl:AnnotationProperty rdf:about="&tax;blast_name">
+        <rdfs:label rdf:datatype="&xsd;string">blast name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#common_name -->
+
+    <owl:AnnotationProperty rdf:about="&tax;common_name">
+        <rdfs:label rdf:datatype="&xsd;string">common name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;exact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#equivalent_name -->
+
+    <owl:AnnotationProperty rdf:about="&tax;equivalent_name">
+        <rdfs:label rdf:datatype="&xsd;string">equivalent name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;exact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#genbank_acronym -->
+
+    <owl:AnnotationProperty rdf:about="&tax;genbank_acronym">
+        <rdfs:label rdf:datatype="&xsd;string">genbank acronym</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;broad"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#genbank_anamorph -->
+
+    <owl:AnnotationProperty rdf:about="&tax;genbank_anamorph">
+        <rdfs:label rdf:datatype="&xsd;string">genbank anamorph</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#genbank_common_name -->
+
+    <owl:AnnotationProperty rdf:about="&tax;genbank_common_name">
+        <rdfs:label rdf:datatype="&xsd;string">genbank common name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;exact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#genbank_synonym -->
+
+    <owl:AnnotationProperty rdf:about="&tax;genbank_synonym">
+        <rdfs:label rdf:datatype="&xsd;string">genbank synonym</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#has_rank -->
+
+    <owl:AnnotationProperty rdf:about="&tax;has_rank"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#in_part -->
+
+    <owl:AnnotationProperty rdf:about="&tax;in_part">
+        <rdfs:label rdf:datatype="&xsd;string">in-part</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#misnomer -->
+
+    <owl:AnnotationProperty rdf:about="&tax;misnomer">
+        <rdfs:label rdf:datatype="&xsd;string">misnomer</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#misspelling -->
+
+    <owl:AnnotationProperty rdf:about="&tax;misspelling">
+        <rdfs:label rdf:datatype="&xsd;string">misspelling</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#scientific_name -->
+
+    <owl:AnnotationProperty rdf:about="&tax;scientific_name">
+        <rdfs:label rdf:datatype="&xsd;string">scientific name</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;exact"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#synonym -->
+
+    <owl:AnnotationProperty rdf:about="&tax;synonym">
+        <rdfs:label rdf:datatype="&xsd;string">synonym</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/tax#teleomorph -->
+
+    <owl:AnnotationProperty rdf:about="&tax;teleomorph">
+        <rdfs:label rdf:datatype="&xsd;string">teleomorph</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="&oboInOwl;SynonymTypeProperty"/>
+        <oboInOwl:hasScope rdf:resource="&oboInOwl;related"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;SynonymTypeProperty">
+        <rdfs:label rdf:datatype="&xsd;string">synonym_type_property</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#broad -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;broad"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#exact -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;exact"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBOFormatVersion">
+        <rdfs:label rdf:datatype="&xsd;string">has_obo_format_version</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasRelatedSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasScope -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasScope">
+        <rdfs:label rdf:datatype="&xsd;string">has_scope</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasSynonymType">
+        <rdfs:label rdf:datatype="&xsd;string">has_synonym_type</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#related -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;related"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10197">
+        <rdfs:label rdf:datatype="&xsd;string">Ctenophora</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Coelenterata</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:10197</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">coelenterates</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">comb jellies</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">ctenophores</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">sea walnuts</oboInOwl:hasExactSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_phylum"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">comb jellies</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">coelenterates</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">sea walnuts</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">ctenophores</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;blast_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Coelenterata</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;in_part"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10199">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_37539"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:10199</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10200">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe mitrata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:10200</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_10201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_10201">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe ovata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:10201</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_127144 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_127144">
+        <rdfs:label rdf:datatype="&xsd;string">Lampocteis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_148608"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:127144</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_127145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_127145">
+        <rdfs:label rdf:datatype="&xsd;string">Lampocteis cruentiventer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_127144"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:127145</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_12996 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_12996">
+        <rdfs:label rdf:datatype="&xsd;string">Cestum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27920"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:12996</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_12997 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_12997">
+        <rdfs:label rdf:datatype="&xsd;string">Cestum veneris</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_12996"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Cestus veneris</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:12997</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Cestus veneris</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_12997"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;misspelling"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
+        <rdfs:label rdf:datatype="&xsd;string">cellular organisms</rdfs:label>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:131567</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">biota</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">biota</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140453 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140453">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe forskalii</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140453</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140454 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140454">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe gracilis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140454</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140455 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140455">
+        <rdfs:label rdf:datatype="&xsd;string">Bolinopsis infundibulum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_51106"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140455</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140456 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140456">
+        <rdfs:label rdf:datatype="&xsd;string">Hormiphora plumosa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_86009"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140456</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140457 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140457">
+        <rdfs:label rdf:datatype="&xsd;string">Pleurobrachia pileus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_34498"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140457</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140460 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140460">
+        <rdfs:label rdf:datatype="&xsd;string">Mertensiidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50341"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140460</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140461 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140461">
+        <rdfs:label rdf:datatype="&xsd;string">Charistephane</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140460"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140461</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140462 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140462">
+        <rdfs:label rdf:datatype="&xsd;string">Charistephane fugiens</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140461"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140462</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140463 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140463">
+        <rdfs:label rdf:datatype="&xsd;string">Callianira</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140460"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140463</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140464 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140464">
+        <rdfs:label rdf:datatype="&xsd;string">Callianira cristata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140463"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140464</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140465 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140465">
+        <rdfs:label rdf:datatype="&xsd;string">Haeckeliidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50341"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140465</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140466 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140466">
+        <rdfs:label rdf:datatype="&xsd;string">Aulacoctena</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140465"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140466</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140467 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140467">
+        <rdfs:label rdf:datatype="&xsd;string">Aulacoctena acuminata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140466"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140467</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140468 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140468">
+        <rdfs:label rdf:datatype="&xsd;string">Haeckelia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140465"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140468</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140469 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140469">
+        <rdfs:label rdf:datatype="&xsd;string">Haeckelia beehleri</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140468"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140469</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140470 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140470">
+        <rdfs:label rdf:datatype="&xsd;string">Haeckelia rubra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140468"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140470</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140471 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140471">
+        <rdfs:label rdf:datatype="&xsd;string">Platyctenida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140492"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140471</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140472 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140472">
+        <rdfs:label rdf:datatype="&xsd;string">Coeloplanidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140471"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140472</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140473 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140473">
+        <rdfs:label rdf:datatype="&xsd;string">Coeloplana</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140472"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140473</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140474 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140474">
+        <rdfs:label rdf:datatype="&xsd;string">Coeloplana bannwarthii</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140473"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Coeloplana banwarthii</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140474</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Coeloplana banwarthii</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140474"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;misspelling"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140475 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140475">
+        <rdfs:label rdf:datatype="&xsd;string">Leucotheidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140475</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140476 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140476">
+        <rdfs:label rdf:datatype="&xsd;string">Leucothea</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140475"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140476</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140477 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140477">
+        <rdfs:label rdf:datatype="&xsd;string">Leucothea pulchra</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140476"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140477</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140478 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140478">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140478</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140479 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140479">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140478"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140479</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140480 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140480">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsis crystallina</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140479"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140480</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140481 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140481">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsis crystallina crystallina</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140480"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140481</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subspecies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140482 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140482">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsis crystallina guttata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140480"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140482</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_subspecies"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140483 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140483">
+        <rdfs:label rdf:datatype="&xsd;string">Ocyropsis maculata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140479"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140483</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140484 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140484">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalycida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140493"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140484</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140485 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140485">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalycidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140484"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140485</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140486 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140486">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalyce</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140485"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140486</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140487 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140487">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalyce inconstans</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140486"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140487</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140488 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140488">
+        <rdfs:label rdf:datatype="&xsd;string">Vallicula</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140472"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140488</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140489 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140489">
+        <rdfs:label rdf:datatype="&xsd;string">Vallicula multiformis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140488"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140489</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Vallicula multiformia</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Vallicula multiformia</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140489"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;misspelling"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140490 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140490">
+        <rdfs:label rdf:datatype="&xsd;string">Velamen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27920"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140490</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140491 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140491">
+        <rdfs:label rdf:datatype="&xsd;string">Velamen parallelum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140490"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140491</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140492 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140492">
+        <rdfs:label rdf:datatype="&xsd;string">Typhlocoela</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140492</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140493 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140493">
+        <rdfs:label rdf:datatype="&xsd;string">Cyclocoela</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10197"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140493</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140495 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140495">
+        <rdfs:label rdf:datatype="&xsd;string">Mertensia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140460"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140495</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140496 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140496">
+        <rdfs:label rdf:datatype="&xsd;string">Mertensia ovum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140495"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140496</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140497 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140497">
+        <rdfs:label rdf:datatype="&xsd;string">Undescribed mertensiid sp. 1</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_86008"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140497</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Undescribed mertensiid A</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Undescribed pleurobrachiid A</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Undescribed pleurobrachiid A</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140497"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Undescribed mertensiid A</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140497"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140498 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140498">
+        <rdfs:label rdf:datatype="&xsd;string">Undescribed mertensiid sp. 2</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_488512"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140498</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Undescribed mertensiid B (At)</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Undescribed mertensiid B (At)</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140498"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140499 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140499">
+        <rdfs:label rdf:datatype="&xsd;string">Undescribed mertensiid sp. 3</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_488512"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140499</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Undescribed mertensiid C (RTC)</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Undescribed mertensiid C (RTC)</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140499"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140500 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140500">
+        <rdfs:label rdf:datatype="&xsd;string">unclassified Lobata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140500</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_140501 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_140501">
+        <rdfs:label rdf:datatype="&xsd;string">Undescribed Lobata sp. 4</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140500"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:140501</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Undescribed sp E (Ll)</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Undescribed sp E (Ll)</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140501"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_148608 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_148608">
+        <rdfs:label rdf:datatype="&xsd;string">Lampoctenidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:148608</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_158797 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_158797">
+        <rdfs:label rdf:datatype="&xsd;string">Mnemiopsis sp. RFW-2001</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27922"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:158797</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_168726 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_168726">
+        <rdfs:label rdf:datatype="&xsd;string">Coeloplana agniae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140473"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:168726</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_220132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_220132">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe sp. SL-2003</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:220132</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_2759 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_2759">
+        <rdfs:label rdf:datatype="&xsd;string">Eukaryota</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131567"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Eucarya</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Eucaryotae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Eukarya</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Eukaryotae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:2759</oboInOwl:id>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">eucaryotes</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">eukaryotes</oboInOwl:hasExactSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_superkingdom"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">eucaryotes</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Eucarya</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Eukaryotae</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">eukaryotes</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Eukarya</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Eucaryotae</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27919 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27919">
+        <rdfs:label rdf:datatype="&xsd;string">Cestida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140493"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:27919</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27920 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27920">
+        <rdfs:label rdf:datatype="&xsd;string">Cestidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27919"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:27920</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27921 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27921">
+        <rdfs:label rdf:datatype="&xsd;string">Lobata</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140493"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Labata</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:27921</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Labata</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27922 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27922">
+        <rdfs:label rdf:datatype="&xsd;string">Mnemiopsis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_51105"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:27922</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_27923 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_27923">
+        <rdfs:label rdf:datatype="&xsd;string">Mnemiopsis leidyi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27922"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:27923</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_31167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_31167">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe cucumis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:31167</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_320166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_320166">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe abyssicola</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:320166</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33154">
+        <rdfs:label rdf:datatype="&xsd;string">Fungi/Metazoa group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_2759"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:33154</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Opisthokonta</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">opisthokonts</oboInOwl:hasRelatedSynonym>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Opisthokonta</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">opisthokonts</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_33208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33208">
+        <rdfs:label rdf:datatype="&xsd;string">Metazoa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33154"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Animalia</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:33208</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">animals</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">metazoans</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">multicellular animals</oboInOwl:hasExactSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_kingdom"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">animals</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;blast_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Animalia</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;synonym"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">metazoans</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;genbank_common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">multicellular animals</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33208"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;common_name"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasExactSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_34498 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_34498">
+        <rdfs:label rdf:datatype="&xsd;string">Pleurobrachia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_86008"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:34498</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_34499 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_34499">
+        <rdfs:label rdf:datatype="&xsd;string">Pleurobrachia bachei</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_34498"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:34499</oboInOwl:id>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Pleurobranchia bachei</oboInOwl:hasRelatedSynonym>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="&xsd;string">Pleurobranchia bachei</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_34499"/>
+        <oboInOwl:hasSynonymType rdf:resource="&tax;misspelling"/>
+        <owl:annotatedProperty rdf:resource="&oboInOwl;hasRelatedSynonym"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_354105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_354105">
+        <rdfs:label rdf:datatype="&xsd;string">Coeloplana willeyi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140473"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:354105</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_37538 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_37538">
+        <rdfs:label rdf:datatype="&xsd;string">Beroida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140493"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:37538</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_37539 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_37539">
+        <rdfs:label rdf:datatype="&xsd;string">Beroidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_37538"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:37539</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_488512 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_488512">
+        <rdfs:label rdf:datatype="&xsd;string">unclassified Mertensiidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140460"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:488512</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_499920 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_499920">
+        <rdfs:label rdf:datatype="&xsd;string">Cestum sp. SC-2008</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_12996"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:499920</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_499921 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_499921">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe sp. KUR20</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:499921</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_499922 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_499922">
+        <rdfs:label rdf:datatype="&xsd;string">Beroe sp. KUR21</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_10199"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:499922</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_499923 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_499923">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalyce sp. KUR22</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140486"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:499923</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_499924 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_499924">
+        <rdfs:label rdf:datatype="&xsd;string">Thalassocalyce sp. KUR23</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140486"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:499924</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_500090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_500090">
+        <rdfs:label rdf:datatype="&xsd;string">unclassified Cydippida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50341"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:500090</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_500091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_500091">
+        <rdfs:label rdf:datatype="&xsd;string">Cydippida sp. KUR30</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_500090"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:500091</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_50341 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_50341">
+        <rdfs:label rdf:datatype="&xsd;string">Cydippida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_140492"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:50341</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_order"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_51105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_51105">
+        <rdfs:label rdf:datatype="&xsd;string">Bolinopsidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_27921"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:51105</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_51106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_51106">
+        <rdfs:label rdf:datatype="&xsd;string">Bolinopsis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_51105"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:51106</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_51107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_51107">
+        <rdfs:label rdf:datatype="&xsd;string">Bolinopsis sp.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_51106"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:51107</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_541220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_541220">
+        <rdfs:label rdf:datatype="&xsd;string">Ctenellidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50341"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:541220</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_624130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_624130">
+        <rdfs:label rdf:datatype="&xsd;string">Ctenophora environmental sample</rdfs:label>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:624130</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_86008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_86008">
+        <rdfs:label rdf:datatype="&xsd;string">Pleurobrachiidae</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50341"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:86008</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_family"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_86009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_86009">
+        <rdfs:label rdf:datatype="&xsd;string">Hormiphora</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_86008"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:86009</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_genus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_86010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_86010">
+        <rdfs:label rdf:datatype="&xsd;string">Hormiphora sp.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_86009"/>
+        <oboInOwl:id rdf:datatype="&xsd;string">NCBITaxon:86010</oboInOwl:id>
+        <tax:has_rank rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_species"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
