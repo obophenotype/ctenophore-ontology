@@ -11,6 +11,10 @@ initial-build: cteno.obo
 build: cteno.obo minidiff
 release: cteno.obo diff
 
+TARGETS = cteno.obo cteno.owl imports diffs
+copy-release:
+	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
+
 # all release files are derived from the editors version.
 # we use the default Oort setup (hermit as reasoner)
 #cteno.obo: cteno-edit.owl
