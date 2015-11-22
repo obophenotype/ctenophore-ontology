@@ -11,6 +11,8 @@ initial-build: cteno.obo
 build: cteno.obo minidiff
 release: cteno.obo diff
 
+test: cteno.obo
+
 TARGETS = cteno.obo cteno.owl imports diffs
 copy-release:
 	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
