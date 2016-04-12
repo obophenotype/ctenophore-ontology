@@ -6,6 +6,7 @@
 # To make a release, type 'make release' in this directory
 
 OBO = http://purl.obolibrary.org/obo
+ROBOT = robot
 
 initial-build: cteno.obo
 build: cteno.obo minidiff
@@ -34,7 +35,9 @@ cteno.obo: cteno.owl
 all_imports: imports/go_import.owl imports/pato_import.owl
 
 imports/%_import.owl: cteno-edit.owl
-	owltools $< $(OBO)/$*.owl --add-imports-from-supports --extract-module -s $(OBO)/$*.owl -c --extract-mingraph  --set-ontology-id $(OBO)/go/extensions/$@ -o $@
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(OBO)/$@ -o $@
+.PRECIOUS: imports/%_import.owl
+##	owltools $< $(OBO)/$*.owl --add-imports-from-supports --extract-module -s $(OBO)/$*.owl -c --extract-mingraph  --set-ontology-id $(OBO)/go/extensions/$@ -o $@
 
 # ----------------------------------------
 # Bridges

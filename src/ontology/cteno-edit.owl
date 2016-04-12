@@ -9,7 +9,7 @@ Ontology(<http://purl.obolibrary.org/obo/cteno.owl>
 Import(<http://purl.obolibrary.org/obo/bspo.owl>)
 Import(<http://purl.obolibrary.org/obo/ro.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/taxonomy.owl>)
-Import(<http://purl.obolibrary.org/obo/uberon/ext.owl>)
+Import(<http://purl.obolibrary.org/obo/cteno/imports/uberon_import.owl>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000001>))
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/CTENO_0000001> "ctene")
