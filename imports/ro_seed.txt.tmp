@@ -1,0 +1,204 @@
+http://purl.obolibrary.org/obo/UBERON_0002036	striated muscle tissue	null
+http://purl.obolibrary.org/obo/CL_0000210	photoreceptor cell	null
+http://purl.obolibrary.org/obo/GO_0040011	null	null
+http://purl.obolibrary.org/obo/UBERON_0001630	muscle organ	null
+http://purl.obolibrary.org/obo/UBERON_0011216	organ system subdivision	null
+http://purl.obolibrary.org/obo/UBERON_0004111	anatomical conduit	null
+http://purl.obolibrary.org/obo/CL_0000353	blastoderm cell	null
+http://purl.obolibrary.org/obo/CL_0000000	cell	null
+http://purl.obolibrary.org/obo/GO_0005737	null	null
+http://purl.obolibrary.org/obo/UBERON_0004923	organ component layer	null
+http://purl.obolibrary.org/obo/CTENO_0000119	micromere, formed during gastulation	null
+http://purl.obolibrary.org/obo/CTENO_0000117	ctenophore 32 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000118	ctenophore 60 cell stage	null
+http://purl.obolibrary.org/obo/UBERON_0001021	nerve	null
+http://purl.obolibrary.org/obo/CTENO_0000111	e3 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000112	e22 micromere	null
+http://purl.obolibrary.org/obo/CL_0000134	mesenchymal stem cell	null
+http://purl.obolibrary.org/obo/CTENO_0000110	m122 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000115	m112 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000116	ctenophore 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000113	e21 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000114	m111 micromere	null
+http://purl.obolibrary.org/obo/BSPO_0000400	anatomical plane	A flat 2D plane intersecting an anatomical continuant, dividing it into two adjacent portions.
+http://purl.obolibrary.org/obo/UBERON_0007023	adult organism	null
+http://purl.obolibrary.org/obo/CTENO_0000108	m22 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000109	m121 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000066	fully formed stage	null
+http://purl.obolibrary.org/obo/CTENO_0000106	e12 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000067	embryo stage part	null
+http://purl.obolibrary.org/obo/CTENO_0000107	m21 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000061	anatomical structure	null
+http://purl.obolibrary.org/obo/UBERON_0000062	organ	null
+http://purl.obolibrary.org/obo/UBERON_0001032	sensory system	null
+http://purl.obolibrary.org/obo/CTENO_0000100	m1 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000101	m2 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000104	e2 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000069	larval stage	null
+http://purl.obolibrary.org/obo/CTENO_0000105	e11 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000102	m11 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0006846	surface groove	null
+http://purl.obolibrary.org/obo/CTENO_0000103	m12 micromere	null
+http://purl.obolibrary.org/obo/CTENO_0000140	tentacular plane	null
+http://purl.obolibrary.org/obo/CTENO_0000020	colloblast	A specialized adhesive cell found in ctenophores
+http://purl.obolibrary.org/obo/CTENO_0000141	slash quadrant	null
+http://purl.obolibrary.org/obo/CTENO_0000018	tentacle	null
+http://purl.obolibrary.org/obo/CTENO_0000139	ciliated groove	A groove that runs along the surface of the animal to each of the eight ctene rows
+http://purl.obolibrary.org/obo/CTENO_0000019	photocyte	Light-producing cell present in nearly all ctenophores
+http://purl.obolibrary.org/obo/CTENO_0000012	balancer cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000133	M-lineage cell	null
+http://purl.obolibrary.org/obo/CTENO_0000013	dome cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000134	lithocyte progenitor	null
+http://purl.obolibrary.org/obo/CTENO_0000131	apical organ ctene row muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000010	pharyngeal cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000011	good groove cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000132	E-lineage cell	null
+http://purl.obolibrary.org/obo/CTENO_0000016	polster cell	null
+http://purl.obolibrary.org/obo/CTENO_0000137	ctene row	A row that is composed of individual ctene plates, which are arranged in longitudinal rows parallel to the oral–aboral axis
+http://purl.obolibrary.org/obo/CTENO_0000017	apical sense organ	null
+http://purl.obolibrary.org/obo/GO_0031012	null	null
+http://purl.obolibrary.org/obo/CTENO_0000138	apical organ statocyst	null
+http://purl.obolibrary.org/obo/CTENO_0000014	aboral groove cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000135	adesophageal plane	null
+http://purl.obolibrary.org/obo/CTENO_0000015	extracellular matrix of mesoglea	null
+http://purl.obolibrary.org/obo/CTENO_0000136	tentacular axis	null
+http://purl.obolibrary.org/obo/CTENO_0000130	trans-tentacular muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000009	auricular cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000128	longitudinal pharyngeal muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000007	tentacle sheath cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000008	polar field cilium	null
+http://purl.obolibrary.org/obo/UBERON_0002385	muscle tissue	null
+http://purl.obolibrary.org/obo/CTENO_0000122	ctenophore pharynx	An ectodermal structure which connects the mouth to the endodermal component of the gut, deep inside the animal
+http://purl.obolibrary.org/obo/CTENO_0000001	ctene plate	A collection of cilia attached to basal cushions and made up of polster cells. A characteristic feature of ctenophores
+http://purl.obolibrary.org/obo/CTENO_0000123	tentacle sheath cell	null
+http://purl.obolibrary.org/obo/CTENO_0000002	outer epidermis	null
+http://purl.obolibrary.org/obo/CTENO_0000120	tentacle epithelium	null
+http://purl.obolibrary.org/obo/CTENO_0000121	tentacle sheath	null
+http://purl.obolibrary.org/obo/CTENO_0000005	comb plate cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000126	stellate mesenchymal cell	A multipolar mesenchymal cell found in the stellate mesenchyme. May be phagocytic. absent in derivatives of 2M? macromeres.
+http://purl.obolibrary.org/obo/CTENO_0000006	sensory cell cilium	null
+http://purl.obolibrary.org/obo/CTENO_0000127	tentacle muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000124	longitudinal mesogleal muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000003	gastrodermis	null
+http://purl.obolibrary.org/obo/CTENO_0000125	radial mesogleal muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000004	mesoglea	A thick jelly-like layer between the epidermis and gastrodermis. The mesoglea is mostly acellular and composed of extracellular matrix, but it also has some muscle and mesenchymal cells.
+http://purl.obolibrary.org/obo/CTENO_0000041	radial mesogleal muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000042	tentacular muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000040	circumferential mesogleal muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000155	pharyngeal muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000034	ctenophore anal canal	null
+http://purl.obolibrary.org/obo/CTENO_0000035	epitheliomuscular cell	null
+http://purl.obolibrary.org/obo/CTENO_0000156	ctenophore blastopore	null
+http://purl.obolibrary.org/obo/CTENO_0000153	endodermal canal	null
+http://purl.obolibrary.org/obo/CTENO_0000032	gonadopore	null
+http://purl.obolibrary.org/obo/CTENO_0000154	mixed E and M lineage structure	null
+http://purl.obolibrary.org/obo/CTENO_0000033	anal pore	null
+http://purl.obolibrary.org/obo/CTENO_0000038	mesogleal muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000039	longitudinal mesogleal muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000036	parietal muscle	Ribbon-shaped smooth muscle that resides between the glandular epithelial cells and the basal lamina
+http://purl.obolibrary.org/obo/CTENO_0000037	giant smooth muscle	null
+http://purl.obolibrary.org/obo/CTENO_0000030	subcortical plasm	null
+http://purl.obolibrary.org/obo/CTENO_0000151	aboral part of organism	null
+http://purl.obolibrary.org/obo/CTENO_0000031	periodic acid Schiff positive yolk particles	null
+http://purl.obolibrary.org/obo/CTENO_0000152	tentacle apparatus	null
+http://purl.obolibrary.org/obo/UBERON_0014892	skeletal muscle organ	null
+http://purl.obolibrary.org/obo/CTENO_0000150	oral side of organism	null
+http://purl.obolibrary.org/obo/CTENO_0000029	endoplasm	null
+http://purl.obolibrary.org/obo/CTENO_0000023	cydippid larva	A ctenophore larva
+http://purl.obolibrary.org/obo/CL_0000066	epithelial cell	null
+http://purl.obolibrary.org/obo/CL_0000187	muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000145	polar field	an ectodermal structure emanating from the apical organ along the esophageal axis.
+http://purl.obolibrary.org/obo/CTENO_0000024	cydippid stage	null
+http://purl.obolibrary.org/obo/CTENO_0000021	oral lobe	A conspicuous lobed structure used for feeding, characteristic of the Lobata ("sea walnuts")
+http://purl.obolibrary.org/obo/CTENO_0000142	backslash quadrant	null
+http://purl.obolibrary.org/obo/CTENO_0000022	adult ctenophore	null
+http://purl.obolibrary.org/obo/CTENO_0000143	tentacle bulb	null
+http://purl.obolibrary.org/obo/CTENO_0000027	nurse cell	null
+http://purl.obolibrary.org/obo/CTENO_0000148	anal canal cell	null
+http://purl.obolibrary.org/obo/CTENO_0000028	ectoplasm	null
+http://purl.obolibrary.org/obo/CTENO_0000149	tentacle-apical organ muscle cell	null
+http://purl.obolibrary.org/obo/UBERON_0000026	appendage	null
+http://purl.obolibrary.org/obo/CTENO_0000146	polar field cell	null
+http://purl.obolibrary.org/obo/CTENO_0000025	ctenophore adult stage	null
+http://purl.obolibrary.org/obo/CTENO_0000026	meridional canal	A canal that is associated with a testis and an ovary
+http://purl.obolibrary.org/obo/CTENO_0000147	esophague-tentacle muscle cell	null
+http://purl.obolibrary.org/obo/CTENO_0000060	epithelial papilla	null
+http://purl.obolibrary.org/obo/CTENO_0000063	ctenophore blastomere	null
+http://purl.obolibrary.org/obo/CTENO_0000064	E macromere, 8 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000061	photoprotein	null
+http://purl.obolibrary.org/obo/CTENO_0000062	quadrant	One of of four nearly identical quadrants organized along the oral-aboral axis. Each of the four quadrants is derived largely from one cell of the four-cell-stage embryo. At the eight-cell stage each quadrant contains a single E ("end") and M ("middle") blastomere. Subsequently, micromeres are formed first at the aboral pole and later at the oral pole.
+http://purl.obolibrary.org/obo/UBERON_0006134	nerve fiber	null
+http://purl.obolibrary.org/obo/CTENO_0000056	lithocyte	A mineralized cell generated and constantly replaced in the floor of the apical organ. They are supported on top of the balancing cilia that make up the gravity-sensing statocyst of the apical organ.
+http://purl.obolibrary.org/obo/CHEBI_36080	null	null
+http://purl.obolibrary.org/obo/CTENO_0000057	balancer cell	null
+http://purl.obolibrary.org/obo/CL_0000199	mechanoreceptor cell	null
+http://purl.obolibrary.org/obo/CTENO_0000054	oral pole	null
+http://purl.obolibrary.org/obo/CTENO_0000055	apical organ floor	null
+http://purl.obolibrary.org/obo/CTENO_0000058	apical organ statolith	null
+http://purl.obolibrary.org/obo/UBERON_0000159	anal canal	null
+http://purl.obolibrary.org/obo/CTENO_0000059	tentacular nerve	null
+http://purl.obolibrary.org/obo/CTENO_0000052	nerve network cell	null
+http://purl.obolibrary.org/obo/CTENO_0000053	nerve fiber of mesoglea of tentacle	null
+http://purl.obolibrary.org/obo/CTENO_0000050	tastborsten cell	null
+http://purl.obolibrary.org/obo/CTENO_0000051	taststiften cell	null
+http://purl.obolibrary.org/obo/UBERON_0001135	smooth muscle tissue	null
+http://purl.obolibrary.org/obo/GO_0005575	null	null
+http://purl.obolibrary.org/obo/UBERON_0000161	orifice	null
+http://purl.obolibrary.org/obo/CTENO_0000045	striated muscle of tentilla	null
+http://purl.obolibrary.org/obo/UBERON_0007233	4 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000046	mesogleal nerve fiber	null
+http://purl.obolibrary.org/obo/CTENO_0000043	trans-tentacular muscle	A muscle that connects the two tentacle apparatuses
+http://purl.obolibrary.org/obo/CTENO_0000044	tentilla	null
+http://purl.obolibrary.org/obo/UBERON_0007236	8 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000049	mesoglea of tentacle	null
+http://purl.obolibrary.org/obo/UBERON_0001016	nervous system	null
+http://purl.obolibrary.org/obo/CTENO_0000047	subepidermal nerve net	null
+http://purl.obolibrary.org/obo/CTENO_0000048	gastrodermal nerve	null
+http://purl.obolibrary.org/obo/NCBITaxon_37539	Beroidae	null
+http://purl.obolibrary.org/obo/CTENO_0000081	M macromere, 8 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000082	macromere, 8 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000085	macromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000086	1E macromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000083	M-backslash macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000084	M-slash macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000078	2E macromere, 32 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000079	3M macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000076	1M macromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000070	EM macromere, 4 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000071	EM-slash blastomere	null
+http://purl.obolibrary.org/obo/CTENO_0000074	M-blackslash blastomere	null
+http://purl.obolibrary.org/obo/CTENO_0000075	macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000072	EM-backslash blastomere	null
+http://purl.obolibrary.org/obo/CTENO_0000073	M-slash blastomere	null
+http://purl.obolibrary.org/obo/UBERON_0000100	blastopore	null
+http://purl.obolibrary.org/obo/UBERON_0006562	pharynx	null
+http://purl.obolibrary.org/obo/CTENO_0000067	2M macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000068	3E macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000065	M blastomere	null
+http://purl.obolibrary.org/obo/CTENO_0000066	micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000109	gastrula stage	null
+http://purl.obolibrary.org/obo/BSPO_0000010	anatomical axis	A straight line through space, intersecting an anatomical entity.
+http://purl.obolibrary.org/obo/CTENO_0000069	circumpharyngeal muscle cell	null
+http://purl.obolibrary.org/obo/UBERON_0000468	multicellular organism	null
+http://purl.obolibrary.org/obo/UBERON_0006583	statocyst	null
+http://purl.obolibrary.org/obo/UBERON_0006582	statolith	null
+http://purl.obolibrary.org/obo/UBERON_0000475	organism subdivision	null
+http://purl.obolibrary.org/obo/NCBITaxon_140471	Platyctenida	null
+http://purl.obolibrary.org/obo/UBERON_0002416	integumental system	null
+http://purl.obolibrary.org/obo/CTENO_0000098	micromere, 60 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000099	e1 micromere	null
+http://purl.obolibrary.org/obo/UBERON_0000477	anatomical cluster	null
+http://purl.obolibrary.org/obo/GO_0005929	null	null
+http://purl.obolibrary.org/obo/UBERON_0000479	tissue	null
+http://purl.obolibrary.org/obo/CTENO_0000092	2M-slash macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000093	2M-backslash macromere	null
+http://purl.obolibrary.org/obo/CTENO_0000090	1M-backslash macromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000091	1M-slash macromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000096	micromere, 16 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000097	micromere, 32 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000094	3M-slash macromere, 60 cell stage	null
+http://purl.obolibrary.org/obo/CTENO_0000095	3M-backslash macromere, 30 cell stage	null
+http://purl.obolibrary.org/obo/UBERON_0000483	epithelium	null
+http://purl.obolibrary.org/obo/UBERON_0002548	larva	null
+http://purl.obolibrary.org/obo/CTENO_0000087	macromere, 32 cell stage and above	null
+http://purl.obolibrary.org/obo/CTENO_0000088	macromere, 60 cell stage	null

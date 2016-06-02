@@ -1,3 +1,4 @@
+Prefix(:=<http://purl.obolibrary.org/obo/cteno.owl/>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -7,669 +8,1162 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<http://purl.obolibrary.org/obo/cteno.owl>
 Import(<http://purl.obolibrary.org/obo/bspo.owl>)
-Import(<http://purl.obolibrary.org/obo/ro.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/taxonomy.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/imports/uberon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cteno/imports/cl_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cteno/imports/bspo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/cteno/imports/ro_import.owl>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000009>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000010>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000012>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000013>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000014>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000016>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000017>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000021>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000022>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000028>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000029>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000030>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000031>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000034>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000035>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000036>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000037>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000038>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000039>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000040>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000041>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000042>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000043>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000044>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000045>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000046>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000047>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000048>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000049>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000050>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000051>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000052>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000053>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000054>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000055>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000056>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000057>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000058>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000059>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000060>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000061>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000062>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000063>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000064>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000065>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000066>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000067>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000068>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000069>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000071>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000072>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000073>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000074>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000075>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000076>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000078>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000079>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000081>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000082>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000083>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000084>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000085>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000086>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000087>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000088>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000091>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000092>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000093>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000094>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000095>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000096>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000097>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000098>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000099>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000100>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000101>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000102>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000103>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000104>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000105>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000106>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000107>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000108>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000109>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000110>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000111>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000112>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000113>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000114>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000115>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000116>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000117>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000118>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000119>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000120>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000121>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000122>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000123>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000124>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000125>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000126>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000127>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000128>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000130>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000131>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000132>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000133>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000134>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000135>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000136>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000137>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000138>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000139>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000140>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000141>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000142>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000143>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000145>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000146>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000147>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000148>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000149>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000150>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000151>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000152>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000153>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000154>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000155>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000156>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005575>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005737>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0005929>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0031012>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000067>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000069>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000100>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000109>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000159>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001135>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002036>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002385>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002548>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0006134>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0006562>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0006582>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0006846>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0007023>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0007233>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0007236>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0014892>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/UBPROP_0000008>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/core#source>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#editor_notes>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000001> (ctene plate)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000001> "A collection of cilia attached to basal cushions and made up of polster cells. A characteristic feature of ctenophores"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000001> "lost in Platyctenida"@en)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/CTENO_0000001> "ctene")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000001> "comb plate")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000001> "lost in Platyctenida"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000001> "The move- ment of the ctene plates are controlled by the apical organ, a sensory structure containing a statocyst located at the aboral pole (Tamm, 1982, for review)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000001> "ctene plate"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000001> "A collection of cilia attached to basal cushions and made up of polster cells. A characteristic feature of ctenophores"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> <http://purl.obolibrary.org/obo/UBERON_0000062>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000137>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002216> <http://purl.obolibrary.org/obo/GO_0040011>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000099>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000103>))
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/UBREL_0000002> <http://purl.obolibrary.org/obo/GO_0005929>))
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> <http://purl.obolibrary.org/obo/GO_0005929>))
 DisjointClasses(<http://purl.obolibrary.org/obo/CTENO_0000001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/NCBITaxon_140471>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000002>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000002> (outer epidermis)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000002> "outer epidermis"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000002> <http://purl.obolibrary.org/obo/UBERON_0000483>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000003>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000003> (gastrodermis)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000003> "gastrodermis"@en)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/CTENO_0000003> "https://en.wikipedia.org/wiki/Gastrodermis"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000003> <http://purl.obolibrary.org/obo/UBERON_0000483>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000004>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000004> "mesoglea"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000004> (mesoglea)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000004> "A thick jelly-like layer between the epidermis and gastrodermis. The mesoglea is mostly acellular and composed of extracellular matrix, but it also has some muscle and mesenchymal cells."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000004> "mesoglea"@en)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/CTENO_0000004> "https://en.wikipedia.org/wiki/Mesoglea"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000004> <http://purl.obolibrary.org/obo/UBERON_0000479>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CL_0000134>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CL_0000187>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000005>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000005> (comb plate cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000005> "comb plate cilium"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000005> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000001>) <http://purl.obolibrary.org/obo/GO_0005929>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0005929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000001>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000005> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000006>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000006> (sensory cell cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000006> "sensory cell cilium"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000006> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001032>) <http://purl.obolibrary.org/obo/CL_0000000>)) <http://purl.obolibrary.org/obo/GO_0005929>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000006> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0005929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001032>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000006> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000007>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000007> (tentacle sheath cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000007> "tentacle sheath cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000007> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000008>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000008> (polar field cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000008> "polar field cilium"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000008> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000145>) <http://purl.obolibrary.org/obo/GO_0005929>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0005929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000145>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000008> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000009>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000009> (auricular cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000009> "auricular cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000009> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000010>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000010> (pharyngeal cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000010> "pharyngeal cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000010> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000011>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000011> (good groove cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000011> "good groove cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000011> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000012>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000012> (balancer cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000012> "balancer cilium"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000012> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000057>) <http://purl.obolibrary.org/obo/GO_0005929>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000012> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0005929> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000057>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000012> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000013>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000013> (dome cilium)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000013> "The statocyst is protected by a transparent dome made of long, immobile cilia.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000013> "dome cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000013> <http://purl.obolibrary.org/obo/GO_0005929>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000013> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000014>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000014> (aboral groove cilium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000014> "aboral groove cilium"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000014> <http://purl.obolibrary.org/obo/GO_0005929>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000015>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000015> (extracellular matrix of mesoglea)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000015> "mesogleal extracellular matrix"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000015> "extracellular matrix of mesoglea"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000015> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000004>) <http://purl.obolibrary.org/obo/GO_0031012>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000015> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0031012> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000004>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000015> <http://purl.obolibrary.org/obo/GO_0031012>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000016>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000016> (polster cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000016> "polster cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000016> <http://purl.obolibrary.org/obo/CL_0000000>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000017>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000017> "apical sense organ"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000017> (apical sense organ)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000017> "aboral organ")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000017> "apical organ")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000017> "apical sense organ"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000017> <http://purl.obolibrary.org/obo/UBERON_0000062>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000151>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001016>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000017> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001032>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000017> ObjectExactCardinality(0 <http://purl.obolibrary.org/obo/BFO_0000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectComplementOf(<http://purl.obolibrary.org/obo/CTENO_0000056>) ObjectComplementOf(<http://purl.obolibrary.org/obo/CTENO_0000134>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000066>))))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000018>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000018> (tentacle)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000018> "absent in beroids"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000018> "tentacle"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000018> "Most ctenophores also bear two muscular tentacles which are used for prey capture, and ultrastruc- tural studies have shown that these structures are distinct from cnidarian tentacles (Hernandez-Nicaise, 1991)")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000018> "tentacle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000018> <http://purl.obolibrary.org/obo/UBERON_0000026>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000019>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000019> "photocyte"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000019> (photocyte)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000019> "Light-producing cell present in nearly all ctenophores"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000019> "photocyte"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000019> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000019> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000067>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000020>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000020> "colloblast"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000020> (colloblast)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000020> "A specialized adhesive cell found in ctenophores"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000020> "colloblast"@en)
 AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/CTENO_0000020> "https://en.wikipedia.org/wiki/Colloblast"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000020> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000020> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000104>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000021>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000021> "oral lobe"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000021> (oral lobe)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000021> "A conspicuous lobed structure used for feeding, characteristic of the Lobata (\"sea walnuts\")"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000021> "oral lobe"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000021> <http://purl.obolibrary.org/obo/UBERON_0000062>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000022>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000022> (adult ctenophore)
+
 AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/core#source> "doi:10.1101/pdb.emo106") <http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000022> "Pleurobrachia species maintain cydippid forms as adults, but the others become radically different: M. leidyi greatly reduce their tentacles and form large oral lobes; B. ovata lack tentacles and form large oral lips that they use to engulf or nip at other ctenophores; and platyctenes become compressed in the oral-aboral direction and adopt a sessile or creeping lifestyle, crawling around the substratum rather than locomoting by beating their ctene rows."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000022> "adult ctenophore"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000022> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000025>) <http://purl.obolibrary.org/obo/UBERON_0000468>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000022> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0000468> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000025>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000022> <http://purl.obolibrary.org/obo/UBERON_0007023>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000022> ObjectSomeValuesFrom(<http://semanticscience.org/resource/SIO_000658> <http://purl.obolibrary.org/obo/CTENO_0000023>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000023>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000023> (cydippid larva)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000023> "A ctenophore larva"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000023> "cydippid larva"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000023> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000024>) <http://purl.obolibrary.org/obo/UBERON_0000468>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000023> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0000468> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000024>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000023> <http://purl.obolibrary.org/obo/UBERON_0002548>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000024>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000024> (cydippid stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000024> "cydippid stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000024> <http://purl.obolibrary.org/obo/UBERON_0000069>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000025>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000025> (ctenophore adult stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000025> "ctenophore adult stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000025> <http://purl.obolibrary.org/obo/UBERON_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000026>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000026> (meridional canal)
+
 AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/core#source> "doi:10.1101/pdb.emo106") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000026> "A canal that is associated with a testis and an ovary"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000026> "meridional canal"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000026> <http://purl.obolibrary.org/obo/UBERON_0004111>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000027>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000027> "nurse cell"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000027> (nurse cell)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000027> "In Bolinopsis microptera each oocyte is associated with as many as 100 nurse cells."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000027> "connected to the oocyte by cytoplasmic bridges that transport cytoplasm and yolk to the oocyte (Dunlap Pianka 1974)"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000027> "nurse cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000027> <http://purl.obolibrary.org/obo/CL_0000000>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000028>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000028> (ectoplasm)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000028> "ectoplasm"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000028> <http://purl.obolibrary.org/obo/GO_0005575>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000028> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/GO_0005737>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000029>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000029> (endoplasm)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000029> "endoplasm"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000029> <http://purl.obolibrary.org/obo/GO_0005575>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000030>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000030> (subcortical plasm)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000030> "subcortical plasm"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000030> <http://purl.obolibrary.org/obo/GO_0005575>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002220> <http://purl.obolibrary.org/obo/CTENO_0000028>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000030> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002220> <http://purl.obolibrary.org/obo/CTENO_0000029>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000031>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000031> (periodic acid Schiff positive yolk particles)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000031> "periodic acid Schiff positive yolk particles"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000031> <http://purl.obolibrary.org/obo/GO_0005575>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000032>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000032> (gonadopore)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000032> "gonadopore"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000032> <http://purl.obolibrary.org/obo/UBERON_0000161>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000033>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000033> (anal pore)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000033> "anal pore"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000033> <http://purl.obolibrary.org/obo/UBERON_0000161>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000142>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000033> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000151>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000034>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000034> (ctenophore anal canal)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000034> "ctenophore anal canal"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000034> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#connects> <http://purl.obolibrary.org/obo/CTENO_0000033>) <http://purl.obolibrary.org/obo/UBERON_0004111>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000034> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0004111> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002176> <http://purl.obolibrary.org/obo/CTENO_0000033>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000034> <http://purl.obolibrary.org/obo/UBERON_0004111>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000034> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000142>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000034> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000067>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000035>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000035> (epitheliomuscular cell)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000035> "To be ceded to cnidarian anatomy ontology"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000035> "epitheliomuscular cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000035> <http://purl.obolibrary.org/obo/CL_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000036>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000036> (parietal muscle)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000036> "Ribbon-shaped smooth muscle that resides between the glandular epithelial cells and the basal lamina"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000036> "parietal muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000036> <http://purl.obolibrary.org/obo/UBERON_0001135>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000036> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002416>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000037>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000037> (giant smooth muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000037> "giant smooth muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000037> <http://purl.obolibrary.org/obo/UBERON_0001135>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000038>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000038> (mesogleal muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000038> "mesogleal muscle"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000038> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000004>) <http://purl.obolibrary.org/obo/UBERON_0002385>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000038> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0002385> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000004>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000038> <http://purl.obolibrary.org/obo/CTENO_0000037>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000039>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000039> (longitudinal mesogleal muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000039> "longitudinal mesogleal muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000039> <http://purl.obolibrary.org/obo/CTENO_0000038>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000040>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000040> (circumferential mesogleal muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000040> "circumferential mesogleal muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000040> <http://purl.obolibrary.org/obo/CTENO_0000038>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000041>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000041> (radial mesogleal muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000041> "radial mesogleal muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000041> <http://purl.obolibrary.org/obo/CTENO_0000038>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000042>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000042> "tentacular muscle"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000042> (tentacular muscle)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#editor_notes> <http://purl.obolibrary.org/obo/CTENO_0000042> "Within the tentacles themselves are mesogleal muscles that are constantly being produced from cells at the base of the tentacle. We need to distinguish between muscles that are part of the tentacle proper and the mesogleal component (see mesogleal muscles)"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000042> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/UBERON_0001630>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000042> "tentacular muscle"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000042> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001630> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000042> <http://purl.obolibrary.org/obo/UBERON_0014892>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000043>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000043> (trans-tentacular muscle)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000043> "A muscle that connects the two tentacle apparatuses")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000043> "trans-tentacular muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000043> <http://purl.obolibrary.org/obo/UBERON_0014892>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000044>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000044> (tentilla)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000044> "tentilla"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000044> <http://purl.obolibrary.org/obo/UBERON_0000026>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000045>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000045> (striated muscle of tentilla)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/UBPROP_0000008> <http://purl.obolibrary.org/obo/CTENO_0000045> "The only description of striated muscle is in the tentilla of Euplokamis (Chun 1880)"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000045> "striated muscle of tentilla"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000045> <http://purl.obolibrary.org/obo/UBERON_0002036>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000046>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000046> "mesogleal nerve fiber"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000046> (mesogleal nerve fiber)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000046> "cross the basal lamina and run through the mesoglea"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000046> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000004>)) <http://purl.obolibrary.org/obo/UBERON_0006134>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000046> "mesogleal nerve fiber"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000046> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0006134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000004>))))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000046> <http://purl.obolibrary.org/obo/UBERON_0006134>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000047>))
-AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/CTENO_0000047> "https://en.wikipedia.org/wiki/Nerve_net"^^xsd:anyURI)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000047> (subepidermal nerve net)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000047> "subepidermal nerve net"@en)
+AnnotationAssertion(rdfs:seeAlso <http://purl.obolibrary.org/obo/CTENO_0000047> "https://en.wikipedia.org/wiki/Nerve_net"^^xsd:anyURI)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000047> <http://purl.obolibrary.org/obo/UBERON_0011216>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000047> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001016>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000047> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CL_0000210>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000047> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000017>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000048>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000048> "gastrodermal nerve"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000048> (gastrodermal nerve)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000048> "subgastrodermal nerve"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000048> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000003>) <http://purl.obolibrary.org/obo/UBERON_0001021>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000048> "gastrodermal nerve"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000048> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000003>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000048> <http://purl.obolibrary.org/obo/UBERON_0001021>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000048> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000026>))
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000048> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/core#innervates> <http://purl.obolibrary.org/obo/CTENO_0000019>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000049>))
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000048> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002134> <http://purl.obolibrary.org/obo/CTENO_0000019>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000049> (mesoglea of tentacle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000049> "mesoglea of tentacle"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000049> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/CTENO_0000004>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000049> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000049> <http://purl.obolibrary.org/obo/CTENO_0000004>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000050>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000050> "tastborsten cell"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000050> (tastborsten cell)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000050> "characterized by a single thin ciliary projection"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000050> "tastborsten cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000052>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000051>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000051> (taststiften cell)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000051> "hoplocyst"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000051> "taststiften cell"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000051> "possess one or several short pointed pegs"@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000051> "taststiften cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000052>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000052>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000052> (nerve network cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000052> "nerve network cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000052> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000047>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000047>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000052> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000100>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000053>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000053> (nerve fiber of mesoglea of tentacle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000053> "nerve fiber of mesoglea of tentacle"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000053> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/CTENO_0000004>))) <http://purl.obolibrary.org/obo/UBERON_0006134>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000053> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0006134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000004> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>))))))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000053> <http://purl.obolibrary.org/obo/UBERON_0006134>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000054>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000054> (oral pole)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000054> "oral pole"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000054> <http://purl.obolibrary.org/obo/UBERON_0000475>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000055>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000055> (apical organ floor)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000055> "Genes: MlIslet")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000055> "apical organ floor"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000055> <http://purl.obolibrary.org/obo/UBERON_0000483>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000012>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000056>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000056> (lithocyte)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000056> "A mineralized cell generated and constantly replaced in the floor of the apical organ. They are supported on top of the balancing cilia that make up the gravity-sensing statocyst of the apical organ."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000056> "control the posture of the animal"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000056> "lithocyte"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000056> "A mineralized cell generated and constantly replaced in the floor of the apical organ. They are supported on top of the balancing cilia that make up the gravity-sensing statocyst of the apical organ."@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000056> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000134>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000057>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000057> (balancer cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000057> "balancer cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000057> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000012>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000057> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000012>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000057> <http://purl.obolibrary.org/obo/CL_0000199>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000057> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000055>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000058>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000058> (apical organ statolith)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000058> "covered by a dome of nonmotile cilia"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000058> "apical organ statolith"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000058> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>) <http://purl.obolibrary.org/obo/UBERON_0006582>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000058> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0006582> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000058> <http://purl.obolibrary.org/obo/UBERON_0006582>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000059>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000059> (tentacular nerve)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000059> "tentacular nerve"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000059> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#connects> <http://purl.obolibrary.org/obo/CTENO_0000017>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#connects> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000059> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001021> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002176> <http://purl.obolibrary.org/obo/CTENO_0000017>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002176> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000059> <http://purl.obolibrary.org/obo/UBERON_0001021>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000060>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000060> (epithelial papilla)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000060> "epithelial papilla"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000060> <http://purl.obolibrary.org/obo/CL_0000066>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000060> <http://purl.obolibrary.org/obo/CL_0000199>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000060> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000061>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000061> (photoprotein)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000061> "mnemiopsin")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000061> "photoprotein"@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000061> "emits light in the presence of calcium ions (Ward and Seliger 1974)."@en)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000061> "photoprotein"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000061> <http://purl.obolibrary.org/obo/CHEBI_36080>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000062>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000062> (quadrant)
+
+AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/core#source> "PMID:10525332") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000062> "One of of four nearly identical quadrants organized along the oral-aboral axis. Each of the four quadrants is derived largely from one cell of the four-cell-stage embryo. At the eight-cell stage each quadrant contains a single E (\"end\") and M (\"middle\") blastomere. Subsequently, micromeres are formed first at the aboral pole and later at the oral pole."@en)
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000062> "Two orthogonal planes run along the oral–aboral axis which define four quadrants (Fig.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000062> "quadrant"@en)
-AnnotationAssertion(Annotation(<http://purl.obolibrary.org/obo/core#source> "PMID:10525332") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000062> "One of of four nearly identical quadrants organized along the oral-aboral axis. Each of the four quadrants is derived largely from one cell of the four-cell-stage embryo. At the eight-cell stage each quadrant contains a single E (\"end\") and M (\"middle\") blastomere. Subsequently, micromeres are formed first at the aboral pole and later at the oral pole."@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000062> <http://purl.obolibrary.org/obo/UBERON_0000475>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000062> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002220> <http://purl.obolibrary.org/obo/CTENO_0000135>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000062> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002220> <http://purl.obolibrary.org/obo/CTENO_0000140>))
-DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000062> <http://purl.obolibrary.org/obo/CTENO_0000142> <http://purl.obolibrary.org/obo/CTENO_0000141>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000063>))
+DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000062> <http://purl.obolibrary.org/obo/CTENO_0000141> <http://purl.obolibrary.org/obo/CTENO_0000142>)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000063> (ctenophore blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000063> "ctenophore blastomere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000063> <http://purl.obolibrary.org/obo/CL_0000353>)
-DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000063> <http://purl.obolibrary.org/obo/CTENO_0000075> <http://purl.obolibrary.org/obo/CTENO_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000064>))
+DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000063> <http://purl.obolibrary.org/obo/CTENO_0000066> <http://purl.obolibrary.org/obo/CTENO_0000075>)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000064> (E macromere, 8 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000064> "E macromere, 8 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000064> <http://purl.obolibrary.org/obo/CTENO_0000082>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000064> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000070>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000065>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000065> (M blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000065> "M blastomere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000065> <http://purl.obolibrary.org/obo/CTENO_0000082>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000070>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000066>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000066> (micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000066> "micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000066> <http://purl.obolibrary.org/obo/CTENO_0000063>)
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_after> <http://purl.obolibrary.org/obo/UBERON_0007236>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000067>))
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002496> <http://purl.obolibrary.org/obo/UBERON_0007236>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000067> (2M macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000067> "2M macromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000067> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000076>) <http://purl.obolibrary.org/obo/CTENO_0000087>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000067> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000087> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000076>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000067> <http://purl.obolibrary.org/obo/CTENO_0000087>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000068>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000068> (3E macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000068> "3E macromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000068> <http://purl.obolibrary.org/obo/CTENO_0000088>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000069>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000069> (circumpharyngeal muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000069> "circumpharyngeal muscle cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000069> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000069> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000092>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000070>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000070> (EM macromere, 4 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000070> "EM macromere, 4 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000070> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/UBERON_0007233>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
-DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000070> <http://purl.obolibrary.org/obo/CTENO_0000072> <http://purl.obolibrary.org/obo/CTENO_0000071>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000071>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000070> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/UBERON_0007233>)))
+DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000070> <http://purl.obolibrary.org/obo/CTENO_0000071> <http://purl.obolibrary.org/obo/CTENO_0000072>)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000071> (EM-slash blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000071> "EM-slash blastomere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000071> <http://purl.obolibrary.org/obo/CTENO_0000070>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000072>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000072> (EM-backslash blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000072> "EM-backslash blastomere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000072> <http://purl.obolibrary.org/obo/CTENO_0000070>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000073>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000073> (M-slash blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000073> "M-slash blastomere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000073> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000071>) <http://purl.obolibrary.org/obo/CTENO_0000065>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000073> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000071>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000073> <http://purl.obolibrary.org/obo/CTENO_0000065>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000074>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000074> (M-blackslash blastomere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000074> "M-blackslash blastomere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000074> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000072>) <http://purl.obolibrary.org/obo/CTENO_0000065>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000074> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000065> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000072>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000074> <http://purl.obolibrary.org/obo/CTENO_0000065>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000075>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000075> (macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000075> "macromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000075> <http://purl.obolibrary.org/obo/CTENO_0000063>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000076>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000076> (1M macromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000076> "1M macromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000076> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000081>) <http://purl.obolibrary.org/obo/CTENO_0000085>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000076> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000081>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000076> <http://purl.obolibrary.org/obo/CTENO_0000085>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000078>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000078> (2E macromere, 32 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000078> "2E macromere, 32 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000078> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000086>) <http://purl.obolibrary.org/obo/CTENO_0000087>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000078> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000087> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000086>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000078> <http://purl.obolibrary.org/obo/CTENO_0000087>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000079>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000079> (3M macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000079> "3M macromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000079> <http://purl.obolibrary.org/obo/CTENO_0000088>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000081>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000081> (M macromere, 8 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000081> "M macromere, 8 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000081> <http://purl.obolibrary.org/obo/CTENO_0000082>)
-DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000081> <http://purl.obolibrary.org/obo/CTENO_0000083> <http://purl.obolibrary.org/obo/CTENO_0000073>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000082>))
+DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000081> <http://purl.obolibrary.org/obo/CTENO_0000073> <http://purl.obolibrary.org/obo/CTENO_0000083>)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000082> (macromere, 8 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000082> "macromere, 8 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000082> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000070>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000082> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/UBERON_0007236>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000070>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/UBERON_0007236>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000082> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000070>))
-DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000082> <http://purl.obolibrary.org/obo/CTENO_0000081> <http://purl.obolibrary.org/obo/CTENO_0000064>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000083>))
+DisjointUnion(<http://purl.obolibrary.org/obo/CTENO_0000082> <http://purl.obolibrary.org/obo/CTENO_0000064> <http://purl.obolibrary.org/obo/CTENO_0000081>)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000083> (M-backslash macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000083> "M-backslash macromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000083> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000072>) <http://purl.obolibrary.org/obo/CTENO_0000081>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000083> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000081> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000072>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000083> <http://purl.obolibrary.org/obo/CTENO_0000081>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000084>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000084> (M-slash macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000084> "M-slash macromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000084> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000071>) <http://purl.obolibrary.org/obo/CTENO_0000081>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000084> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000081> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000071>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000084> <http://purl.obolibrary.org/obo/CTENO_0000081>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000085>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000085> (macromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000085> "macromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000082>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000116>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000082>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000116>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000085> <http://purl.obolibrary.org/obo/CTENO_0000075>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000086>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000086> (1E macromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000086> "1E macromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000086> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000064>) <http://purl.obolibrary.org/obo/CTENO_0000085>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000086> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000064>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000086> <http://purl.obolibrary.org/obo/CTENO_0000085>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000087>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000087> (macromere, 32 cell stage and above)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000087> "32 cell stage refers to time of birth. 2M cells persist")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000087> "macromere, 32 cell stage and above"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000087> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000117>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000087> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000117>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000087> <http://purl.obolibrary.org/obo/CTENO_0000075>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000088>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000088> "macromere, 60 cell stage"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000088> (macromere, 60 cell stage)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000088> "2M cells persist")
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000088> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000118>) <http://purl.obolibrary.org/obo/CTENO_0000075>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000088> "macromere, 60 cell stage"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000088> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000075> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000118>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000088> <http://purl.obolibrary.org/obo/CTENO_0000075>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000090>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000090> (1M-backslash macromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000090> "1M-backslash macromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000090> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000083>) <http://purl.obolibrary.org/obo/CTENO_0000076>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000090> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000076> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000083>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000090> <http://purl.obolibrary.org/obo/CTENO_0000076>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000091>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000091> (1M-slash macromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000091> "1M-slash macromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000091> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000073>) <http://purl.obolibrary.org/obo/CTENO_0000076>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000091> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000076> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000073>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000091> <http://purl.obolibrary.org/obo/CTENO_0000076>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000092>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000092> (2M-slash macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000092> "2M-slash macromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000092> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000090>) <http://purl.obolibrary.org/obo/CTENO_0000067>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000092> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000067> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000091>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000092> <http://purl.obolibrary.org/obo/CTENO_0000067>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000093>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000093> (2M-backslash macromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000093> "2M-backslash macromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000093> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000090>) <http://purl.obolibrary.org/obo/CTENO_0000067>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000093> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000067> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000090>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000093> <http://purl.obolibrary.org/obo/CTENO_0000067>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000094>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000094> (3M-slash macromere, 60 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000094> "3M-slash macromere, 60 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000094> <http://purl.obolibrary.org/obo/CTENO_0000079>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000095>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000095> (3M-backslash macromere, 30 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000095> "3M-backslash macromere, 30 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000095> <http://purl.obolibrary.org/obo/CTENO_0000079>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000096>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000096> (micromere, 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000096> "micromere, 16 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000082>) <http://purl.obolibrary.org/obo/CTENO_0000066>))
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000116>) <http://purl.obolibrary.org/obo/CTENO_0000066>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000082>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000116>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000096> <http://purl.obolibrary.org/obo/CTENO_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000097>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000097> (micromere, 32 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000097> "micromere, 32 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000097> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000117>) <http://purl.obolibrary.org/obo/CTENO_0000066>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000097> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000117>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000097> <http://purl.obolibrary.org/obo/CTENO_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000098>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000098> (micromere, 60 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000098> "micromere, 60 cell stage"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000098> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/uberon/core#existence_starts_and_ends_during> <http://purl.obolibrary.org/obo/CTENO_0000118>) <http://purl.obolibrary.org/obo/CTENO_0000066>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000098> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002491> <http://purl.obolibrary.org/obo/CTENO_0000118>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000098> <http://purl.obolibrary.org/obo/CTENO_0000066>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000098> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000102>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000099>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000099> (e1 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000099> "e1 micromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000099> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000064>) <http://purl.obolibrary.org/obo/CTENO_0000096>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000099> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000064>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000099> <http://purl.obolibrary.org/obo/CTENO_0000096>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000100>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000100> (m1 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000100> "m1 micromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000100> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000081>) <http://purl.obolibrary.org/obo/CTENO_0000096>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000100> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000096> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000081>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000100> <http://purl.obolibrary.org/obo/CTENO_0000096>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000101>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000101> (m2 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000101> "m2 micromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000101> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000076>) <http://purl.obolibrary.org/obo/CTENO_0000097>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000101> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000097> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000076>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000101> <http://purl.obolibrary.org/obo/CTENO_0000097>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000102>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000102> (m11 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000102> "m11 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000102> <http://purl.obolibrary.org/obo/CTENO_0000097>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000102> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000100>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000103>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000103> (m12 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000103> "m12 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000103> <http://purl.obolibrary.org/obo/CTENO_0000097>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000103> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000100>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000104>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000104> (e2 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000104> "e2 micromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000104> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000086>) <http://purl.obolibrary.org/obo/CTENO_0000097>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000104> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000097> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000086>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000104> <http://purl.obolibrary.org/obo/CTENO_0000097>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000105>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000105> (e11 micromere)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000105> "e11 and m11 lie closest to sagittal plane")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000105> "e11 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000105> <http://purl.obolibrary.org/obo/CTENO_0000097>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000105> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000106>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000106> (e12 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000106> "e12 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000106> <http://purl.obolibrary.org/obo/CTENO_0000097>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000106> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000107>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000107> (m21 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000107> "m21 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000107> <http://purl.obolibrary.org/obo/CTENO_0000098>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000107> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000101>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000108>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000108> (m22 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000108> "m22 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000108> <http://purl.obolibrary.org/obo/CTENO_0000098>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000108> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000101>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000109>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000109> (m121 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000109> "m121 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000109> <http://purl.obolibrary.org/obo/CTENO_0000098>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000109> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000103>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000110>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000110> (m122 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000110> "m122 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000110> <http://purl.obolibrary.org/obo/CTENO_0000098>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000110> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000103>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000111>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000111> (e3 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000111> "e3 micromere"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000111> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000078>) <http://purl.obolibrary.org/obo/CTENO_0000098>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000111> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000098> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000078>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000111> <http://purl.obolibrary.org/obo/CTENO_0000098>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000112>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000112> (e22 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000112> "e22 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000112> <http://purl.obolibrary.org/obo/CTENO_0000098>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000113>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000113> (e21 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000113> "e21 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000113> <http://purl.obolibrary.org/obo/CTENO_0000098>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000114>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000114> (m111 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000114> "m111 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000114> <http://purl.obolibrary.org/obo/CTENO_0000098>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000114> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002207> <http://purl.obolibrary.org/obo/CTENO_0000102>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000115>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000115> (m112 micromere)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000115> "m112 micromere"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000098>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000116>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000116> (ctenophore 16 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000116> "ctenophore 16 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000116> <http://purl.obolibrary.org/obo/UBERON_0000067>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000116> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002087> <http://purl.obolibrary.org/obo/UBERON_0007236>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000117>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000117> (ctenophore 32 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000117> "ctenophore 32 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000117> <http://purl.obolibrary.org/obo/UBERON_0000067>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000117> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002087> <http://purl.obolibrary.org/obo/CTENO_0000116>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000118>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000118> (ctenophore 60 cell stage)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000118> "ctenophore 60 cell stage"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000118> <http://purl.obolibrary.org/obo/UBERON_0000067>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000119>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000119> (micromere, formed during gastulation)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000119> "micromere, formed during gastulation"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000119> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000068> <http://purl.obolibrary.org/obo/UBERON_0000109>) <http://purl.obolibrary.org/obo/CTENO_0000066>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000119> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000066> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000068> <http://purl.obolibrary.org/obo/UBERON_0000109>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000119> <http://purl.obolibrary.org/obo/CTENO_0000066>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000120>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000120> (tentacle epithelium)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000120> "tentacle epithelium"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000120> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/UBERON_0000483>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000120> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0000483> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000120> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000121>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000121> (tentacle sheath)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000121> "tentacle sheath"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000121> <http://purl.obolibrary.org/obo/UBERON_0004923>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000121> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000122>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000122> "ctenophore pharynx"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000122> (ctenophore pharynx)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000122> "An ectodermal structure which connects the mouth to the endodermal component of the gut, deep inside the animal")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000122> "ctenophore pharynx"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000122> <http://purl.obolibrary.org/obo/UBERON_0006562>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000122> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000156>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000123>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000123> (tentacle sheath cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000123> "tentacle sheath cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000123> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000121>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000123> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000121>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000123> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000123> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000124>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000124> (longitudinal mesogleal muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000124> "longitudinal mesogleal muscle cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000124> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000039>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000124> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000039>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000124> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000124> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000068>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000125>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000125> (radial mesogleal muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000125> "radial mesogleal muscle cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000125> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000041>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000125> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000041>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000125> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000068>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000126>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000126> "stellate mesenchymal cell"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000126> (stellate mesenchymal cell)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000126> "A multipolar mesenchymal cell found in the stellate mesenchyme. May be phagocytic. absent in derivatives of 2M? macromeres.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000126> "stellate mesenchymal cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000126> <http://purl.obolibrary.org/obo/CL_0000134>)
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000126> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> ObjectUnionOf(<http://purl.obolibrary.org/obo/CTENO_0000068> <http://purl.obolibrary.org/obo/CTENO_0000067>)))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000127>))
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000126> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> ObjectUnionOf(<http://purl.obolibrary.org/obo/CTENO_0000067> <http://purl.obolibrary.org/obo/CTENO_0000068>)))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000127> (tentacle muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000127> "tentacle muscle cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000127> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/CL_0000187>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000127> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000187> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000127> <http://purl.obolibrary.org/obo/CL_0000187>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000128>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000128> (longitudinal pharyngeal muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000128> "longitudinal pharyngeal muscle cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000128> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000128> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000068>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000130>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000130> (trans-tentacular muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000130> "trans-tentacular muscle cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000130> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000043>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000130> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000043>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000130> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000130> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000067>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000131>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000131> (apical organ ctene row muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000131> "apical organ ctene row muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000131> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000131> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000068>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000132>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000132> (E-lineage cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000132> "E-lineage cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000132> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000064>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000132> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000064>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000132> <http://purl.obolibrary.org/obo/CL_0000000>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000133>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000133> (M-lineage cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000133> "M-lineage cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000133> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000081>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000133> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000081>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000133> <http://purl.obolibrary.org/obo/CL_0000000>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000134>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000134> (lithocyte progenitor)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000134> "reserve lithocyte")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000134> "lithocyte progenitor"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000134> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000055>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000134> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000068>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000135>))
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000135> "plane of first cleavage (Freeman 1977)")
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000135> (adesophageal plane)
+
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000135> "esophageal plane")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CTENO_0000135> "sagittal plane")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000135> "plane of first cleavage (Freeman 1977)")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000135> "adesophageal plane"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000135> <http://purl.obolibrary.org/obo/BSPO_0000400>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000135> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BSPO_0015005> <http://purl.obolibrary.org/obo/CTENO_0000140>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000136>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000136> "tentacular axis"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000136> (tentacular axis)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000136> "The plane of second cleavage includes the tentacular axis")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000136> "tentacular axis"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000136> <http://purl.obolibrary.org/obo/BSPO_0000010>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000137>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000137> "ctene row"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000137> (ctene row)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000137> "A row that is composed of individual ctene plates, which are arranged in longitudinal rows parallel to the oral–aboral axis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000137> "comb row")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000137> "ctene row"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000137> <http://purl.obolibrary.org/obo/UBERON_0000477>)
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000137> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/UBREL_0000002> <http://purl.obolibrary.org/obo/CTENO_0000001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000138>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000138> "apical organ statocyst"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000137> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> <http://purl.obolibrary.org/obo/CTENO_0000001>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000138> (apical organ statocyst)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000138> "a balance sensor consisting of a statolith, a solid particle supported on four bundles of cilia, called \"balancers\", that sense its orientation")
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000138> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>) <http://purl.obolibrary.org/obo/UBERON_0006583>))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000138> "apical organ statocyst"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000138> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0006583> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000017>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000138> <http://purl.obolibrary.org/obo/UBERON_0006583>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000138> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000056>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000139>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000139> (ciliated groove)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000139> "A groove that runs along the surface of the animal to each of the eight ctene rows")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/CTENO_0000139> "ciliated furrow")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000139> "ciliated groove"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000139> "A groove that runs along the surface of the animal to each of the eight ctene rows")
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000139> <http://purl.obolibrary.org/obo/UBERON_0006846>)
-SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000139> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/FMA_85972> <http://purl.obolibrary.org/obo/CTENO_0000137>))
+SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000139> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002150> <http://purl.obolibrary.org/obo/CTENO_0000137>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000139> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000140>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000140> (tentacular plane)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000140> "tentacular plane"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000140> <http://purl.obolibrary.org/obo/BSPO_0000400>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000141>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000141> (slash quadrant)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000141> "slash quadrant"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000141> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/UBREL_0000002> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000071>) <http://purl.obolibrary.org/obo/CL_0000000>)) <http://purl.obolibrary.org/obo/CTENO_0000062>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000141> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000062> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000071>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000141> <http://purl.obolibrary.org/obo/CTENO_0000062>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000142>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000142> (backslash quadrant)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000142> "backslash quadrant"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000142> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/UBREL_0000002> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000072>) <http://purl.obolibrary.org/obo/CL_0000000>)) <http://purl.obolibrary.org/obo/CTENO_0000062>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000142> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000062> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000072>)))))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000142> <http://purl.obolibrary.org/obo/CTENO_0000062>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000143>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000143> (tentacle bulb)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000143> "tentacle bulb"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000143> <http://purl.obolibrary.org/obo/UBERON_0000479>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000143> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000152>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000143> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002131> <http://purl.obolibrary.org/obo/CTENO_0000140>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000143> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000099>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000145>))
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000145> "polar field"@en)
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000145> (polar field)
+
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CTENO_0000145> "an ectodermal structure emanating from the apical organ along the esophageal axis.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000145> "polar field"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000145> <http://purl.obolibrary.org/obo/UBERON_0000475>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000146>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000146> (polar field cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000146> "polar field cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000146> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000145>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000146> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000145>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000146> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000102>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000147>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000147> (esophague-tentacle muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000147> "esophague-tentacle muscle cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000147> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000147> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000093>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000148>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000148> (anal canal cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000148> "anal canal cell"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000148> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000159>) <http://purl.obolibrary.org/obo/CL_0000000>))
+EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000148> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CL_0000000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000159>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000148> <http://purl.obolibrary.org/obo/CL_0000000>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000148> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000093>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000149>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000149> (tentacle-apical organ muscle cell)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000149> "tentacle-apical organ muscle cell"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000149> <http://purl.obolibrary.org/obo/CL_0000187>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000149> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002202> <http://purl.obolibrary.org/obo/CTENO_0000092>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000150>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000150> (oral side of organism)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000150> "oral side of organism"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000150> <http://purl.obolibrary.org/obo/UBERON_0000475>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000151>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000151> (aboral part of organism)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000151> "aboral part of organism"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000151> <http://purl.obolibrary.org/obo/UBERON_0000475>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000152>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000152> (tentacle apparatus)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000152> "tentacle apparatus"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000152> <http://purl.obolibrary.org/obo/UBERON_0000477>)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000018>))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000152> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/CTENO_0000143>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000153>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000153> (endodermal canal)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000153> "endodermal canal"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000153> <http://purl.obolibrary.org/obo/UBERON_0004111>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000154>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000154> (mixed E and M lineage structure)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000154> "mixed E and M lineage structure"@en)
 EquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000154> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0000061> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000064>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002254> <http://purl.obolibrary.org/obo/CTENO_0000081>)))
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000154> <http://purl.obolibrary.org/obo/UBERON_0000061>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000155>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000155> (pharyngeal muscle)
+
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000155> "pharyngeal muscle"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000155> <http://purl.obolibrary.org/obo/UBERON_0001630>)
-Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000156>))
+
+# Class: <http://purl.obolibrary.org/obo/CTENO_0000156> (ctenophore blastopore)
+
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/CTENO_0000156> "Genes: MlLhx1/5")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CTENO_0000156> "ctenophore blastopore"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/CTENO_0000156> <http://purl.obolibrary.org/obo/UBERON_0000100>)
+
+# Class: <http://purl.obolibrary.org/obo/UBERON_0000067> (<http://purl.obolibrary.org/obo/UBERON_0000067>)
+
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0000067> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002087> <http://purl.obolibrary.org/obo/CTENO_0000117>))
+
+# Class: <http://purl.obolibrary.org/obo/UBERON_0001630> (muscle organ)
+
 EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_0001630> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001630> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000122>)))
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0001630> <http://purl.obolibrary.org/obo/CTENO_0000154>)
-SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/NCBITaxon_37539>) <http://purl.obolibrary.org/obo/CTENO_0000018>) owl:Nothing)
+
+
+SubClassOf(ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CTENO_0000018> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/NCBITaxon_37539>)) owl:Nothing)
 )

@@ -1,16 +1,2054 @@
 format-version: 1.2
-import: http://purl.obolibrary.org/obo/uberon/ext.owl
+synonymtypedef: acronym "acronym" broad
+synonymtypedef: anamorph "anamorph" related
+synonymtypedef: blast_name "blast name" related
+synonymtypedef: common_name "common name" exact
+synonymtypedef: equivalent_name "equivalent name" exact
+synonymtypedef: genbank_acronym "genbank acronym" broad
+synonymtypedef: genbank_anamorph "genbank anamorph" related
+synonymtypedef: genbank_common_name "genbank common name" exact
+synonymtypedef: genbank_synonym "genbank synonym" related
+synonymtypedef: human "synonym typically used in the context of human anatomy" NARROW
+synonymtypedef: in_part "in-part" related
+synonymtypedef: misnomer "misnomer" related
+synonymtypedef: misspelling "misspelling" related
+synonymtypedef: scientific_name "scientific name" exact
+synonymtypedef: synonym "synonym" related
+synonymtypedef: teleomorph "teleomorph" related
+synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/bspo.owl>) VersionIRI(<http://purl.obolibrary.org/obo/bspo/releases/2014-02-03/bspo.owl>))) [Axioms: 1874 Logical Axioms: 473]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/cteno/taxonomy.owl>) VersionIRI(<null>))) [Axioms: 552 Logical Axioms: 89]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/bspo_import.owl>) VersionIRI(<null>))) [Axioms: 24 Logical Axioms: 6]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/cl_import.owl>) VersionIRI(<null>))) [Axioms: 313 Logical Axioms: 153]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/ro_import.owl>) VersionIRI(<null>))) [Axioms: 11 Logical Axioms: 3]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/uberon_import.owl>) VersionIRI(<null>))) [Axioms: 666 Logical Axioms: 354]
 ontology: cteno
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nEquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000006> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001032>) <http://purl.obolibrary.org/obo/CL_0000000>)) <http://purl.obolibrary.org/obo/GO_0005929>))\nEquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000046> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> <http://purl.obolibrary.org/obo/CTENO_0000004>)) <http://purl.obolibrary.org/obo/UBERON_0006134>))\nEquivalentClasses(<http://purl.obolibrary.org/obo/CTENO_0000053> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0001025> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/CTENO_0000018>) <http://purl.obolibrary.org/obo/CTENO_0000004>))) <http://purl.obolibrary.org/obo/UBERON_0006134>))\n)
+
+[Term]
+id: BSPO:0000000
+name: left side
+namespace: spatial
+def: "The side of an organism that is left of the sagittal plane." [BSPO:cjm]
+synonym: "left" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000110 BSPO:0000007 ! left_of right side
+relationship: BSPO:0015007 BSPO:0000017 ! starts_axis left-right axis
+
+[Term]
+id: BSPO:0000001
+name: upper side
+namespace: spatial
+comment: Consider merging with superior side.
+synonym: "upper" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015007 BSPO:0000011 ! starts_axis upper-lower axis
+
+[Term]
+id: BSPO:0000002
+name: lower side
+namespace: spatial
+comment: Consider merging with inferior side.
+synonym: "lower" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015001 BSPO:0000011 ! finishes_axis upper-lower axis
+
+[Term]
+id: BSPO:00000021
+name: deep-superficial gradient (obsolete)
+namespace: spatial
+comment: was made obsolete because the ID had too many digits
+is_obsolete: true
+replaced_by: BSPO:0000021
+
+[Term]
+id: BSPO:0000003
+name: deep side
+namespace: spatial
+synonym: "deep" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000107 BSPO:0000004 ! deep_to superficial side
+relationship: BSPO:0015007 BSPO:0000012 ! starts_axis deep-superficial axis
+
+[Term]
+id: BSPO:0000004
+name: superficial side
+namespace: spatial
+synonym: "superficial" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015001 BSPO:0000012 ! finishes_axis deep-superficial axis
+
+[Term]
+id: BSPO:0000005
+name: anatomical surface
+namespace: spatial
+def: "A 2D surface of an anatomical continuant." [BSPO:cjm]
+comment: to be merged into CARO
+synonym: "surface" EXACT []
+xref: FMA:24137
+is_a: CARO:0000010 ! anatomical boundary
+
+[Term]
+id: BSPO:0000006
+name: anatomical margin
+namespace: spatial
+def: "Fiat anatomical region extending a short distance from the boundary of an object inwards." [BSPO:cjm]
+synonym: "edge" EXACT []
+synonym: "margin" EXACT []
+is_a: BSPO:0000070 ! anatomical region
+
+[Term]
+id: BSPO:0000007
+name: right side
+namespace: spatial
+def: "The side of an organism that is right of the sagittal plane." [BSPO:cjm, BSPO:wd]
+synonym: "right" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015001 BSPO:0000017 ! finishes_axis left-right axis
+
+[Term]
+id: BSPO:0000008
+name: parasagittal plane
+namespace: spatial
+def: "Sagittal plane that divides a bilateral body into unequal left and right parts." [BSPO:mah]
+synonym: "parasagittal section" EXACT []
+is_a: BSPO:0000417 ! sagittal plane
+
+[Term]
+id: BSPO:0000009
+name: midsagittal plane
+namespace: spatial
+def: "Sagittal plane that divides bilateral body into equal left and right parts." [BSPO:mah]
+comment: only in bilaterally symmetrical organisms
+synonym: "median plane" RELATED []
+synonym: "median sagittal plane" EXACT [FMA:74563]
+synonym: "midline plane" EXACT []
+synonym: "midsagittal section" EXACT []
+xref: FMA:74563
+is_a: BSPO:0000417 ! sagittal plane
+
+[Term]
+id: BSPO:0000010
+name: anatomical axis
+namespace: spatial
+def: "A straight line through space, intersecting an anatomical entity." [BSPO:cjm]
+comment: Axis directions are defined in terms of axes.
+xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
+is_a: CARO:0000008 ! anatomical line
+relationship: passes_through CARO:0000000 ! anatomical entity
+
+[Term]
+id: BSPO:0000011
+name: upper-lower axis
+namespace: spatial
+def: "An anatomical axis determined by gravity." [BSPO:cjm]
+synonym: "superior-inferior axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000012
+name: deep-superficial axis
+namespace: spatial
+def: "An axis that extends from an internal position to a more external position in the body or body part." [BSPO:PM]
+comment: Muscles are frequently categorized as 'deep', 'intermediate', and 'superficial'.
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000013
+name: anterior-posterior axis
+namespace: spatial
+def: "An axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
+comment: In sponges, AP is used to indicate the direction of movement [in larval stage] (as it is in other metazoans that move, e.g., the basal bilaterians). [PM]
+synonym: "A-P axis" EXACT []
+synonym: "anteroposterior axis" EXACT []
+synonym: "AP axis" EXACT []
+synonym: "cephalocaudal axis" NARROW [http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
+synonym: "craniocaudal axis" NARROW vertebrate []
+synonym: "longitudinal axis" RELATED []
+synonym: "rostral/caudal" NARROW vertebrate []
+synonym: "rostrocaudal axis" NARROW vertebrate []
+is_a: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0015005 BSPO:0000018 ! orthogonal_to transverse plane
+relationship: BSPO:0000104 BSPO:0000016 ! approximately_perpendicular_to dorsal-ventral axis
+relationship: BSPO:0015005 BSPO:0000018 ! orthogonal_to transverse plane
+
+[Term]
+id: BSPO:0000014
+name: apical-basal axis relative to substrate
+namespace: spatial
+def: "An axis that extends through an organism or organism part from the part of the organism or organism part attached to a substrate (basal) to the furthest from the attachment (apical). Note that the apical-basal axis is often used for organismal parts where there is attachment via a basal lamina or other structure." [BSPO:mah]
+synonym: "apical/basal" EXACT []
+synonym: "longitudinal axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000015
+name: proximal-distal axis
+namespace: spatial
+def: "An axis that extends from the point of attachment of a structure (proximal) to the  point furthest away from the plane of attachment (distal)." [BSPO:curators, http://en.wikipedia.org/wiki/Anatomical_terms_of_location]
+comment: In some communities, proximal and distal are used when specifying the position of parts of elements that are contained within the body, such as gill arches or vertebral spines. In these cases, use of the classes medial-lateral axis or medial-external axis are more appropriate.
+synonym: "proximal/distal" EXACT []
+synonym: "proximodistal" EXACT []
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000016
+name: dorsal-ventral axis
+namespace: spatial
+def: "An axis that is approximately perpendicular to the anterior-posterior axis and that extends through the horizontal plane of the body." [BSPO:curators]
+synonym: "anterior-posterior axis" NARROW human []
+synonym: "D-V axis" EXACT []
+synonym: "dorsoventral axis" EXACT []
+synonym: "DV axis" EXACT []
+is_a: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0015005 BSPO:0000019 ! orthogonal_to horizontal plane
+relationship: BSPO:0015005 BSPO:0000019 ! orthogonal_to horizontal plane
+
+[Term]
+id: BSPO:0000017
+name: left-right axis
+namespace: spatial
+def: "An axis that bisects an organism from left to right sides of body, through a sagittal plane." [BSPO:cjm]
+synonym: "dextro-sinister axis" EXACT []
+synonym: "L-R axis" EXACT []
+synonym: "left to right axis" EXACT []
+synonym: "LR axis" EXACT []
+synonym: "R-L axis" EXACT []
+synonym: "right to left axis" EXACT []
+synonym: "right-left axis" EXACT []
+synonym: "RL axis" EXACT []
+is_a: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0000010 ! anatomical axis
+intersection_of: BSPO:0015005 BSPO:0000417 ! orthogonal_to sagittal plane
+relationship: BSPO:0015005 BSPO:0000417 ! orthogonal_to sagittal plane
+
+[Term]
+id: BSPO:0000018
+name: transverse plane
+namespace: spatial
+def: "Anatomical plane that divides body into anterior and posterior parts." [BSPO:mah]
+synonym: "axial plane" EXACT []
+synonym: "axial section" EXACT []
+synonym: "cross-section" RELATED []
+synonym: "transverse section" EXACT []
+xref: FMA:12247
+is_a: BSPO:0000400 ! anatomical plane
+
+[Term]
+id: BSPO:0000019
+name: horizontal plane
+namespace: spatial
+def: "Anatomical plane that divides bilateral body into dorsal and ventral parts." [BSPO:mah]
+synonym: "coronal section" RELATED []
+synonym: "frontal plane" EXACT []
+synonym: "frontal section" RELATED []
+synonym: "horizontal anatomical plane" EXACT [FMA:52810]
+synonym: "horizontal section" EXACT []
+xref: FMA:52810
+is_a: BSPO:0000400 ! anatomical plane
+
+[Term]
+id: BSPO:0000020
+name: upper-lower gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the upper-lower axis." [BSPO:wd]
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015002 BSPO:0000011 ! follows_axis upper-lower axis
+relationship: BSPO:0015002 BSPO:0000011 ! follows_axis upper-lower axis
+
+[Term]
+id: BSPO:0000021
+name: deep-superficial gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the deep-superficial axis." [BSPO:wd]
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015002 BSPO:0000012 ! follows_axis deep-superficial axis
+relationship: BSPO:0015002 BSPO:0000012 ! follows_axis deep-superficial axis
+
+[Term]
+id: BSPO:0000022
+name: superior side
+namespace: spatial
+def: "The side that is higher relative to the substrate." [BSPO:curators]
+synonym: "cranial" RELATED []
+synonym: "superior" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000023
+name: apical-basal gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the apical-basal axis." [BSPO:wd]
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015002 BSPO:0000014 ! follows_axis apical-basal axis relative to substrate
+relationship: BSPO:0015002 BSPO:0000014 ! follows_axis apical-basal axis relative to substrate
+
+[Term]
+id: BSPO:0000024
+name: proximal-distal gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the proximal-distal axis." [BSPO:wd]
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015002 BSPO:0000015 ! follows_axis proximal-distal axis
+relationship: BSPO:0015002 BSPO:0000015 ! follows_axis proximal-distal axis
+
+[Term]
+id: BSPO:0000025
+name: inferior side
+namespace: spatial
+def: "The side that is lower relative to the substrate." [BSPO:curators]
+synonym: "caudal" RELATED []
+synonym: "inferior" EXACT []
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000026
+name: antero-dorsal region
+namespace: spatial
+def: "Anatomical region that overlaps the anterior and dorsal regions of a body or body part." [BSPO:wd]
+synonym: "anterodorsal region " EXACT []
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000079 ! dorsal region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:01:38Z
+
+[Term]
+id: BSPO:0000027
+name: antero-ventral region
+namespace: spatial
+def: "Anatomical region that overlaps the anterior and ventral regions of a body or body part." [BSPO:wd]
+synonym: "anteroventral region " EXACT []
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000084 ! ventral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:04:59Z
+
+[Term]
+id: BSPO:0000028
+name: postero-lateral region
+namespace: spatial
+def: "Anatomical region that overlaps the posterior and lateral regions of the body or body part." [BSPO:wd]
+synonym: "posterolateral region" EXACT []
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000082 ! lateral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:06:01Z
+
+[Term]
+id: BSPO:0000029
+name: antero-lateral region
+namespace: spatial
+def: "Anatomical region that overlaps the anterior and lateral regions of a body or body part." [BSPO:wd]
+synonym: "anterolateral region" EXACT []
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000082 ! lateral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:07:18Z
+
+[Term]
+id: BSPO:0000030
+name: postero-dorsal region
+namespace: spatial
+def: "Anatomical region that overlaps the posterior and dorsal regions of the body or body part." [BSPO:wd]
+synonym: "posterodorsal region" EXACT []
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000079 ! dorsal region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:08:13Z
+
+[Term]
+id: BSPO:0000031
+name: upper region
+namespace: spatial
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000001 ! overlaps upper side
+relationship: RO:0002131 BSPO:0000001 ! overlaps upper side
+
+[Term]
+id: BSPO:0000032
+name: lower region
+namespace: spatial
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000002 ! overlaps lower side
+relationship: RO:0002131 BSPO:0000002 ! overlaps lower side
+
+[Term]
+id: BSPO:0000033
+name: deep region
+namespace: spatial
+def: "Anatomical region located deep within an organism or structure." [BSPO:wd]
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000003 ! overlaps deep side
+relationship: RO:0002131 BSPO:0000003 ! overlaps deep side
+
+[Term]
+id: BSPO:0000034
+name: superficial region
+namespace: spatial
+def: "Anatomical region superficially located on the body or body part." [BSPO:wd]
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000004 ! overlaps superficial side
+relationship: RO:0002131 BSPO:0000004 ! overlaps superficial side
+
+[Term]
+id: BSPO:0000035
+name: postero-ventral region
+namespace: spatial
+def: "Anatomical region that overlaps the posterior and ventral regions of a body or body part." [BSPO:wd]
+synonym: "posteroventral region" EXACT []
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000084 ! ventral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+created_by: Melissa  Haendel
+creation_date: 2009-06-15T01:08:38Z
+
+[Term]
+id: BSPO:0000036
+name: anterior-most region
+namespace: spatial
+synonym: "anterior-most" EXACT []
+synonym: "anteriormost" EXACT []
+is_a: BSPO:0000071 ! anterior region
+created_by: Melissa  Haendel
+creation_date: 2009-06-16T08:49:03Z
+
+[Term]
+id: BSPO:0000037
+name: posterior-most region
+namespace: spatial
+synonym: "posterior-most" EXACT []
+synonym: "posteriormost" EXACT []
+is_a: BSPO:0000072 ! posterior region
+created_by: Melissa  Haendel
+creation_date: 2009-06-16T08:49:50Z
+
+[Term]
+id: BSPO:0000038
+name: dorsal-most region
+namespace: spatial
+synonym: "dorsal-most" EXACT []
+synonym: "dorsalmost" EXACT []
+is_a: BSPO:0000079 ! dorsal region
+created_by: Melissa  Haendel
+creation_date: 2009-06-16T08:50:26Z
+
+[Term]
+id: BSPO:0000039
+name: ventral-most region
+namespace: spatial
+synonym: "ventral-most" EXACT []
+synonym: "ventralmost" EXACT []
+is_a: BSPO:0000084 ! ventral region
+created_by: Melissa  Haendel
+creation_date: 2009-06-16T08:51:07Z
+
+[Term]
+id: BSPO:0000040
+name: upper/lower compartment boundary
+namespace: spatial
+is_a: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0015003 BSPO:0000011 ! has_axis upper-lower axis
+relationship: BSPO:0015003 BSPO:0000011 ! has_axis upper-lower axis
+
+[Term]
+id: BSPO:0000041
+name: deep/superficial compartment boundary
+namespace: spatial
+is_a: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0015003 BSPO:0000012 ! has_axis deep-superficial axis
+relationship: BSPO:0015003 BSPO:0000012 ! has_axis deep-superficial axis
+
+[Term]
+id: BSPO:0000042
+name: antero-medial margin
+namespace: spatial
+def: "Anatomical margin that is located on the antero-medial region of the body or body part." [BSPO:wd<new dbxref>]
+synonym: "anteromedial margin" EXACT []
+is_a: BSPO:0000050 ! antero-medial region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000683 ! medial margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:49:57Z
+
+[Term]
+id: BSPO:0000043
+name: apical/basal compartment boundary
+namespace: spatial
+is_a: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0015003 BSPO:0000014 ! has_axis apical-basal axis relative to substrate
+relationship: BSPO:0015003 BSPO:0000014 ! has_axis apical-basal axis relative to substrate
+
+[Term]
+id: BSPO:0000044
+name: proximal/distal compartment boundary
+namespace: spatial
+is_a: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0000092 ! anatomical compartment boundary
+intersection_of: BSPO:0015003 BSPO:0000015 ! has_axis proximal-distal axis
+relationship: BSPO:0015003 BSPO:0000015 ! has_axis proximal-distal axis
+
+[Term]
+id: BSPO:0000045
+name: antero-lateral margin
+namespace: spatial
+def: "Anatomical margin that is located on the antero-lateral region of the body or body part." [BSPO:wd]
+synonym: "anterolateral margin" EXACT []
+is_a: BSPO:0000029 ! antero-lateral region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000682 ! lateral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:50:37Z
+
+[Term]
+id: BSPO:0000046
+name: postero-medial margin
+namespace: spatial
+def: "Anatomical margin that is located on the postero-medial region of the body or body part." [BSPO:wd]
+synonym: "posteromedial margin" EXACT []
+is_a: BSPO:0000064 ! postero-medial region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000683 ! medial margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:51:07Z
+
+[Term]
+id: BSPO:0000047
+name: postero-lateral margin
+namespace: spatial
+def: "Anatomical margin that is located on the postero-lateral region of the body or body part." [BSPO:wd]
+synonym: "posterolateral margin" EXACT []
+is_a: BSPO:0000028 ! postero-lateral region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000682 ! lateral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:51:42Z
+
+[Term]
+id: BSPO:0000048
+name: dorso-medial margin
+namespace: spatial
+def: "Anatomical margin that is located on the dorso-medial region of the body or body part." [BSPO:wd]
+synonym: "dorso-medial margin" EXACT []
+is_a: BSPO:0000069 ! dorso-medial region
+is_a: BSPO:0000679 ! dorsal margin
+is_a: BSPO:0000683 ! medial margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:52:04Z
+
+[Term]
+id: BSPO:0000049
+name: ventro-medial margin
+namespace: spatial
+def: "Anatomical margin that is located on the ventro-medial region of the body or body part." [BSPO:wd]
+synonym: "ventromedial margin" EXACT []
+is_a: BSPO:0000112 ! ventro-medial region
+is_a: BSPO:0000683 ! medial margin
+is_a: BSPO:0000684 ! ventral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:52:48Z
+
+[Term]
+id: BSPO:0000050
+name: antero-medial region
+namespace: spatial
+def: "Anatomical region that overlaps the anterior and medial regions of the body or body part." [BSPO:wd]
+synonym: "anteromedial region" EXACT []
+is_a: BSPO:0000071 ! anterior region
+is_a: BSPO:0000083 ! medial region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:55:32Z
+
+[Term]
+id: BSPO:0000051
+name: anatomical gradient
+namespace: spatial
+def: "Material anatomical entity defined by change in the value of some quantity per unit of distance across some spatial axis." [BSPO:cjm]
+xref: FBql:00005254
+is_a: CARO:0000006 ! material anatomical entity
+
+[Term]
+id: BSPO:0000052
+name: anterior-posterior gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the anterior-posterior axis." [BSPO:wd]
+xref: FBcv:0000142
+xref: FBql:00005256
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015003 BSPO:0000013 ! has_axis anterior-posterior axis
+relationship: BSPO:0015003 BSPO:0000013 ! has_axis anterior-posterior axis
+
+[Term]
+id: BSPO:0000053
+name: dorsal-ventral gradient
+namespace: spatial
+def: "Anatomical gradient that is distributed along the dorsal-ventral axis." [BSPO:wd]
+xref: FBcv:0000143
+xref: FBql:00005255
+is_a: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0000051 ! anatomical gradient
+intersection_of: BSPO:0015003 BSPO:0000016 ! has_axis dorsal-ventral axis
+relationship: BSPO:0015003 BSPO:0000016 ! has_axis dorsal-ventral axis
+
+[Term]
+id: BSPO:0000054
+name: anatomical side
+namespace: spatial
+def: "An anatomical region bounded by a plane perpendicular to an axis through the middle." [BSPO:cjm]
+xref: FBql:00005841
+is_a: BSPO:0000070 ! anatomical region
+
+[Term]
+id: BSPO:0000055
+name: anterior side
+namespace: spatial
+def: "An anatomical region that is the entire part of an anatomical structure anterior to a transverse plane and bounded on one side by the same transverse plane." [BSPO:RW]
+synonym: "anterior" EXACT []
+synonym: "rostral" EXACT []
+xref: FBcv:0000053
+xref: FBql:00005848
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000096 BSPO:0000056 ! anterior_to posterior side
+relationship: BSPO:0000113 BSPO:0000056 ! opposite_to posterior side
+relationship: BSPO:0015007 BSPO:0000013 ! starts_axis anterior-posterior axis
+
+[Term]
+id: BSPO:0000056
+name: posterior side
+namespace: spatial
+def: "An anatomical region that is the entire part of an anatomical structure posterior to a transverse plane and bounded on one side by the same transverse plane." [BSPO:RW, BSPO:wd]
+synonym: "caudal" NARROW vertebrate []
+synonym: "posterior" EXACT []
+xref: FBcv:0000065
+xref: FBql:00005849
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000099 BSPO:0000055 ! posterior_to anterior side
+relationship: BSPO:0015001 BSPO:0000013 ! finishes_axis anterior-posterior axis
+
+[Term]
+id: BSPO:0000057
+name: apical side
+namespace: spatial
+def: "Anatomical side that is located on the apical end of an organism or structure." [BSPO:wd]
+synonym: "apical" EXACT []
+xref: FBcv:0000054
+xref: FBql:00005854
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000113 BSPO:0000058 ! opposite_to basal side
+relationship: BSPO:0015007 BSPO:0000014 ! starts_axis apical-basal axis relative to substrate
+
+[Term]
+id: BSPO:0000058
+name: basal side
+namespace: spatial
+def: "Anatomical side that is located on the basal end of an organism or structure." [BSPO:wd]
+comment: The part of the organism attached to a substrate. Axis of symmetry.
+synonym: "basal" EXACT []
+xref: FBcv:0000055
+xref: FBql:00005855
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015001 BSPO:0000014 ! finishes_axis apical-basal axis relative to substrate
+
+[Term]
+id: BSPO:0000059
+name: central side
+namespace: spatial
+def: "Anatomical side that is centrally located on an organism or structure." [BSPO:wd]
+comment: central is not an axis direction
+synonym: "central" EXACT []
+xref: FBcv:0000056
+xref: FBql:00015851
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000060
+name: contralateral side
+namespace: spatial
+def: "On the opposite side." [BSPO:cjm]
+comment: inherited from flybase cv. not clear how this would be used. Suggest we obsolete, and use the corresponding relation.
+synonym: "contralateral" EXACT []
+xref: FBcv:0000057
+xref: FBql:00005851
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000061
+name: proximal side
+namespace: spatial
+synonym: "proximal" EXACT []
+xref: FBcv:0000066
+xref: FBql:00005852
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000113 BSPO:0000062 ! opposite_to distal side
+relationship: BSPO:0015007 BSPO:0000015 ! starts_axis proximal-distal axis
+
+[Term]
+id: BSPO:0000062
+name: distal side
+namespace: spatial
+def: "Anatomical side that is distally located on an organism or structure." [BSPO:wd]
+synonym: "distal" EXACT []
+xref: FBcv:0000058
+xref: FBql:00005853
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000097 BSPO:0000061 ! distal_to proximal side
+relationship: BSPO:0015001 BSPO:0000015 ! finishes_axis proximal-distal axis
+
+[Term]
+id: BSPO:0000063
+name: dorsal side
+namespace: spatial
+def: "An anatomical region that is the entire part of an anatomical structure dorsal to a horizontal plane and bounded on one side by the same transverse plane." [BSPO:wd]
+synonym: "dorsal" EXACT []
+xref: FBcv:0000059
+xref: FBql:00005842
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0000098 BSPO:0000066 ! dorsal_to lateral side
+relationship: BSPO:0000113 BSPO:0000068 ! opposite_to ventral side
+relationship: BSPO:0015007 BSPO:0000016 ! starts_axis dorsal-ventral axis
+
+[Term]
+id: BSPO:0000064
+name: postero-medial region
+namespace: spatial
+def: "Anatomical region that overlaps the posterior and medial regions of the body or body part." [BSPO:wd]
+synonym: "posteromedial region" EXACT []
+is_a: BSPO:0000072 ! posterior region
+is_a: BSPO:0000083 ! medial region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:56:39Z
+
+[Term]
+id: BSPO:0000065
+name: ipsilateral side
+namespace: spatial
+def: "On the same side" [BSPO:cjm]
+comment: inherited from flybase cv. not clear how this would be used. Suggest we obsolete, and use the corresponding relation.
+synonym: "ipsilateral" EXACT []
+xref: FBcv:0000062
+xref: FBql:00005850
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000066
+name: lateral side
+namespace: spatial
+synonym: "lateral" EXACT []
+xref: FBcv:0000063
+xref: FBql:00005844
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000067
+name: medial side
+namespace: spatial
+comment: a point in the centre of the organism (where the left-right axis intersects the midsagittal plane)
+synonym: "medial" EXACT []
+xref: FBcv:0000064
+xref: FBql:00005847
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000068
+name: ventral side
+namespace: spatial
+def: "An anatomical region that is the entire part of an anatomical structure ventral to a horizontal plane and bounded on one side by the same horizontal plane." [BSPO:RW, BSPO:wd]
+synonym: "ventral" EXACT []
+xref: FBcv:0000070
+xref: FBql:00005843
+is_a: BSPO:0000054 ! anatomical side
+relationship: BSPO:0015001 BSPO:0000016 ! finishes_axis dorsal-ventral axis
+
+[Term]
+id: BSPO:0000069
+name: dorso-medial region
+namespace: spatial
+def: "Anatomical region that overlaps the dorsal and medial regions of the body or body part." [BSPO:wd]
+synonym: "dorsomedial region" EXACT []
+is_a: BSPO:0000079 ! dorsal region
+is_a: BSPO:0000083 ! medial region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:57:22Z
+
+[Term]
+id: BSPO:0000070
+name: anatomical region
+namespace: spatial
+def: "A 3D region in space without well-defined compartmental boundaries; for example, the dorsal region of an ectoderm." [BSPO:cjm]
+comment: to be merged into CARO
+xref: FBql:00005841
+is_a: CARO:0000003 ! anatomical structure
+
+[Term]
+id: BSPO:0000071
+name: anterior region
+namespace: spatial
+def: "Anatomical region anteriorly located on the body or body part." [BSPO:wd]
+xref: FBql:00005848
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+
+[Term]
+id: BSPO:0000072
+name: posterior region
+namespace: spatial
+def: "Anatomical region posteriorly located on the body or body part." [BSPO:wd]
+xref: FBql:00005849
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+
+[Term]
+id: BSPO:0000073
+name: apical region
+namespace: spatial
+def: "Anatomical region located on the apical end on the body or body part." [BSPO:wd]
+xref: FBql:00005854
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000057 ! overlaps apical side
+relationship: RO:0002131 BSPO:0000057 ! overlaps apical side
+
+[Term]
+id: BSPO:0000074
+name: basal region
+namespace: spatial
+def: "Anatomical region located basally on the body or body part." [BSPO:wd]
+xref: FBql:00005855
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000058 ! overlaps basal side
+relationship: RO:0002131 BSPO:0000058 ! overlaps basal side
+
+[Term]
+id: BSPO:0000075
+name: central region
+namespace: spatial
+def: "Anatomical region centrally located on the body or body part." [BSPO:wd]
+xref: FBql:00015851
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000059 ! overlaps central side
+relationship: RO:0002131 BSPO:0000059 ! overlaps central side
+
+[Term]
+id: BSPO:0000076
+name: contralateral region
+namespace: spatial
+comment: inherited from flybase cv. not clear how this would be used
+xref: FBql:00005851
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000060 ! overlaps contralateral side
+relationship: RO:0002131 BSPO:0000060 ! overlaps contralateral side
+
+[Term]
+id: BSPO:0000077
+name: proximal region
+namespace: spatial
+def: "Anatomical region proximally located on the body or body part." [BSPO:wd]
+xref: FBql:00005852
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000061 ! overlaps proximal side
+relationship: RO:0002131 BSPO:0000061 ! overlaps proximal side
+
+[Term]
+id: BSPO:0000078
+name: distal region
+namespace: spatial
+def: "Anatomical region distally located on the body or body part." [BSPO:wd]
+xref: FBql:00005853
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000062 ! overlaps distal side
+relationship: RO:0002131 BSPO:0000062 ! overlaps distal side
+
+[Term]
+id: BSPO:0000079
+name: dorsal region
+namespace: spatial
+def: "Anatomical region dorsally located on the body or body part." [BSPO:wd]
+xref: FBql:00005842
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+
+[Term]
+id: BSPO:0000080
+name: dorso-lateral region
+namespace: spatial
+def: "Anatomical region that overlaps the dorsal and lateral regions of a body or body part." [BSPO:wd]
+synonym: "dorsolateral region" EXACT []
+xref: FBql:00005845
+is_a: BSPO:0000079 ! dorsal region
+is_a: BSPO:0000082 ! lateral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+
+[Term]
+id: BSPO:0000081
+name: ipsilateral region
+namespace: spatial
+xref: FBql:00005850
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000065 ! overlaps ipsilateral side
+relationship: RO:0002131 BSPO:0000065 ! overlaps ipsilateral side
+
+[Term]
+id: BSPO:0000082
+name: lateral region
+namespace: spatial
+def: "Anatomical region laterally located on the body or body part." [BSPO:wd]
+xref: FBql:00005844
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+
+[Term]
+id: BSPO:0000083
+name: medial region
+namespace: spatial
+def: "Anatomical region medially located on the body or body part." [BSPO:wd]
+xref: FBql:00005847
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+
+[Term]
+id: BSPO:0000084
+name: ventral region
+namespace: spatial
+def: "Anatomical region ventrally located on the body or body part." [BSPO:wd]
+xref: FBql:00005843
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0000085
+name: ventro-lateral region
+namespace: spatial
+def: "Anatomical region that overlaps the ventral and lateral regions of a body or body part." [BSPO:wd]
+comment: This is an example of a composition of two axis positions.
+synonym: "ventrolateral region" EXACT []
+xref: FBql:00005846
+is_a: BSPO:0000082 ! lateral region
+is_a: BSPO:0000084 ! ventral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0000086
+name: anatomical compartment
+namespace: spatial
+comment: to be merged into CARO
+xref: FBql:00005873
+xref: FMA:9647
+is_a: CARO:0000003 ! anatomical structure
+
+[Term]
+id: BSPO:0000087
+name: anterior compartment
+namespace: spatial
+xref: FBcv:0000031
+xref: FBql:00005874
+is_a: BSPO:0000086 ! anatomical compartment
+
+[Term]
+id: BSPO:0000088
+name: compartment boundary
+namespace: spatial
+xref: FBcv:0000032
+xref: FBql:00005878
+is_a: BSPO:0000086 ! anatomical compartment
+
+[Term]
+id: BSPO:0000089
+name: dorsal compartment
+namespace: spatial
+xref: FBcv:0000035
+xref: FBql:00005876
+is_a: BSPO:0000086 ! anatomical compartment
+
+[Term]
+id: BSPO:0000090
+name: posterior compartment
+namespace: spatial
+xref: FBcv:0000036
+xref: FBql:00005875
+is_a: BSPO:0000086 ! anatomical compartment
+
+[Term]
+id: BSPO:0000091
+name: ventral compartment
+namespace: spatial
+xref: FBcv:0000037
+xref: FBql:00005877
+is_a: BSPO:0000086 ! anatomical compartment
+
+[Term]
+id: BSPO:0000092
+name: anatomical compartment boundary
+namespace: spatial
+comment: to be merged into CARO
+xref: FBql:00005881
+is_a: CARO:0000010 ! anatomical boundary
+
+[Term]
+id: BSPO:0000093
+name: anterior/posterior compartment boundary
+namespace: spatial
+xref: FBcv:0000033
+xref: FBql:00005880
+is_a: BSPO:0000092 ! anatomical compartment boundary
+
+[Term]
+id: BSPO:0000094
+name: dorsal/ventral compartment boundary
+namespace: spatial
+xref: FBcv:0000034
+xref: FBql:00005879
+is_a: BSPO:0000092 ! anatomical compartment boundary
+
+[Term]
+id: BSPO:0000112
+name: ventro-medial region
+namespace: spatial
+def: "The region corresponding to the ventral region of the entity, towards the midline." [BSPO:wd]
+synonym: "medioventral region" EXACT []
+synonym: "ventromedial region" EXACT []
+is_a: BSPO:0000083 ! medial region
+is_a: BSPO:0000084 ! ventral region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+created_by: Melissa  Haendel
+creation_date: 2009-09-10T08:57:54Z
+
+[Term]
+id: BSPO:0000127
+name: peripheral region
+namespace: spatial
+def: "Anatomical region peripherally located on the body or body part." [BSPO:wd]
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000129 ! overlaps peripheral side
+relationship: RO:0002131 BSPO:0000129 ! overlaps peripheral side
+
+[Term]
+id: BSPO:0000128
+name: axial region
+namespace: spatial
+is_a: BSPO:0000070 ! anatomical region
+intersection_of: BSPO:0000070 ! anatomical region
+intersection_of: RO:0002131 BSPO:0000130 ! overlaps axial side
+relationship: RO:0002131 BSPO:0000130 ! overlaps axial side
+
+[Term]
+id: BSPO:0000129
+name: peripheral side
+namespace: spatial
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000130
+name: axial side
+namespace: spatial
+is_a: BSPO:0000054 ! anatomical side
+
+[Term]
+id: BSPO:0000195
+name: adaxial-abaxial axis
+namespace: spatial
+def: "An anatomical axis that extends from the side of the anatomical entity that is closer to an axis (adaxial) to the side that is further from the same axis (abaxial)." [BSPO:RW]
+synonym: "AA axis" EXACT []
+synonym: "dorsal-ventral axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:20:29Z
+
+[Term]
+id: BSPO:0000196
+name: medial-external axis
+namespace: spatial
+def: "An anatomical axis that extends from the center of the body outwards or externally." [BSPO:curators]
+comment: The medial-external axis could apply to a sphere-shaped body.
+synonym: "proximal-distal axis" RELATED []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:21:42Z
+
+[Term]
+id: BSPO:0000197
+name: medial-radial axis
+namespace: spatial
+def: "An anatomical axis that is perpendicular to an apical/basal axis or proximal/distal axis and extends from the center of an axis (shoot axis or root in the case of plants) to any point on the exterior of the axis." [BSPO:curators]
+comment: In plants, lateral growth (http://purl.obolibrary.org/obo/GO_0080190) run is along the medial/radial axis (from medial to radial) [RW].  Also applies to radially symmetrical animals such as sea urchins, cnidarians [PM] or applies to more-or-less cylindrical body parts in animals, like limbs.
+synonym: "M-R axis" EXACT []
+synonym: "MR axis" EXACT []
+is_a: BSPO:0000196 ! medial-external axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:23:31Z
+
+[Term]
+id: BSPO:0000198
+name: oral-aboral axis
+namespace: spatial
+def: "An axis that extends from the oral opening to the furthest point in an organism that is directly opposite." [BSPO:PM]
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:29:33Z
+
+[Term]
+id: BSPO:0000199
+name: animal-vegetal axis
+namespace: spatial
+def: "An axis that extends from the animal end of an egg or early embryo to the opposite, vegetal end. In animals with yolk-bearing eggs, the vegetal end is the yolk bearing pole. (pertains to animals only - both vertebrate and invertebrate embryos)." [BSPO:PM]
+synonym: "A-V axis" EXACT []
+synonym: "animal/vegetal axis" EXACT []
+synonym: "AV axis" EXACT []
+is_a: BSPO:0000010 ! anatomical axis
+created_by: wasila.dahdul
+creation_date: 2013-07-02T11:30:13Z
+
+[Term]
+id: BSPO:0000200
+name: apical-basal axis relative to direction of growth
+namespace: spatial
+def: "An axis of a plant structure that is determined by the direction of apical growth, either by an apical meristem or an apical cell. Apical is toward the direction of apical growth: toward the tip of a growing shoot axis, root, thallus, or non-vascular leaf. Basal is away from the direction of apical growth: toward the root-shoot junction in the case of the primary root or stem, toward the primary root or stem for higher order roots or branches, toward the point of attachment for non-vascular leaves, and toward the original point of growth (as determined in the embryo) for thalli." [BSPO:RW]
+comment: Plant structures that do not grow from an apical meristem, such as vascular leaves or petals, should be described using the proximal-distal axis. The proximal-distal axis may also be used for branches or lateral roots, and, in those cases, is concordant with the apical-basal axis.
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: BSPO:0000201
+name: tangential plane
+namespace: spatial
+def: "Anatomical plane that is perpendicular to a radial plane." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:31Z
+
+[Term]
+id: BSPO:0000202
+name: radial plane
+namespace: spatial
+def: "Anatomical plane that follows the two dimensions specified by an apical-basal axis relative to direction of growth and a medial-lateral axis." [BSPO:wd]
+comment: Need to add logical definitions.
+is_a: BSPO:0000400 ! anatomical plane
+created_by: wasila.dahdul
+creation_date: 2014-01-22T15:34:02Z
+
+[Term]
+id: BSPO:0000371
+name: anterior surface
+namespace: spatial
+def: "Anatomical surface that is located on the anterior side of the body or body part." [BSPO:wd]
+xref: FBql:00005848
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000055 ! surface_of anterior side
+relationship: BSPO:0015008 BSPO:0000055 ! surface_of anterior side
+
+[Term]
+id: BSPO:0000372
+name: posterior surface
+namespace: spatial
+def: "Anatomical surface that is located on the posterior side of the body or body part." [BSPO:wd]
+xref: FBql:00005849
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000056 ! surface_of posterior side
+relationship: BSPO:0015008 BSPO:0000056 ! surface_of posterior side
+
+[Term]
+id: BSPO:0000373
+name: apical surface
+namespace: spatial
+def: "Anatomical surface that is located on the apical side of the body or body part." [BSPO:wd]
+xref: FBql:00005854
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000057 ! surface_of apical side
+relationship: BSPO:0015008 BSPO:0000057 ! surface_of apical side
+
+[Term]
+id: BSPO:0000374
+name: basal surface
+namespace: spatial
+def: "Anatomical surface that is located on the basal side of the body or body part." [BSPO:wd]
+xref: FBql:00005855
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000058 ! surface_of basal side
+relationship: BSPO:0015008 BSPO:0000058 ! surface_of basal side
+
+[Term]
+id: BSPO:0000376
+name: contralateral surface
+namespace: spatial
+xref: FBql:00005851
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000060 ! surface_of contralateral side
+relationship: BSPO:0015008 BSPO:0000060 ! surface_of contralateral side
+
+[Term]
+id: BSPO:0000377
+name: proximal surface
+namespace: spatial
+def: "Anatomical surface that is located on the proximal side of the body or body part." [BSPO:wd]
+xref: FBql:00005852
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000061 ! surface_of proximal side
+relationship: BSPO:0015008 BSPO:0000061 ! surface_of proximal side
+
+[Term]
+id: BSPO:0000378
+name: distal surface
+namespace: spatial
+def: "Anatomical surface that is located on the distal side of the body or body part." [BSPO:wd]
+xref: FBql:00005853
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000062 ! surface_of distal side
+relationship: BSPO:0015008 BSPO:0000062 ! surface_of distal side
+
+[Term]
+id: BSPO:0000379
+name: dorsal surface
+namespace: spatial
+def: "Anatomical surface that located on the dorsal side of the body or body part." [BSPO:wd]
+xref: FBql:00005842
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000063 ! surface_of dorsal side
+relationship: BSPO:0015008 BSPO:0000063 ! surface_of dorsal side
+
+[Term]
+id: BSPO:0000381
+name: ipsilateral surface
+namespace: spatial
+def: "Anatomical surface that is located on the same side of an organism or structure." [BSPO:wd]
+xref: FBql:00005850
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000065 ! surface_of ipsilateral side
+relationship: BSPO:0015008 BSPO:0000065 ! surface_of ipsilateral side
+
+[Term]
+id: BSPO:0000382
+name: lateral surface
+namespace: spatial
+def: "Anatomical surface that located on the lateral side of the body or body part." [BSPO:wd]
+xref: FBql:00005844
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000066 ! surface_of lateral side
+relationship: BSPO:0015008 BSPO:0000066 ! surface_of lateral side
+
+[Term]
+id: BSPO:0000383
+name: medial surface
+namespace: spatial
+def: "Anatomical surface that located on the medial side of the body or body part." [BSPO:wd]
+xref: FBql:00005847
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000067 ! surface_of medial side
+relationship: BSPO:0015008 BSPO:0000067 ! surface_of medial side
+
+[Term]
+id: BSPO:0000384
+name: ventral surface
+namespace: spatial
+def: "Anatomical surface that is located on the ventral side of the body or body part." [BSPO:wd]
+xref: FBql:00005843
+is_a: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0000005 ! anatomical surface
+intersection_of: BSPO:0015008 BSPO:0000068 ! surface_of ventral side
+relationship: BSPO:0015008 BSPO:0000068 ! surface_of ventral side
+
+[Term]
+id: BSPO:0000400
+name: anatomical plane
+namespace: spatial
+def: "A flat 2D plane intersecting an anatomical continuant, dividing it into two adjacent portions." [BSPO:cjm]
+comment: These anatomical sections are applicable to most bilaterally symmetrical animals, but bipedal animals such as humans have more complex usage of these terms. For example, in post-embryonic humans a coronal plane is vertical and a transverse plane is horizontal, but for embryos and quadrupeds a coronal plane is horizontal and a transverse plane is vertical.
+synonym: "anatomical cross-section" EXACT []
+synonym: "anatomical section" EXACT []
+synonym: "cross-section" RELATED []
+synonym: "plane" EXACT []
+synonym: "section" EXACT []
+xref: FMA:242982
+is_a: CARO:0000010 ! anatomical boundary
+
+[Term]
+id: BSPO:0000417
+name: sagittal plane
+namespace: spatial
+def: "Anatomical plane that divides a bilateral body into left and right parts, not necessarily of even size." [BSPO:cjm, BSPO:DOS, BSPO:mah]
+synonym: "left/right plane" EXACT []
+synonym: "median plane" EXACT []
+synonym: "sagittal section" EXACT []
+xref: FMA:11361
+is_a: BSPO:0000010 ! anatomical axis
+is_a: BSPO:0000400 ! anatomical plane
+intersection_of: BSPO:0000400 ! anatomical plane
+intersection_of: BSPO:0015005 BSPO:0000017 ! orthogonal_to left-right axis
+intersection_of: parallel_to BSPO:0000013 ! anterior-posterior axis
+intersection_of: parallel_to BSPO:0000016 ! dorsal-ventral axis
+relationship: BSPO:0015005 BSPO:0000017 ! orthogonal_to left-right axis
+relationship: parallel_to BSPO:0000013 ! anterior-posterior axis
+relationship: parallel_to BSPO:0000016 ! dorsal-ventral axis
+
+[Term]
+id: BSPO:0000671
+name: anterior margin
+namespace: spatial
+def: "Anatomical margin that is located on the anterior side of a body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000071 ! anterior region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+
+[Term]
+id: BSPO:0000672
+name: posterior margin
+namespace: spatial
+def: "Anatomical margin that is located on the posterior side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000072 ! posterior region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+
+[Term]
+id: BSPO:0000673
+name: apical margin
+namespace: spatial
+def: "Anatomical margin that is located on the apical side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000073 ! apical region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000057 ! overlaps apical side
+relationship: RO:0002131 BSPO:0000057 ! overlaps apical side
+
+[Term]
+id: BSPO:0000674
+name: basal margin
+namespace: spatial
+def: "Anatomical margin that is located on the basal side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000074 ! basal region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000058 ! overlaps basal side
+relationship: RO:0002131 BSPO:0000058 ! overlaps basal side
+
+[Term]
+id: BSPO:0000677
+name: proximal margin
+namespace: spatial
+def: "Anatomical margin that is located on the proximal region of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000077 ! proximal region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000061 ! overlaps proximal side
+relationship: RO:0002131 BSPO:0000061 ! overlaps proximal side
+
+[Term]
+id: BSPO:0000678
+name: distal margin
+namespace: spatial
+def: "Anatomical margin that is located on the distal side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000078 ! distal region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000062 ! overlaps distal side
+relationship: RO:0002131 BSPO:0000062 ! overlaps distal side
+
+[Term]
+id: BSPO:0000679
+name: dorsal margin
+namespace: spatial
+def: "Anatomical margin that is located on the dorsal side of body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000079 ! dorsal region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+
+[Term]
+id: BSPO:0000680
+name: dorso-lateral margin
+namespace: spatial
+def: "Anatomical margin that is located on the dorso-lateral region of the body or body part." [BSPO:wd]
+synonym: "dorsolateral margin" EXACT []
+is_a: BSPO:0000080 ! dorso-lateral region
+is_a: BSPO:0000679 ! dorsal margin
+is_a: BSPO:0000682 ! lateral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+
+[Term]
+id: BSPO:0000682
+name: lateral margin
+namespace: spatial
+def: "Anatomical margin that is located on the lateral side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000082 ! lateral region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+
+[Term]
+id: BSPO:0000683
+name: medial margin
+namespace: spatial
+def: "Anatomical margin that is located on the medial side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000083 ! medial region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
+relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+
+[Term]
+id: BSPO:0000684
+name: ventral margin
+namespace: spatial
+def: "Anatomical margin that is located on the ventral side of the body or body part." [BSPO:wd]
+is_a: BSPO:0000006 ! anatomical margin
+is_a: BSPO:0000084 ! ventral region
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0000685
+name: ventro-lateral margin
+namespace: spatial
+def: "Anatomical margin that is located on the ventro-lateral region of the body or body part." [BSPO:wd]
+comment: This is an example of a composition of two axis positions
+synonym: "ventrolateral margin" EXACT []
+is_a: BSPO:0000085 ! ventro-lateral region
+is_a: BSPO:0000682 ! lateral margin
+is_a: BSPO:0000684 ! ventral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0000686
+name: antero-dorsal margin
+namespace: spatial
+def: "Anatomical margin that is located on the antero-dorso region of the body or body part." [BSPO:wd]
+synonym: "anterodorsal margin" EXACT []
+is_a: BSPO:0000026 ! antero-dorsal region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000679 ! dorsal margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+
+[Term]
+id: BSPO:0000687
+name: postero-dorsal margin
+namespace: spatial
+def: "Anatomical margin that is located on the postero-dorsal region of the body or body part." [BSPO:wd]
+synonym: "posterodorsal margin" EXACT []
+is_a: BSPO:0000030 ! postero-dorsal region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000679 ! dorsal margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+
+[Term]
+id: BSPO:0000688
+name: antero-ventral margin
+namespace: spatial
+def: "Anatomical margin that is located on the antero-ventral region of the body or body part." [BSPO:wd]
+synonym: "anteroventral margin" EXACT []
+is_a: BSPO:0000027 ! antero-ventral region
+is_a: BSPO:0000671 ! anterior margin
+is_a: BSPO:0000684 ! ventral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0000689
+name: postero-ventral margin
+namespace: spatial
+def: "Anatomical margin that is located on the postero-ventral region of the body or body part." [BSPO:wd]
+synonym: "posteroventral margin" EXACT []
+is_a: BSPO:0000035 ! postero-ventral region
+is_a: BSPO:0000672 ! posterior margin
+is_a: BSPO:0000684 ! ventral margin
+intersection_of: BSPO:0000006 ! anatomical margin
+intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
+relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+
+[Term]
+id: BSPO:0001001
+name: medial-lateral axis
+namespace: spatial
+def: "An axis that extends from the center of organism to one or other side." [BSPO:cjm]
+comment: Properly, the ML axis is a half axis; practically, its usage is less clumsy and less linguistically biased than "left-right". The terms may still be used relatively to describe locations along the LR axis. The gills are medial to the operculum, but lateral to the heart.
+synonym: "M-L axis" EXACT []
+synonym: "medio-lateral axis" EXACT []
+synonym: "mediolateral axis" EXACT []
+synonym: "ML axis" EXACT []
+synonym: "proximal-distal axis " RELATED []
+xref: http://upload.wikimedia.org/wikipedia/commons/3/34/Anatomical_Directions_and_Axes.JPG
+is_a: BSPO:0000196 ! medial-external axis
+
+[Term]
+id: CARO:0000000
+name: anatomical entity
+namespace: spatial
+def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." [CARO:MAH]
+
+[Term]
+id: CARO:0000003
+name: anatomical structure
+namespace: spatial
+def: "Material anatomical entity that is a single connected structure with inherent 3D shape generated by coordinated expression of the organism's own genome." [CC:DOS]
+is_a: CARO:0000006 ! material anatomical entity
+
+[Term]
+id: CARO:0000006
+name: material anatomical entity
+namespace: spatial
+def: "An anatomical entity that has mass." [CC:DOS]
+is_a: BFO:0000040
+is_a: CARO:0000000 ! anatomical entity
+
+[Term]
+id: CARO:0000007
+name: immaterial anatomical entity
+namespace: spatial
+def: "An anatomical entity that has no mass." [CC:DOS]
+is_a: CARO:0000000 ! anatomical entity
+
+[Term]
+id: CARO:0000008
+name: anatomical line
+namespace: spatial
+def: "A one dimensional, immaterial anatomical entity." [CC:DOS]
+is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Term]
+id: CARO:0000010
+name: anatomical boundary
+namespace: spatial
+def: "A non-material anatomical entity of two dimensions. Anatomical boundaries are contiguous structures." [CC:DOS]
+is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Term]
+id: CL:0000000
+name: cell
+is_a: CARO:0000003 ! anatomical structure
+is_a: GO:0005575
+equivalent_to: GO:0005623
+
+[Term]
+id: CL:0000003
+name: native cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+
+[Term]
+id: CL:0000006
+name: neuronal receptor cell
+is_a: CL:0000101 ! sensory neuron
+is_a: CL:0000197 ! receptor cell
+intersection_of: CL:0000197 ! receptor cell
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000007
+name: early embryonic cell
+is_a: CL:0002321 ! embryonic cell
+
+[Term]
+id: CL:0000031
+name: neuroblast
+is_a: CL:0000047 ! neuronal stem cell
+is_a: CL:0000055 ! non-terminally differentiated cell
+
+[Term]
+id: CL:0000034
+name: stem cell
+is_a: CL:0011115 ! precursor cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0017145
+relationship: capable_of GO:0017145
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:0000047
+name: neuronal stem cell
+is_a: CL:0000048 ! multi fate stem cell
+is_a: CL:0002319 ! neural cell
+intersection_of: CL:0000048 ! multi fate stem cell
+intersection_of: part_of UBERON:0001017 ! central nervous system
+relationship: develops_from CL:0000133 ! neurectodermal cell
+relationship: part_of UBERON:0001017 ! central nervous system
+
+[Term]
+id: CL:0000048
+name: multi fate stem cell
+is_a: CL:0000034 ! stem cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0002371 ! somatic cell
+intersection_of: bearer_of PATO:0001402
+intersection_of: capable_of GO:0017145
+relationship: bearer_of PATO:0001402
+relationship: capable_of GO:0017145
+
+[Term]
+id: CL:0000055
+name: non-terminally differentiated cell
+is_a: CL:0011115 ! precursor cell
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:0000056
+name: myoblast
+is_a: CL:0000680 ! muscle precursor cell
+
+[Term]
+id: CL:0000064
+name: ciliated cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: has_plasma_membrane_part GO:0005929
+relationship: has_plasma_membrane_part GO:0005929
+
+[Term]
+id: CL:0000066
+name: epithelial cell
+is_a: CL:0000548 ! animal cell
+intersection_of: CL:0000548 ! animal cell
+intersection_of: part_of UBERON:0000483 ! epithelium
+relationship: part_of UBERON:0000483 ! epithelium
+
+[Term]
+id: CL:0000067
+name: ciliated epithelial cell
+is_a: CL:0000064 ! ciliated cell
+is_a: CL:0000075 ! columnar/cuboidal epithelial cell
+intersection_of: CL:0000075 ! columnar/cuboidal epithelial cell
+intersection_of: has_plasma_membrane_part GO:0005929
+relationship: has_plasma_membrane_part GO:0005929
+
+[Term]
+id: CL:0000075
+name: columnar/cuboidal epithelial cell
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+
+[Term]
+id: CL:0000098
+name: sensory epithelial cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0000197 ! receptor cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000101
+name: sensory neuron
+is_a: CL:0000526 ! afferent neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000133
+name: neurectodermal cell
+is_a: CL:0000221 ! ectodermal cell
+
+[Term]
+id: CL:0000134
+name: mesenchymal stem cell
+is_a: CL:0000048 ! multi fate stem cell
+is_a: CL:0000219 ! motile cell
+is_a: CL:0002320 ! connective tissue cell
+intersection_of: CL:0002320 ! connective tissue cell
+intersection_of: capable_of GO:0001649
+intersection_of: capable_of GO:0016477
+intersection_of: capable_of GO:0030182
+intersection_of: capable_of GO:0030855
+intersection_of: capable_of GO:0045444
+intersection_of: capable_of GO:0055007
+intersection_of: capable_of GO:0060591
+intersection_of: has_plasma_membrane_part PR:000001345
+intersection_of: has_plasma_membrane_part PR:000001800
+intersection_of: has_plasma_membrane_part PR:000001843
+intersection_of: lacks_plasma_membrane_part GO:0042613
+intersection_of: lacks_plasma_membrane_part PR:000001003
+intersection_of: lacks_plasma_membrane_part PR:000001006
+relationship: capable_of GO:0001649
+relationship: capable_of GO:0016477
+relationship: capable_of GO:0030182
+relationship: capable_of GO:0030855
+relationship: capable_of GO:0045444
+relationship: capable_of GO:0055007
+relationship: capable_of GO:0060591
+relationship: has_plasma_membrane_part PR:000001345
+relationship: has_plasma_membrane_part PR:000001800
+relationship: has_plasma_membrane_part PR:000001843
+relationship: lacks_plasma_membrane_part GO:0042613
+relationship: lacks_plasma_membrane_part PR:000001003
+relationship: lacks_plasma_membrane_part PR:000001006
+
+[Term]
+id: CL:0000183
+name: contractile cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000187
+name: muscle cell
+is_a: BFO:0000004
+is_a: CL:0000183 ! contractile cell
+is_a: CL:0000393 ! electrically responsive cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+relationship: develops_from CL:0000056 ! myoblast
+
+[Term]
+id: CL:0000197
+name: receptor cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000199
+name: mechanoreceptor cell
+is_a: CL:0000101 ! sensory neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050974
+relationship: capable_of GO:0050974
+
+[Term]
+id: CL:0000210
+name: photoreceptor cell
+is_a: CL:0000006 ! neuronal receptor cell
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050962
+relationship: capable_of GO:0050962
+
+[Term]
+id: CL:0000211
+name: electrically active cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000219
+name: motile cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0048870
+relationship: capable_of GO:0048870
+
+[Term]
+id: CL:0000221
+name: ectodermal cell
+is_a: BFO:0000004
+is_a: CL:0002321 ! embryonic cell
+relationship: part_of UBERON:0000924 ! ectoderm
+
+[Term]
+id: CL:0000222
+name: mesodermal cell
+is_a: BFO:0000004
+is_a: CL:0002321 ! embryonic cell
+relationship: part_of UBERON:0000926 ! mesoderm
+
+[Term]
+id: CL:0000225
+name: anucleate cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: bearer_of PATO:0001405
+relationship: bearer_of PATO:0001405
+
+[Term]
+id: CL:0000255
+name: eukaryotic cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000353
+name: blastoderm cell
+is_a: CL:0000007 ! early embryonic cell
+
+[Term]
+id: CL:0000393
+name: electrically responsive cell
+is_a: CL:0000211 ! electrically active cell
+
+[Term]
+id: CL:0000404
+name: electrically signaling cell
+is_a: CL:0000211 ! electrically active cell
+
+[Term]
+id: CL:0000526
+name: afferent neuron
+is_a: CL:0000540 ! neuron
+
+[Term]
+id: CL:0000540
+name: neuron
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000393 ! electrically responsive cell
+is_a: CL:0000404 ! electrically signaling cell
+is_a: CL:0002319 ! neural cell
+relationship: capable_of GO:0019226
+relationship: develops_from CL:0000031 ! neuroblast
+
+[Term]
+id: CL:0000548
+name: animal cell
+is_a: CL:0000255 ! eukaryotic cell
+relationship: has_part GO:0005902
+
+[Term]
+id: CL:0000680
+name: muscle precursor cell
+is_a: CL:0000055 ! non-terminally differentiated cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: GO:0005623
+intersection_of: develops_into CL:0000187 ! muscle cell
+relationship: develops_from CL:0000222 ! mesodermal cell
+relationship: develops_into CL:0000187 ! muscle cell
+
+[Term]
+id: CL:0000710
+name: neurecto-epithelial cell
+is_a: CL:0000075 ! columnar/cuboidal epithelial cell
+is_a: CL:0002077 ! ecto-epithelial cell
+intersection_of: CL:0002077 ! ecto-epithelial cell
+intersection_of: develops_from CL:0000133 ! neurectodermal cell
+relationship: develops_from CL:0000133 ! neurectodermal cell
+
+[Term]
+id: CL:0002077
+name: ecto-epithelial cell
+is_a: BFO:0000004
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: develops_from CL:0000221 ! ectodermal cell
+relationship: develops_from CL:0000221 ! ectodermal cell
+
+[Term]
+id: CL:0002078
+name: meso-epithelial cell
+is_a: BFO:0000004
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: develops_from CL:0000222 ! mesodermal cell
+relationship: develops_from CL:0000222 ! mesodermal cell
+
+[Term]
+id: CL:0002242
+name: nucleate cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: has_part GO:0005634
+relationship: has_part GO:0005634
+
+[Term]
+id: CL:0002319
+name: neural cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of UBERON:0001016 ! nervous system
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: CL:0002320
+name: connective tissue cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0002371 ! somatic cell
+intersection_of: part_of UBERON:0002384
+relationship: part_of UBERON:0002384
+
+[Term]
+id: CL:0002321
+name: embryonic cell
+is_a: CL:0000548 ! animal cell
+
+[Term]
+id: CL:0002371
+name: somatic cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0011115
+name: precursor cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0030154
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:2000029
+name: central nervous system neuron
+is_a: CL:0000540 ! neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: part_of UBERON:0001017 ! central nervous system
+relationship: part_of UBERON:0001017 ! central nervous system
 
 [Term]
 id: CTENO:0000001
-name: comb plate
+name: ctene plate
 def: "A collection of cilia attached to basal cushions and made up of polster cells. A characteristic feature of ctenophores" []
-synonym: "ctene" EXACT []
+comment: The move- ment of the ctene plates are controlled by the apical organ, a sensory structure containing a statocyst located at the aboral pole (Tamm, 1982, for review)
+synonym: "comb plate" RELATED []
+synonym: "ctene" BROAD []
 is_a: UBERON:0000062 ! organ
-relationship: RO:0002216 GO:0040011 ! capable of part of locomotion
-relationship: UBREL:0000002 GO:0005929 ! composed_primarily_of cilium
+relationship: part_of CTENO:0000137 ! ctene row
+relationship: RO:0002216 GO:0040011
+relationship: RO:0002254 CTENO:0000099 ! e1 micromere
+relationship: RO:0002254 CTENO:0000103 ! m12 micromere
+relationship: RO:0002473 GO:0005929
 property_value: UBPROP:0000008 "lost in Platyctenida" xsd:string
 
 [Term]
@@ -22,93 +2060,107 @@ is_a: UBERON:0000483 ! epithelium
 id: CTENO:0000003
 name: gastrodermis
 is_a: UBERON:0000483 ! epithelium
+property_value: seeAlso https://en.wikipedia.org/wiki/Gastrodermis xsd:anyURI
 
 [Term]
 id: CTENO:0000004
 name: mesoglea
 def: "A thick jelly-like layer between the epidermis and gastrodermis. The mesoglea is mostly acellular and composed of extracellular matrix, but it also has some muscle and mesenchymal cells." []
 is_a: UBERON:0000479 ! tissue
-relationship: BFO:0000051 CL:0000134 ! has_part mesenchymal cell
-relationship: BFO:0000051 CL:0000187 ! has_part muscle cell
+relationship: has_part CL:0000134 ! mesenchymal stem cell
+relationship: has_part CL:0000187 ! muscle cell
+property_value: seeAlso https://en.wikipedia.org/wiki/Mesoglea xsd:anyURI
 
 [Term]
 id: CTENO:0000005
 name: comb plate cilium
-is_a: GO:0005929 ! cilium
-intersection_of: GO:0005929 ! cilium
-intersection_of: BFO:0000050 CTENO:0000001 ! part_of comb plate
+is_a: GO:0005929
+intersection_of: GO:0005929
+intersection_of: part_of CTENO:0000001 ! ctene plate
+relationship: part_of CTENO:0000001 ! ctene plate
 
 [Term]
 id: CTENO:0000006
 name: sensory cell cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000007
 name: tentacle sheath cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000008
 name: polar field cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
+intersection_of: GO:0005929
+intersection_of: part_of CTENO:0000145 ! polar field
+relationship: part_of CTENO:0000145 ! polar field
 
 [Term]
 id: CTENO:0000009
 name: auricular cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000010
 name: pharyngeal cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000011
 name: good groove cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000012
 name: balancer cilium
-is_a: GO:0005929 ! cilium
-intersection_of: GO:0005929 ! cilium
-intersection_of: BFO:0000050 CTENO:0000057 ! part_of balancer cell
+is_a: CTENO:0000006 ! sensory cell cilium
+intersection_of: GO:0005929
+intersection_of: part_of CTENO:0000057 ! balancer cell
+relationship: part_of CTENO:0000057 ! balancer cell
 
 [Term]
 id: CTENO:0000013
 name: dome cilium
-is_a: GO:0005929 ! cilium
-relationship: BFO:0000050 CTENO:0000017 ! part_of apical sense organ
+comment: The statocyst is protected by a transparent dome made of long, immobile cilia.
+is_a: GO:0005929
+relationship: part_of CTENO:0000017 ! apical sense organ
 
 [Term]
 id: CTENO:0000014
 name: aboral groove cilium
-is_a: GO:0005929 ! cilium
+is_a: GO:0005929
 
 [Term]
 id: CTENO:0000015
 name: extracellular matrix of mesoglea
 synonym: "mesogleal extracellular matrix" EXACT []
-is_a: GO:0031012 ! extracellular matrix
-intersection_of: GO:0031012 ! extracellular matrix
-intersection_of: BFO:0000050 CTENO:0000004 ! part_of mesoglea
+is_a: GO:0031012
+intersection_of: GO:0031012
+intersection_of: part_of CTENO:0000004 ! mesoglea
+relationship: part_of CTENO:0000004 ! mesoglea
 
 [Term]
 id: CTENO:0000016
 name: polster cell
 is_a: CL:0000000 ! cell
+is_a: GO:0005623
 
 [Term]
 id: CTENO:0000017
 name: apical sense organ
+synonym: "aboral organ" RELATED []
+synonym: "apical organ" RELATED []
 is_a: UBERON:0000062 ! organ
-relationship: BFO:0000050 UBERON:0001016 ! part_of nervous system
-relationship: BFO:0000050 UBERON:0001032 ! part_of sensory system
+relationship: part_of CTENO:0000151 ! aboral part of organism
+relationship: part_of UBERON:0001016 ! nervous system
+relationship: part_of UBERON:0001032 ! sensory system
 
 [Term]
 id: CTENO:0000018
 name: tentacle
+comment: Most ctenophores also bear two muscular tentacles which are used for prey capture, and ultrastruc- tural studies have shown that these structures are distinct from cnidarian tentacles (Hernandez-Nicaise, 1991)
 is_a: UBERON:0000026 ! appendage
 property_value: UBPROP:0000008 "absent in beroids" xsd:string
 
@@ -117,13 +2169,18 @@ id: CTENO:0000019
 name: photocyte
 def: "Light-producing cell present in nearly all ctenophores" []
 is_a: CL:0000000 ! cell
+is_a: GO:0005623
+relationship: develops_from CTENO:0000067 ! 2M macromere
 
 [Term]
 id: CTENO:0000020
 name: colloblast
 def: "A specialized adhesive cell found in ctenophores" []
 is_a: CL:0000000 ! cell
-relationship: BFO:0000050 CTENO:0000018 ! part_of tentacle
+is_a: GO:0005623
+relationship: develops_from CTENO:0000104 ! e2 micromere
+relationship: part_of CTENO:0000018 ! tentacle
+property_value: seeAlso https://en.wikipedia.org/wiki/Colloblast xsd:anyURI
 
 [Term]
 id: CTENO:0000021
@@ -135,8 +2192,9 @@ is_a: UBERON:0000062 ! organ
 id: CTENO:0000022
 name: adult ctenophore
 is_a: UBERON:0007023 ! adult organism
-intersection_of: UBERON:0000468 ! multi-cellular organism
-intersection_of: existence_starts_and_ends_during CTENO:0000025 ! ctenophore adult stage
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: RO:0002491 CTENO:0000025 ! ctenophore adult stage
+relationship: RO:0002491 CTENO:0000025 ! ctenophore adult stage
 relationship: SIO:000658 CTENO:0000023 ! cydippid larva
 property_value: UBPROP:0000008 "Pleurobrachia species maintain cydippid forms as adults, but the others become radically different: M. leidyi greatly reduce their tentacles and form large oral lobes; B. ovata lack tentacles and form large oral lips that they use to engulf or nip at other ctenophores; and platyctenes become compressed in the oral-aboral direction and adopt a sessile or creeping lifestyle, crawling around the substratum rather than locomoting by beating their ctene rows." xsd:string {http://purl.obolibrary.org/obo/core#source="doi:10.1101/pdb.emo106"}
 
@@ -145,8 +2203,9 @@ id: CTENO:0000023
 name: cydippid larva
 def: "A ctenophore larva" []
 is_a: UBERON:0002548 ! larva
-intersection_of: UBERON:0000468 ! multi-cellular organism
-intersection_of: existence_starts_and_ends_during CTENO:0000024 ! cydippid stage
+intersection_of: UBERON:0000468 ! multicellular organism
+intersection_of: RO:0002491 CTENO:0000024 ! cydippid stage
+relationship: RO:0002491 CTENO:0000024 ! cydippid stage
 
 [Term]
 id: CTENO:0000024
@@ -169,30 +2228,31 @@ id: CTENO:0000027
 name: nurse cell
 comment: connected to the oocyte by cytoplasmic bridges that transport cytoplasm and yolk to the oocyte (Dunlap Pianka 1974)
 is_a: CL:0000000 ! cell
+is_a: GO:0005623
 property_value: UBPROP:0000008 "In Bolinopsis microptera each oocyte is associated with as many as 100 nurse cells." xsd:string
 
 [Term]
 id: CTENO:0000028
 name: ectoplasm
-is_a: GO:0005575 ! cellular_component
-relationship: BFO:0000050 GO:0005737 ! part_of cytoplasm
+is_a: GO:0005575
+relationship: part_of GO:0005737
 
 [Term]
 id: CTENO:0000029
 name: endoplasm
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0005575
 
 [Term]
 id: CTENO:0000030
 name: subcortical plasm
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0005575
 relationship: RO:0002220 CTENO:0000028 ! adjacent_to ectoplasm
 relationship: RO:0002220 CTENO:0000029 ! adjacent_to endoplasm
 
 [Term]
 id: CTENO:0000031
 name: periodic acid Schiff positive yolk particles
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0005575
 
 [Term]
 id: CTENO:0000032
@@ -203,14 +2263,18 @@ is_a: UBERON:0000161 ! orifice
 id: CTENO:0000033
 name: anal pore
 is_a: UBERON:0000161 ! orifice
+relationship: part_of CTENO:0000142 ! backslash quadrant
+relationship: part_of CTENO:0000151 ! aboral part of organism
 
 [Term]
 id: CTENO:0000034
 name: ctenophore anal canal
 is_a: UBERON:0004111 ! anatomical conduit
 intersection_of: UBERON:0004111 ! anatomical conduit
-intersection_of: connects CTENO:0000033 ! anal pore
-relationship: RO:0002202 CTENO:0000067 ! develops from 2M macromere
+intersection_of: RO:0002176 CTENO:0000033 ! anal pore
+relationship: develops_from CTENO:0000067 ! 2M macromere
+relationship: part_of CTENO:0000142 ! backslash quadrant
+relationship: RO:0002176 CTENO:0000033 ! anal pore
 
 [Term]
 id: CTENO:0000035
@@ -223,7 +2287,7 @@ id: CTENO:0000036
 name: parietal muscle
 def: "Ribbon-shaped smooth muscle that resides between the glandular epithelial cells and the basal lamina" []
 is_a: UBERON:0001135 ! smooth muscle tissue
-relationship: BFO:0000050 UBERON:0002416 ! part_of integumental system
+relationship: part_of UBERON:0002416 ! integumental system
 
 [Term]
 id: CTENO:0000037
@@ -235,7 +2299,8 @@ id: CTENO:0000038
 name: mesogleal muscle
 is_a: CTENO:0000037 ! giant smooth muscle
 intersection_of: UBERON:0002385 ! muscle tissue
-intersection_of: BFO:0000050 CTENO:0000004 ! part_of mesoglea
+intersection_of: part_of CTENO:0000004 ! mesoglea
+relationship: part_of CTENO:0000004 ! mesoglea
 
 [Term]
 id: CTENO:0000039
@@ -257,12 +2322,14 @@ id: CTENO:0000042
 name: tentacular muscle
 is_a: UBERON:0014892 ! skeletal muscle organ
 intersection_of: UBERON:0001630 ! muscle organ
-intersection_of: BFO:0000050 CTENO:0000018 ! part_of tentacle
-property_value: editor_notes "Within the tentacles themselves are mesogleal muscles that are constantly being produced from cells at the base of the tentacle. We need to distinguish between muscles that are part of the tentacle proper and the mesogleal component (see mesogleal muscles)"
+intersection_of: part_of CTENO:0000018 ! tentacle
+relationship: part_of CTENO:0000018 ! tentacle
+property_value: editor_notes "Within the tentacles themselves are mesogleal muscles that are constantly being produced from cells at the base of the tentacle. We need to distinguish between muscles that are part of the tentacle proper and the mesogleal component (see mesogleal muscles)" xsd:string
 
 [Term]
 id: CTENO:0000043
 name: trans-tentacular muscle
+def: "A muscle that connects the two tentacle apparatuses" []
 is_a: UBERON:0014892 ! skeletal muscle organ
 
 [Term]
@@ -286,7 +2353,10 @@ is_a: UBERON:0006134 ! nerve fiber
 id: CTENO:0000047
 name: subepidermal nerve net
 is_a: UBERON:0011216 ! organ system subdivision
-relationship: BFO:0000050 UBERON:0001016 ! part_of nervous system
+relationship: has_part CL:0000210 ! photoreceptor cell
+relationship: has_part CTENO:0000017 ! apical sense organ
+relationship: part_of UBERON:0001016 ! nervous system
+property_value: seeAlso https://en.wikipedia.org/wiki/Nerve_net xsd:anyURI
 
 [Term]
 id: CTENO:0000048
@@ -294,16 +2364,18 @@ name: gastrodermal nerve
 synonym: "subgastrodermal nerve" EXACT []
 is_a: UBERON:0001021 ! nerve
 intersection_of: UBERON:0001021 ! nerve
-intersection_of: RO:0001025 CTENO:0000003 ! located_in gastrodermis
-relationship: innervates CTENO:0000019 ! photocyte
-relationship: RO:0001025 CTENO:0000026 ! located_in meridional canal
+intersection_of: RO:0001025 CTENO:0000003 ! gastrodermis
+relationship: RO:0001025 CTENO:0000003 ! gastrodermis
+relationship: RO:0001025 CTENO:0000026 ! meridional canal
+relationship: RO:0002134 CTENO:0000019 ! photocyte
 
 [Term]
 id: CTENO:0000049
 name: mesoglea of tentacle
 is_a: CTENO:0000004 ! mesoglea
 intersection_of: CTENO:0000004 ! mesoglea
-intersection_of: BFO:0000050 CTENO:0000018 ! part_of tentacle
+intersection_of: part_of CTENO:0000018 ! tentacle
+relationship: part_of CTENO:0000018 ! tentacle
 
 [Term]
 id: CTENO:0000050
@@ -321,14 +2393,16 @@ is_a: CTENO:0000052 ! nerve network cell
 [Term]
 id: CTENO:0000052
 name: nerve network cell
-is_a: CL:0000000 ! cell
+is_a: CL:0002319 ! neural cell
 intersection_of: CL:0000000 ! cell
-intersection_of: BFO:0000050 CTENO:0000047 ! part_of subepidermal nerve net
+intersection_of: part_of CTENO:0000047 ! subepidermal nerve net
+relationship: develops_from CTENO:0000100 ! m1 micromere
+relationship: part_of CTENO:0000047 ! subepidermal nerve net
 
 [Term]
 id: CTENO:0000053
 name: nerve fiber of mesoglea of tentacle
-is_a: UBERON:0006134 ! nerve fiber
+is_a: CTENO:0000046 ! mesogleal nerve fiber
 
 [Term]
 id: CTENO:0000054
@@ -338,25 +2412,32 @@ is_a: UBERON:0000475 ! organism subdivision
 [Term]
 id: CTENO:0000055
 name: apical organ floor
+comment: Genes: MlIslet
 is_a: UBERON:0000483 ! epithelium
-relationship: BFO:0000050 CTENO:0000017 ! part_of apical sense organ
-relationship: BFO:0000051 CTENO:0000012 ! has_part balancer cilium
+relationship: has_part CTENO:0000012 ! balancer cilium
+relationship: part_of CTENO:0000017 ! apical sense organ
+relationship: RO:0002254 CTENO:0000099 ! e1 micromere
 
 [Term]
 id: CTENO:0000056
 name: lithocyte
-def: "A mineralized cell generated and constantly replaced in the floor of the apical organ." []
+def: "A mineralized cell generated and constantly replaced in the floor of the apical organ. They are supported on top of the balancing cilia that make up the gravity-sensing statocyst of the apical organ." []
 comment: control the posture of the animal
-is_a: CL:0000000 ! cell
-relationship: BFO:0000050 CTENO:0000055 ! part_of apical organ floor
+is_a: CL:0002319 ! neural cell
+relationship: part_of CTENO:0000017 ! apical sense organ
+relationship: RO:0002207 CTENO:0000134 ! lithocyte progenitor
 
 [Term]
 id: CTENO:0000057
 name: balancer cell
+is_a: CL:0000006 ! neuronal receptor cell
+is_a: CL:0000098 ! sensory epithelial cell
 is_a: CL:0000199 ! mechanoreceptor cell
+is_a: CL:0000710 ! neurecto-epithelial cell
 intersection_of: CL:0000000 ! cell
-intersection_of: BFO:0000051 CTENO:0000012 ! has_part balancer cilium
-relationship: BFO:0000050 CTENO:0000055 ! part_of apical organ floor
+intersection_of: has_part CTENO:0000012 ! balancer cilium
+relationship: has_part CTENO:0000012 ! balancer cilium
+relationship: part_of CTENO:0000055 ! apical organ floor
 
 [Term]
 id: CTENO:0000058
@@ -364,126 +2445,2773 @@ name: apical organ statolith
 comment: covered by a dome of nonmotile cilia
 is_a: UBERON:0006582 ! statolith
 intersection_of: UBERON:0006582 ! statolith
-intersection_of: BFO:0000050 CTENO:0000017 ! part_of apical sense organ
+intersection_of: part_of CTENO:0000017 ! apical sense organ
+relationship: part_of CTENO:0000017 ! apical sense organ
 
 [Term]
 id: CTENO:0000059
 name: tentacular nerve
 is_a: UBERON:0001021 ! nerve
 intersection_of: UBERON:0001021 ! nerve
-intersection_of: connects CTENO:0000017 ! apical sense organ
-intersection_of: connects CTENO:0000018 ! tentacle
+intersection_of: RO:0002176 CTENO:0000017 ! apical sense organ
+intersection_of: RO:0002176 CTENO:0000018 ! tentacle
+relationship: RO:0002176 CTENO:0000017 ! apical sense organ
+relationship: RO:0002176 CTENO:0000018 ! tentacle
 
 [Term]
 id: CTENO:0000060
 name: epithelial papilla
-is_a: CL:0000066 ! epithelial cell
+is_a: CL:0000006 ! neuronal receptor cell
+is_a: CL:0000098 ! sensory epithelial cell
 is_a: CL:0000199 ! mechanoreceptor cell
-relationship: BFO:0000050 CTENO:0000017 ! part_of apical sense organ
+is_a: CL:0000710 ! neurecto-epithelial cell
+relationship: part_of CTENO:0000017 ! apical sense organ
 
 [Term]
 id: CTENO:0000061
-name: mnemiopsin
-comment: emits light in the pres- ence of calcium ions (Ward and Seliger 1974).
-is_a: CHEBI:36080 ! protein
+name: photoprotein
+comment: emits light in the presence of calcium ions (Ward and Seliger 1974).
+synonym: "mnemiopsin" RELATED []
+is_a: CHEBI:36080
 
 [Term]
 id: CTENO:0000062
 name: quadrant
 def: "One of of four nearly identical quadrants organized along the oral-aboral axis. Each of the four quadrants is derived largely from one cell of the four-cell-stage embryo. At the eight-cell stage each quadrant contains a single E (\"end\") and M (\"middle\") blastomere. Subsequently, micromeres are formed first at the aboral pole and later at the oral pole." [] {http://purl.obolibrary.org/obo/core#source="PMID:10525332"}
+comment: Two orthogonal planes run along the oral–aboral axis which define four quadrants (Fig.
 is_a: UBERON:0000475 ! organism subdivision
+relationship: RO:0002220 CTENO:0000135 ! adjacent_to adesophageal plane
+relationship: RO:0002220 CTENO:0000140 ! adjacent_to tentacular plane
 
 [Term]
 id: CTENO:0000063
-name: ctenophore blastmere
+name: ctenophore blastomere
 is_a: CL:0000353 ! blastoderm cell
 
 [Term]
 id: CTENO:0000064
-name: E blastomere
-is_a: CTENO:0000063 ! ctenophore blastmere
-relationship: RO:0002207 CTENO:0000070 ! directly develops from EM blastomere
+name: E macromere, 8 cell stage
+is_a: CTENO:0000082 ! macromere, 8 cell stage
 
 [Term]
 id: CTENO:0000065
 name: M blastomere
-is_a: CTENO:0000063 ! ctenophore blastmere
-relationship: RO:0002207 CTENO:0000070 ! directly develops from EM blastomere
+is_a: CTENO:0000082 ! macromere, 8 cell stage
 
 [Term]
 id: CTENO:0000066
 name: micromere
-is_a: CL:0000000 ! cell
+is_a: CTENO:0000063 ! ctenophore blastomere
+relationship: RO:0002496 UBERON:0007236 ! 8 cell stage
 
 [Term]
 id: CTENO:0000067
 name: 2M macromere
-is_a: CTENO:0000075 ! macromere
+is_a: CTENO:0000087 ! macromere, 32 cell stage and above
+intersection_of: CTENO:0000087 ! macromere, 32 cell stage and above
+intersection_of: RO:0002207 CTENO:0000076 ! 1M macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000076 ! 1M macromere, 16 cell stage
 
 [Term]
 id: CTENO:0000068
 name: 3E macromere
-is_a: CTENO:0000075 ! macromere
+is_a: CTENO:0000088 ! macromere, 60 cell stage
 
 [Term]
 id: CTENO:0000069
 name: circumpharyngeal muscle cell
 is_a: CL:0000187 ! muscle cell
-relationship: RO:0002202 CTENO:0000067 ! develops from 2M macromere
+relationship: develops_from CTENO:0000092 ! 2M-slash macromere
 
 [Term]
 id: CTENO:0000070
-name: EM blastomere
-is_a: CTENO:0000063 ! ctenophore blastmere
-intersection_of: CL:0000000 ! cell
-intersection_of: existence_starts_and_ends_during UBERON:0007233 ! 4 cell stage
+name: EM macromere, 4 cell stage
+is_a: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: RO:0002491 UBERON:0007233 ! 4 cell stage
+relationship: RO:0002491 UBERON:0007233 ! 4 cell stage
 
 [Term]
 id: CTENO:0000071
 name: EM-slash blastomere
-is_a: CTENO:0000070 ! EM blastomere
+is_a: CTENO:0000070 ! EM macromere, 4 cell stage
 
 [Term]
 id: CTENO:0000072
 name: EM-backslash blastomere
-is_a: CTENO:0000070 ! EM blastomere
+is_a: CTENO:0000070 ! EM macromere, 4 cell stage
 
 [Term]
 id: CTENO:0000073
 name: M-slash blastomere
 is_a: CTENO:0000065 ! M blastomere
 intersection_of: CTENO:0000065 ! M blastomere
-intersection_of: RO:0002202 CTENO:0000071 ! develops from EM-slash blastomere
+intersection_of: develops_from CTENO:0000071 ! EM-slash blastomere
+relationship: develops_from CTENO:0000071 ! EM-slash blastomere
 
 [Term]
 id: CTENO:0000074
 name: M-blackslash blastomere
 is_a: CTENO:0000065 ! M blastomere
 intersection_of: CTENO:0000065 ! M blastomere
-intersection_of: RO:0002202 CTENO:0000072 ! develops from EM-backslash blastomere
+intersection_of: develops_from CTENO:0000072 ! EM-backslash blastomere
+relationship: develops_from CTENO:0000072 ! EM-backslash blastomere
 
 [Term]
 id: CTENO:0000075
 name: macromere
-is_a: CL:0000000 ! cell
+is_a: CTENO:0000063 ! ctenophore blastomere
 
 [Term]
 id: CTENO:0000076
-name: 1M macromere
-is_a: CTENO:0000075 ! macromere
-
-[Term]
-id: CTENO:0000077
-name: 1E macromere
-is_a: CTENO:0000075 ! macromere
+name: 1M macromere, 16 cell stage
+is_a: CTENO:0000085 ! macromere, 16 cell stage
+intersection_of: CTENO:0000085 ! macromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000081 ! M macromere, 8 cell stage
+relationship: RO:0002207 CTENO:0000081 ! M macromere, 8 cell stage
 
 [Term]
 id: CTENO:0000078
-name: 2E macromere
-is_a: CTENO:0000075 ! macromere
+name: 2E macromere, 32 cell stage
+is_a: CTENO:0000087 ! macromere, 32 cell stage and above
+intersection_of: CTENO:0000087 ! macromere, 32 cell stage and above
+intersection_of: RO:0002207 CTENO:0000086 ! 1E macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000086 ! 1E macromere, 16 cell stage
 
 [Term]
 id: CTENO:0000079
 name: 3M macromere
+is_a: CTENO:0000088 ! macromere, 60 cell stage
+
+[Term]
+id: CTENO:0000081
+name: M macromere, 8 cell stage
+is_a: CTENO:0000082 ! macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000082
+name: macromere, 8 cell stage
 is_a: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: RO:0002207 CTENO:0000070 ! EM macromere, 4 cell stage
+intersection_of: RO:0002491 UBERON:0007236 ! 8 cell stage
+relationship: RO:0002207 CTENO:0000070 ! EM macromere, 4 cell stage
+relationship: RO:0002491 UBERON:0007236 ! 8 cell stage
+
+[Term]
+id: CTENO:0000083
+name: M-backslash macromere
+is_a: CTENO:0000081 ! M macromere, 8 cell stage
+intersection_of: CTENO:0000081 ! M macromere, 8 cell stage
+intersection_of: RO:0002207 CTENO:0000072 ! EM-backslash blastomere
+relationship: RO:0002207 CTENO:0000072 ! EM-backslash blastomere
+
+[Term]
+id: CTENO:0000084
+name: M-slash macromere
+is_a: CTENO:0000081 ! M macromere, 8 cell stage
+intersection_of: CTENO:0000081 ! M macromere, 8 cell stage
+intersection_of: RO:0002207 CTENO:0000071 ! EM-slash blastomere
+relationship: RO:0002207 CTENO:0000071 ! EM-slash blastomere
+
+[Term]
+id: CTENO:0000085
+name: macromere, 16 cell stage
+is_a: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: RO:0002207 CTENO:0000082 ! macromere, 8 cell stage
+intersection_of: RO:0002491 CTENO:0000116 ! ctenophore 16 cell stage
+relationship: RO:0002207 CTENO:0000082 ! macromere, 8 cell stage
+relationship: RO:0002491 CTENO:0000116 ! ctenophore 16 cell stage
+
+[Term]
+id: CTENO:0000086
+name: 1E macromere, 16 cell stage
+is_a: CTENO:0000085 ! macromere, 16 cell stage
+intersection_of: CTENO:0000085 ! macromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000064 ! E macromere, 8 cell stage
+relationship: RO:0002207 CTENO:0000064 ! E macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000087
+name: macromere, 32 cell stage and above
+comment: 32 cell stage refers to time of birth. 2M cells persist
+is_a: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: RO:0002491 CTENO:0000117 ! ctenophore 32 cell stage
+relationship: RO:0002491 CTENO:0000117 ! ctenophore 32 cell stage
+
+[Term]
+id: CTENO:0000088
+name: macromere, 60 cell stage
+comment: 2M cells persist
+is_a: CTENO:0000075 ! macromere
+intersection_of: CTENO:0000075 ! macromere
+intersection_of: RO:0002491 CTENO:0000118 ! ctenophore 60 cell stage
+relationship: RO:0002491 CTENO:0000118 ! ctenophore 60 cell stage
+
+[Term]
+id: CTENO:0000090
+name: 1M-backslash macromere, 16 cell stage
+is_a: CTENO:0000076 ! 1M macromere, 16 cell stage
+intersection_of: CTENO:0000076 ! 1M macromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000083 ! M-backslash macromere
+relationship: RO:0002207 CTENO:0000083 ! M-backslash macromere
+
+[Term]
+id: CTENO:0000091
+name: 1M-slash macromere, 16 cell stage
+is_a: CTENO:0000076 ! 1M macromere, 16 cell stage
+intersection_of: CTENO:0000076 ! 1M macromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000073 ! M-slash blastomere
+relationship: RO:0002207 CTENO:0000073 ! M-slash blastomere
+
+[Term]
+id: CTENO:0000092
+name: 2M-slash macromere
+is_a: CTENO:0000067 ! 2M macromere
+intersection_of: CTENO:0000067 ! 2M macromere
+intersection_of: RO:0002207 CTENO:0000091 ! 1M-slash macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000091 ! 1M-slash macromere, 16 cell stage
+
+[Term]
+id: CTENO:0000093
+name: 2M-backslash macromere
+is_a: CTENO:0000067 ! 2M macromere
+intersection_of: CTENO:0000067 ! 2M macromere
+intersection_of: RO:0002207 CTENO:0000090 ! 1M-backslash macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000090 ! 1M-backslash macromere, 16 cell stage
+
+[Term]
+id: CTENO:0000094
+name: 3M-slash macromere, 60 cell stage
+is_a: CTENO:0000079 ! 3M macromere
+
+[Term]
+id: CTENO:0000095
+name: 3M-backslash macromere, 30 cell stage
+is_a: CTENO:0000079 ! 3M macromere
+
+[Term]
+id: CTENO:0000096
+name: micromere, 16 cell stage
+is_a: CTENO:0000066 ! micromere
+intersection_of: CTENO:0000066 ! micromere
+intersection_of: CTENO:0000066 ! micromere
+intersection_of: RO:0002207 CTENO:0000082 ! macromere, 8 cell stage
+intersection_of: RO:0002491 CTENO:0000116 ! ctenophore 16 cell stage
+relationship: RO:0002207 CTENO:0000082 ! macromere, 8 cell stage
+relationship: RO:0002491 CTENO:0000116 ! ctenophore 16 cell stage
+
+[Term]
+id: CTENO:0000097
+name: micromere, 32 cell stage
+is_a: CTENO:0000066 ! micromere
+intersection_of: CTENO:0000066 ! micromere
+intersection_of: RO:0002491 CTENO:0000117 ! ctenophore 32 cell stage
+relationship: RO:0002491 CTENO:0000117 ! ctenophore 32 cell stage
+
+[Term]
+id: CTENO:0000098
+name: micromere, 60 cell stage
+is_a: CTENO:0000066 ! micromere
+intersection_of: CTENO:0000066 ! micromere
+intersection_of: RO:0002491 CTENO:0000118 ! ctenophore 60 cell stage
+relationship: RO:0002207 CTENO:0000102 ! m11 micromere
+relationship: RO:0002491 CTENO:0000118 ! ctenophore 60 cell stage
+
+[Term]
+id: CTENO:0000099
+name: e1 micromere
+is_a: CTENO:0000096 ! micromere, 16 cell stage
+intersection_of: CTENO:0000096 ! micromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000064 ! E macromere, 8 cell stage
+relationship: RO:0002207 CTENO:0000064 ! E macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000100
+name: m1 micromere
+is_a: CTENO:0000096 ! micromere, 16 cell stage
+intersection_of: CTENO:0000096 ! micromere, 16 cell stage
+intersection_of: RO:0002207 CTENO:0000081 ! M macromere, 8 cell stage
+relationship: RO:0002207 CTENO:0000081 ! M macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000101
+name: m2 micromere
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+intersection_of: CTENO:0000097 ! micromere, 32 cell stage
+intersection_of: RO:0002207 CTENO:0000076 ! 1M macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000076 ! 1M macromere, 16 cell stage
+
+[Term]
+id: CTENO:0000102
+name: m11 micromere
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+relationship: RO:0002207 CTENO:0000100 ! m1 micromere
+
+[Term]
+id: CTENO:0000103
+name: m12 micromere
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+relationship: RO:0002207 CTENO:0000100 ! m1 micromere
+
+[Term]
+id: CTENO:0000104
+name: e2 micromere
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+intersection_of: CTENO:0000097 ! micromere, 32 cell stage
+intersection_of: RO:0002207 CTENO:0000086 ! 1E macromere, 16 cell stage
+relationship: RO:0002207 CTENO:0000086 ! 1E macromere, 16 cell stage
+
+[Term]
+id: CTENO:0000105
+name: e11 micromere
+comment: e11 and m11 lie closest to sagittal plane
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+relationship: RO:0002207 CTENO:0000099 ! e1 micromere
+
+[Term]
+id: CTENO:0000106
+name: e12 micromere
+is_a: CTENO:0000097 ! micromere, 32 cell stage
+relationship: RO:0002207 CTENO:0000099 ! e1 micromere
+
+[Term]
+id: CTENO:0000107
+name: m21 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+relationship: RO:0002207 CTENO:0000101 ! m2 micromere
+
+[Term]
+id: CTENO:0000108
+name: m22 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+relationship: RO:0002207 CTENO:0000101 ! m2 micromere
+
+[Term]
+id: CTENO:0000109
+name: m121 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+relationship: RO:0002207 CTENO:0000103 ! m12 micromere
+
+[Term]
+id: CTENO:0000110
+name: m122 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+relationship: RO:0002207 CTENO:0000103 ! m12 micromere
+
+[Term]
+id: CTENO:0000111
+name: e3 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+intersection_of: CTENO:0000098 ! micromere, 60 cell stage
+intersection_of: RO:0002207 CTENO:0000078 ! 2E macromere, 32 cell stage
+relationship: RO:0002207 CTENO:0000078 ! 2E macromere, 32 cell stage
+
+[Term]
+id: CTENO:0000112
+name: e22 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+
+[Term]
+id: CTENO:0000113
+name: e21 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+
+[Term]
+id: CTENO:0000114
+name: m111 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+
+[Term]
+id: CTENO:0000115
+name: m112 micromere
+is_a: CTENO:0000098 ! micromere, 60 cell stage
+
+[Term]
+id: CTENO:0000116
+name: ctenophore 16 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: RO:0002087 UBERON:0007236 ! 8 cell stage
+
+[Term]
+id: CTENO:0000117
+name: ctenophore 32 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: RO:0002087 CTENO:0000116 ! ctenophore 16 cell stage
+
+[Term]
+id: CTENO:0000118
+name: ctenophore 60 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+
+[Term]
+id: CTENO:0000119
+name: micromere, formed during gastulation
+is_a: CTENO:0000066 ! micromere
+intersection_of: CTENO:0000066 ! micromere
+intersection_of: BFO:0000068 UBERON:0000109 ! gastrula stage
+relationship: BFO:0000068 UBERON:0000109 ! gastrula stage
+
+[Term]
+id: CTENO:0000120
+name: tentacle epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of CTENO:0000018 ! tentacle
+relationship: part_of CTENO:0000018 ! tentacle
+relationship: RO:0002254 CTENO:0000099 ! e1 micromere
+
+[Term]
+id: CTENO:0000121
+name: tentacle sheath
+is_a: UBERON:0004923 ! organ component layer
+relationship: part_of CTENO:0000018 ! tentacle
+
+[Term]
+id: CTENO:0000122
+name: ctenophore pharynx
+def: "An ectodermal structure which connects the mouth to the endodermal component of the gut, deep inside the animal" []
+is_a: UBERON:0006562 ! pharynx
+relationship: develops_from CTENO:0000156 ! ctenophore blastopore
+
+[Term]
+id: CTENO:0000123
+name: tentacle sheath cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of CTENO:0000121 ! tentacle sheath
+relationship: develops_from CTENO:0000099 ! e1 micromere
+relationship: part_of CTENO:0000121 ! tentacle sheath
+
+[Term]
+id: CTENO:0000124
+name: longitudinal mesogleal muscle cell
+is_a: CL:0000187 ! muscle cell
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of CTENO:0000039 ! longitudinal mesogleal muscle
+relationship: develops_from CTENO:0000068 ! 3E macromere
+relationship: part_of CTENO:0000039 ! longitudinal mesogleal muscle
+
+[Term]
+id: CTENO:0000125
+name: radial mesogleal muscle cell
+is_a: CL:0000187 ! muscle cell
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of CTENO:0000041 ! radial mesogleal muscle
+relationship: develops_from CTENO:0000068 ! 3E macromere
+relationship: part_of CTENO:0000041 ! radial mesogleal muscle
+
+[Term]
+id: CTENO:0000126
+name: stellate mesenchymal cell
+def: "A multipolar mesenchymal cell found in the stellate mesenchyme. May be phagocytic. absent in derivatives of 2M? macromeres." []
+is_a: CL:0000134 ! mesenchymal stem cell
+
+[Term]
+id: CTENO:0000127
+name: tentacle muscle cell
+is_a: CL:0000187 ! muscle cell
+intersection_of: CL:0000187 ! muscle cell
+intersection_of: part_of CTENO:0000018 ! tentacle
+relationship: part_of CTENO:0000018 ! tentacle
+
+[Term]
+id: CTENO:0000128
+name: longitudinal pharyngeal muscle cell
+is_a: CL:0000187 ! muscle cell
+relationship: develops_from CTENO:0000068 ! 3E macromere
+
+[Term]
+id: CTENO:0000130
+name: trans-tentacular muscle cell
+is_a: CL:0000187 ! muscle cell
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of CTENO:0000043 ! trans-tentacular muscle
+relationship: develops_from CTENO:0000067 ! 2M macromere
+relationship: part_of CTENO:0000043 ! trans-tentacular muscle
+
+[Term]
+id: CTENO:0000131
+name: apical organ ctene row muscle
+is_a: CL:0000187 ! muscle cell
+relationship: develops_from CTENO:0000068 ! 3E macromere
+
+[Term]
+id: CTENO:0000132
+name: E-lineage cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+intersection_of: CL:0000000 ! cell
+intersection_of: develops_from CTENO:0000064 ! E macromere, 8 cell stage
+relationship: develops_from CTENO:0000064 ! E macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000133
+name: M-lineage cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+intersection_of: CL:0000000 ! cell
+intersection_of: develops_from CTENO:0000081 ! M macromere, 8 cell stage
+relationship: develops_from CTENO:0000081 ! M macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000134
+name: lithocyte progenitor
+synonym: "reserve lithocyte" EXACT []
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002319 ! neural cell
+relationship: develops_from CTENO:0000068 ! 3E macromere
+relationship: part_of CTENO:0000055 ! apical organ floor
+
+[Term]
+id: CTENO:0000135
+name: adesophageal plane
+comment: plane of first cleavage (Freeman 1977)
+synonym: "esophageal plane" RELATED []
+synonym: "sagittal plane" RELATED []
+is_a: BSPO:0000400 ! anatomical plane
+relationship: BSPO:0015005 CTENO:0000140 ! orthogonal_to tentacular plane
+
+[Term]
+id: CTENO:0000136
+name: tentacular axis
+comment: The plane of second cleavage includes the tentacular axis
+is_a: BSPO:0000010 ! anatomical axis
+
+[Term]
+id: CTENO:0000137
+name: ctene row
+def: "A row that is composed of individual ctene plates, which are arranged in longitudinal rows parallel to the oral–aboral axis" []
+synonym: "comb row" EXACT []
+is_a: UBERON:0000477 ! anatomical cluster
+relationship: RO:0002473 CTENO:0000001 ! ctene plate
+
+[Term]
+id: CTENO:0000138
+name: apical organ statocyst
+comment: a balance sensor consisting of a statolith, a solid particle supported on four bundles of cilia, called "balancers", that sense its orientation
+is_a: UBERON:0006583 ! statocyst
+intersection_of: UBERON:0006583 ! statocyst
+intersection_of: part_of CTENO:0000017 ! apical sense organ
+relationship: has_part CTENO:0000056 ! lithocyte
+relationship: part_of CTENO:0000017 ! apical sense organ
+
+[Term]
+id: CTENO:0000139
+name: ciliated groove
+def: "A groove that runs along the surface of the animal to each of the eight ctene rows" []
+synonym: "ciliated furrow" EXACT []
+is_a: UBERON:0006846 ! surface groove
+relationship: RO:0002150 CTENO:0000137 ! ctene row
+relationship: RO:0002254 CTENO:0000099 ! e1 micromere
+
+[Term]
+id: CTENO:0000140
+name: tentacular plane
+is_a: BSPO:0000400 ! anatomical plane
+
+[Term]
+id: CTENO:0000141
+name: slash quadrant
+is_a: CTENO:0000062 ! quadrant
+
+[Term]
+id: CTENO:0000142
+name: backslash quadrant
+is_a: CTENO:0000062 ! quadrant
+
+[Term]
+id: CTENO:0000143
+name: tentacle bulb
+is_a: UBERON:0000479 ! tissue
+relationship: part_of CTENO:0000152 ! tentacle apparatus
+relationship: RO:0002131 CTENO:0000140 ! overlaps tentacular plane
+relationship: RO:0002254 CTENO:0000099 ! e1 micromere
+
+[Term]
+id: CTENO:0000145
+name: polar field
+def: "an ectodermal structure emanating from the apical organ along the esophageal axis." []
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: CTENO:0000146
+name: polar field cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of CTENO:0000145 ! polar field
+relationship: develops_from CTENO:0000102 ! m11 micromere
+relationship: part_of CTENO:0000145 ! polar field
+
+[Term]
+id: CTENO:0000147
+name: esophague-tentacle muscle cell
+is_a: CL:0000187 ! muscle cell
+relationship: develops_from CTENO:0000093 ! 2M-backslash macromere
+
+[Term]
+id: CTENO:0000148
+name: anal canal cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: develops_from CTENO:0000093 ! 2M-backslash macromere
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: CTENO:0000149
+name: tentacle-apical organ muscle cell
+is_a: CL:0000187 ! muscle cell
+relationship: develops_from CTENO:0000092 ! 2M-slash macromere
+
+[Term]
+id: CTENO:0000150
+name: oral side of organism
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: CTENO:0000151
+name: aboral part of organism
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: CTENO:0000152
+name: tentacle apparatus
+is_a: UBERON:0000477 ! anatomical cluster
+relationship: has_part CTENO:0000018 ! tentacle
+relationship: has_part CTENO:0000143 ! tentacle bulb
+
+[Term]
+id: CTENO:0000153
+name: endodermal canal
+is_a: UBERON:0004111 ! anatomical conduit
+
+[Term]
+id: CTENO:0000154
+name: mixed E and M lineage structure
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: RO:0002254 CTENO:0000064 ! E macromere, 8 cell stage
+intersection_of: RO:0002254 CTENO:0000081 ! M macromere, 8 cell stage
+relationship: RO:0002254 CTENO:0000064 ! E macromere, 8 cell stage
+relationship: RO:0002254 CTENO:0000081 ! M macromere, 8 cell stage
+
+[Term]
+id: CTENO:0000155
+name: pharyngeal muscle
+is_a: UBERON:0001630 ! muscle organ
+
+[Term]
+id: CTENO:0000156
+name: ctenophore blastopore
+comment: Genes: MlLhx1/5
+is_a: UBERON:0000100 ! blastopore
+
+[Term]
+id: GO:0005623
+is_a: CARO:0000003 ! anatomical structure
+is_a: GO:0005575
+
+[Term]
+id: NCBITaxon:10197
+name: Ctenophora
+synonym: "Coelenterata" RELATED in_part []
+synonym: "coelenterates" RELATED common_name []
+synonym: "comb jellies" EXACT common_name []
+synonym: "ctenophores" RELATED blast_name []
+synonym: "sea walnuts" EXACT common_name []
+is_a: NCBITaxon:33208 ! Metazoa
+property_value: has_rank NCBITaxon:phylum
+
+[Term]
+id: NCBITaxon:10199
+name: Beroe
+is_a: NCBITaxon:37539 ! Beroidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:10200
+name: Beroe mitrata
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:10201
+name: Beroe ovata
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:127144
+name: Lampocteis
+is_a: NCBITaxon:148608 ! Lampoctenidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:127145
+name: Lampocteis cruentiventer
+is_a: NCBITaxon:127144 ! Lampocteis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:12996
+name: Cestum
+is_a: NCBITaxon:27920 ! Cestidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:12997
+name: Cestum veneris
+synonym: "Cestus veneris" RELATED misspelling []
+is_a: NCBITaxon:12996 ! Cestum
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+
+[Term]
+id: NCBITaxon:140453
+name: Beroe forskalii
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140454
+name: Beroe gracilis
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140455
+name: Bolinopsis infundibulum
+is_a: NCBITaxon:51106 ! Bolinopsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140456
+name: Hormiphora plumosa
+is_a: NCBITaxon:86009 ! Hormiphora
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140457
+name: Pleurobrachia pileus
+is_a: NCBITaxon:34498 ! Pleurobrachia
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140460
+name: Mertensiidae
+is_a: NCBITaxon:50341 ! Cydippida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140461
+name: Charistephane
+is_a: NCBITaxon:140460 ! Mertensiidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140462
+name: Charistephane fugiens
+is_a: NCBITaxon:140461 ! Charistephane
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140463
+name: Callianira
+is_a: NCBITaxon:140460 ! Mertensiidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140464
+name: Callianira cristata
+is_a: NCBITaxon:140463 ! Callianira
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140465
+name: Haeckeliidae
+is_a: NCBITaxon:50341 ! Cydippida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140466
+name: Aulacoctena
+is_a: NCBITaxon:140465 ! Haeckeliidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140467
+name: Aulacoctena acuminata
+is_a: NCBITaxon:140466 ! Aulacoctena
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140468
+name: Haeckelia
+is_a: NCBITaxon:140465 ! Haeckeliidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140469
+name: Haeckelia beehleri
+is_a: NCBITaxon:140468 ! Haeckelia
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140470
+name: Haeckelia rubra
+is_a: NCBITaxon:140468 ! Haeckelia
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140471
+name: Platyctenida
+is_a: NCBITaxon:140492 ! Typhlocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:140472
+name: Coeloplanidae
+is_a: NCBITaxon:140471 ! Platyctenida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140473
+name: Coeloplana
+is_a: NCBITaxon:140472 ! Coeloplanidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140474
+name: Coeloplana bannwarthii
+synonym: "Coeloplana banwarthii" RELATED misspelling []
+is_a: NCBITaxon:140473 ! Coeloplana
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140475
+name: Leucotheidae
+is_a: NCBITaxon:27921 ! Lobata
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140476
+name: Leucothea
+is_a: NCBITaxon:140475 ! Leucotheidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140477
+name: Leucothea pulchra
+is_a: NCBITaxon:140476 ! Leucothea
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140478
+name: Ocyropsidae
+is_a: NCBITaxon:27921 ! Lobata
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140479
+name: Ocyropsis
+is_a: NCBITaxon:140478 ! Ocyropsidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140480
+name: Ocyropsis crystallina
+is_a: NCBITaxon:140479 ! Ocyropsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140481
+name: Ocyropsis crystallina crystallina
+is_a: NCBITaxon:140480 ! Ocyropsis crystallina
+property_value: has_rank NCBITaxon:subspecies
+
+[Term]
+id: NCBITaxon:140482
+name: Ocyropsis crystallina guttata
+is_a: NCBITaxon:140480 ! Ocyropsis crystallina
+property_value: has_rank NCBITaxon:subspecies
+
+[Term]
+id: NCBITaxon:140483
+name: Ocyropsis maculata
+is_a: NCBITaxon:140479 ! Ocyropsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140484
+name: Thalassocalycida
+is_a: NCBITaxon:140493 ! Cyclocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:140485
+name: Thalassocalycidae
+is_a: NCBITaxon:140484 ! Thalassocalycida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:140486
+name: Thalassocalyce
+is_a: NCBITaxon:140485 ! Thalassocalycidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140487
+name: Thalassocalyce inconstans
+is_a: NCBITaxon:140486 ! Thalassocalyce
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140488
+name: Vallicula
+is_a: NCBITaxon:140472 ! Coeloplanidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140489
+name: Vallicula multiformis
+synonym: "Vallicula multiformia" RELATED misspelling []
+is_a: NCBITaxon:140488 ! Vallicula
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140490
+name: Velamen
+is_a: NCBITaxon:27920 ! Cestidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140491
+name: Velamen parallelum
+is_a: NCBITaxon:140490 ! Velamen
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140492
+name: Typhlocoela
+is_a: NCBITaxon:10197 ! Ctenophora
+
+[Term]
+id: NCBITaxon:140493
+name: Cyclocoela
+is_a: NCBITaxon:10197 ! Ctenophora
+
+[Term]
+id: NCBITaxon:140495
+name: Mertensia
+is_a: NCBITaxon:140460 ! Mertensiidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:140496
+name: Mertensia ovum
+is_a: NCBITaxon:140495 ! Mertensia
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140497
+name: Undescribed mertensiid sp. 1
+synonym: "Undescribed mertensiid A" RELATED synonym []
+synonym: "Undescribed pleurobrachiid A" RELATED synonym []
+is_a: NCBITaxon:86008 ! Pleurobrachiidae
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140498
+name: Undescribed mertensiid sp. 2
+synonym: "Undescribed mertensiid B (At)" RELATED synonym []
+is_a: NCBITaxon:488512 ! unclassified Mertensiidae
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140499
+name: Undescribed mertensiid sp. 3
+synonym: "Undescribed mertensiid C (RTC)" RELATED synonym []
+is_a: NCBITaxon:488512 ! unclassified Mertensiidae
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:140500
+name: unclassified Lobata
+is_a: NCBITaxon:27921 ! Lobata
+
+[Term]
+id: NCBITaxon:140501
+name: Undescribed Lobata sp. 4
+synonym: "Undescribed sp E (Ll)" RELATED synonym []
+is_a: NCBITaxon:140500 ! unclassified Lobata
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:148608
+name: Lampoctenidae
+is_a: NCBITaxon:27921 ! Lobata
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:158797
+name: Mnemiopsis sp. RFW-2001
+is_a: NCBITaxon:27922 ! Mnemiopsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:168726
+name: Coeloplana agniae
+is_a: NCBITaxon:140473 ! Coeloplana
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:220132
+name: Beroe sp. SL-2003
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+property_value: has_rank NCBITaxon:superkingdom
+
+[Term]
+id: NCBITaxon:27919
+name: Cestida
+is_a: NCBITaxon:140493 ! Cyclocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:27920
+name: Cestidae
+is_a: NCBITaxon:27919 ! Cestida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:27921
+name: Lobata
+synonym: "Labata" RELATED synonym []
+is_a: NCBITaxon:140493 ! Cyclocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:27922
+name: Mnemiopsis
+is_a: NCBITaxon:51105 ! Bolinopsidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:27923
+name: Mnemiopsis leidyi
+is_a: NCBITaxon:27922 ! Mnemiopsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:31167
+name: Beroe cucumis
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:320166
+name: Beroe abyssicola
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:33154
+name: Fungi/Metazoa group
+synonym: "Opisthokonta" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+synonym: "Animalia" RELATED synonym []
+synonym: "animals" RELATED blast_name []
+synonym: "metazoans" EXACT genbank_common_name []
+synonym: "multicellular animals" EXACT common_name []
+is_a: NCBITaxon:33154 ! Fungi/Metazoa group
+property_value: has_rank NCBITaxon:kingdom
+
+[Term]
+id: NCBITaxon:34498
+name: Pleurobrachia
+is_a: NCBITaxon:86008 ! Pleurobrachiidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:34499
+name: Pleurobrachia bachei
+synonym: "Pleurobranchia bachei" RELATED misspelling []
+is_a: NCBITaxon:34498 ! Pleurobrachia
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:354105
+name: Coeloplana willeyi
+is_a: NCBITaxon:140473 ! Coeloplana
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:37538
+name: Beroida
+is_a: NCBITaxon:140493 ! Cyclocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:37539
+name: Beroidae
+is_a: NCBITaxon:37538 ! Beroida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:488512
+name: unclassified Mertensiidae
+is_a: NCBITaxon:140460 ! Mertensiidae
+
+[Term]
+id: NCBITaxon:499920
+name: Cestum sp. SC-2008
+is_a: NCBITaxon:12996 ! Cestum
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:499921
+name: Beroe sp. KUR20
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:499922
+name: Beroe sp. KUR21
+is_a: NCBITaxon:10199 ! Beroe
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:499923
+name: Thalassocalyce sp. KUR22
+is_a: NCBITaxon:140486 ! Thalassocalyce
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:499924
+name: Thalassocalyce sp. KUR23
+is_a: NCBITaxon:140486 ! Thalassocalyce
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:500090
+name: unclassified Cydippida
+is_a: NCBITaxon:50341 ! Cydippida
+
+[Term]
+id: NCBITaxon:500091
+name: Cydippida sp. KUR30
+is_a: NCBITaxon:500090 ! unclassified Cydippida
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:50341
+name: Cydippida
+is_a: NCBITaxon:140492 ! Typhlocoela
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:51105
+name: Bolinopsidae
+is_a: NCBITaxon:27921 ! Lobata
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:51106
+name: Bolinopsis
+is_a: NCBITaxon:51105 ! Bolinopsidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:51107
+name: Bolinopsis sp.
+is_a: NCBITaxon:51106 ! Bolinopsis
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:541220
+name: Ctenellidae
+is_a: NCBITaxon:50341 ! Cydippida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:624130
+name: Ctenophora environmental sample
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:86008
+name: Pleurobrachiidae
+is_a: NCBITaxon:50341 ! Cydippida
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:86009
+name: Hormiphora
+is_a: NCBITaxon:86008 ! Pleurobrachiidae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:86010
+name: Hormiphora sp.
+is_a: NCBITaxon:86009 ! Hormiphora
+property_value: has_rank NCBITaxon:species
+
+[Term]
+id: UBERON:0000000
+name: processual entity
+
+[Term]
+id: UBERON:0000009
+name: submucosa
+is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000010
+name: peripheral nervous system
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0000020
+name: sense organ
+is_a: UBERON:0000062 ! organ
+relationship: part_of UBERON:0001032 ! sensory system
+
+[Term]
+id: UBERON:0000025
+name: tube
+is_a: UBERON:0004111 ! anatomical conduit
+
+[Term]
+id: UBERON:0000026
+name: appendage
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: UBERON:0000059
+name: large intestine
+is_a: UBERON:0004921 ! subdivision of digestive tract
+is_a: UBERON:0013765 ! digestive system element
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0004907 ! lower digestive tract
+
+[Term]
+id: UBERON:0000060
+name: anatomical wall
+is_a: UBERON:0000064 ! organ part
+
+[Term]
+id: UBERON:0000061
+name: anatomical structure
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0000062
+name: organ
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0000064
+name: organ part
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0000066
+name: fully formed stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000092 ! post-embryonic stage
+
+[Term]
+id: UBERON:0000067
+name: embryo stage part
+is_a: UBERON:0000105 ! life cycle stage
+intersection_of: UBERON:0000105 ! life cycle stage
+intersection_of: part_of UBERON:0000068 ! embryo stage
+relationship: part_of UBERON:0000068 ! embryo stage
+relationship: RO:0002087 CTENO:0000117 ! ctenophore 32 cell stage
+
+[Term]
+id: UBERON:0000068
+name: embryo stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000069
+name: larval stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000092 ! post-embryonic stage
+
+[Term]
+id: UBERON:0000076
+name: external ectoderm
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0000092
+name: post-embryonic stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000100
+name: blastopore
+is_a: UBERON:0002050 ! embryonic structure
+relationship: part_of UBERON:0004735 ! archenteron
+
+[Term]
+id: UBERON:0000104
+name: life cycle
+is_a: UBERON:0000000 ! processual entity
+
+[Term]
+id: UBERON:0000105
+name: life cycle stage
+is_a: UBERON:0000000 ! processual entity
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000107
+name: cleavage stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0000109
+name: gastrula stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0000122
+name: neuron projection bundle
+is_a: UBERON:0005162 ! multi cell part structure
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0000159
+name: anal canal
+is_a: UBERON:0004111 ! anatomical conduit
+is_a: UBERON:0004121 ! ectoderm-derived structure
+relationship: develops_from UBERON:0011272 ! embryonic skin basal layer
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0000160
+name: intestine
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0000161
+name: orifice
+is_a: UBERON:0004111 ! anatomical conduit
+
+[Term]
+id: UBERON:0000307
+name: blastula
+is_a: UBERON:0000922 ! embryo
+relationship: develops_from UBERON:0007010 ! cleaving embryo
+
+[Term]
+id: UBERON:0000328
+name: gut wall
+is_a: UBERON:0000060 ! anatomical wall
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0000344
+name: mucosa
+is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000383
+name: musculature of body
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0002204 ! musculoskeletal system
+
+[Term]
+id: UBERON:0000465
+name: material anatomical entity
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000467
+name: anatomical system
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000468
+name: multicellular organism
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0000475
+name: organism subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000476
+name: acellular anatomical structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0000477
+name: anatomical cluster
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000479
+name: tissue
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000483
+name: epithelium
+is_a: UBERON:0000479 ! tissue
+union_of: UBERON:0000486 ! multilaminar epithelium
+union_of: UBERON:0000490 ! unilaminar epithelium
+
+[Term]
+id: UBERON:0000485
+name: simple columnar epithelium
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0012274 ! columnar epithelium
+
+[Term]
+id: UBERON:0000486
+name: multilaminar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0000490
+name: unilaminar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0000922
+name: embryo
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000923
+name: germ layer
+is_a: UBERON:0010316 ! germ layer / neural crest
+relationship: develops_from UBERON:0002532 ! epiblast (generic)
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0000924
+name: ectoderm
+is_a: UBERON:0000923 ! germ layer
+
+[Term]
+id: UBERON:0000926
+name: mesoderm
+is_a: UBERON:0000923 ! germ layer
+
+[Term]
+id: UBERON:0001007
+name: digestive system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0001015
+name: musculature
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0000383 ! musculature of body
+
+[Term]
+id: UBERON:0001016
+name: nervous system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0001017
+name: central nervous system
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0001019
+name: nerve fasciculus
+is_a: UBERON:0000122 ! neuron projection bundle
+
+[Term]
+id: UBERON:0001021
+name: nerve
+is_a: UBERON:0000122 ! neuron projection bundle
+relationship: part_of UBERON:0000010 ! peripheral nervous system
+
+[Term]
+id: UBERON:0001032
+name: sensory system
+is_a: UBERON:0000467 ! anatomical system
+relationship: part_of UBERON:0004456 ! entire sense organ system
+
+[Term]
+id: UBERON:0001046
+name: hindgut
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: develops_from UBERON:0003104 ! mesenchyme
+
+[Term]
+id: UBERON:0001062
+name: anatomical entity
+
+[Term]
+id: UBERON:0001135
+name: smooth muscle tissue
+is_a: UBERON:0002385 ! muscle tissue
+
+[Term]
+id: UBERON:0001169
+name: wall of large intestine
+is_a: UBERON:0001262 ! wall of intestine
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+
+[Term]
+id: UBERON:0001207
+name: mucosa of large intestine
+is_a: UBERON:0001242 ! intestinal mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+relationship: part_of UBERON:0001242 ! intestinal mucosa
+
+[Term]
+id: UBERON:0001208
+name: submucosa of large intestine
+is_a: UBERON:0009566 ! intestinal submucosa
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+
+[Term]
+id: UBERON:0001242
+name: intestinal mucosa
+is_a: UBERON:0004786 ! gastrointestinal system mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0001262
+name: wall of intestine
+is_a: UBERON:0000328 ! gut wall
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+
+[Term]
+id: UBERON:0001277
+name: intestinal epithelium
+is_a: UBERON:0000485 ! simple columnar epithelium
+is_a: UBERON:0003350 ! epithelium of mucosa
+is_a: UBERON:0003929 ! digestive tract epithelium
+is_a: UBERON:0004808 ! gastrointestinal system epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001242 ! intestinal mucosa
+
+[Term]
+id: UBERON:0001278
+name: epithelium of large intestine
+is_a: UBERON:0001277 ! intestinal epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001207 ! mucosa of large intestine
+
+[Term]
+id: UBERON:0001353
+name: anal region
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: UBERON:0001555
+name: digestive tract
+is_a: UBERON:0000025 ! tube
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0001630
+name: muscle organ
+is_a: CTENO:0000154 ! mixed E and M lineage structure
+is_a: UBERON:0000062 ! organ
+is_a: UBERON:0005090 ! muscle structure
+is_a: UBERON:0013765 ! digestive system element
+intersection_of: UBERON:0001630 ! muscle organ
+intersection_of: part_of CTENO:0000122 ! ctenophore pharynx
+relationship: part_of CTENO:0000122 ! ctenophore pharynx
+relationship: part_of UBERON:0001015 ! musculature
+
+[Term]
+id: UBERON:0002036
+name: striated muscle tissue
+is_a: UBERON:0002385 ! muscle tissue
+
+[Term]
+id: UBERON:0002050
+name: embryonic structure
+is_a: UBERON:0000061 ! anatomical structure
+is_a: UBERON:0005423 ! developing anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0002072
+name: hypodermis
+is_a: UBERON:0004120 ! mesoderm-derived structure
+is_a: UBERON:0013754 ! integumentary system layer
+relationship: develops_from UBERON:0000926 ! mesoderm
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0002097
+name: skin of body
+is_a: UBERON:0000062 ! organ
+is_a: UBERON:0004121 ! ectoderm-derived structure
+relationship: develops_from UBERON:0011272 ! embryonic skin basal layer
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0002199
+name: integument
+is_a: UBERON:0003102 ! surface structure
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0002204
+name: musculoskeletal system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0002329
+name: somite
+is_a: UBERON:0005423 ! developing anatomical structure
+is_a: UBERON:0007503 ! epithelial vesicle
+is_a: UBERON:0012275 ! meso-epithelium
+relationship: develops_from UBERON:0003059 ! presomitic mesoderm
+
+[Term]
+id: UBERON:0002385
+name: muscle tissue
+is_a: UBERON:0000479 ! tissue
+is_a: UBERON:0004120 ! mesoderm-derived structure
+relationship: develops_from UBERON:0000926 ! mesoderm
+relationship: part_of UBERON:0001015 ! musculature
+
+[Term]
+id: UBERON:0002416
+name: integumental system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0002532
+name: epiblast (generic)
+is_a: UBERON:0002050 ! embryonic structure
+
+[Term]
+id: UBERON:0002548
+name: larva
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0003059
+name: presomitic mesoderm
+is_a: UBERON:0006598 ! presumptive structure
+relationship: part_of UBERON:0003077 ! paraxial mesoderm
+
+[Term]
+id: UBERON:0003077
+name: paraxial mesoderm
+is_a: UBERON:0004120 ! mesoderm-derived structure
+is_a: UBERON:0005291 ! embryonic tissue
+is_a: UBERON:0007524 ! dense mesenchyme tissue
+is_a: UBERON:0015212 ! lateral structure
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0003082
+name: myotome
+is_a: UBERON:0017650 ! developing mesenchymal structure
+relationship: develops_from UBERON:0002329 ! somite
+relationship: develops_from UBERON:0004290 ! dermomyotome
+
+[Term]
+id: UBERON:0003102
+name: surface structure
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0003104
+name: mesenchyme
+is_a: UBERON:0000479 ! tissue
+
+[Term]
+id: UBERON:0003329
+name: submucosa of anal canal
+is_a: UBERON:0001208 ! submucosa of large intestine
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0003342
+name: mucosa of anal canal
+is_a: UBERON:0001207 ! mucosa of large intestine
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0003350
+name: epithelium of mucosa
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000344 ! mucosa
+relationship: part_of UBERON:0000344 ! mucosa
+
+[Term]
+id: UBERON:0003353
+name: epithelium of hindgut
+is_a: UBERON:0003929 ! digestive tract epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0001046 ! hindgut
+
+[Term]
+id: UBERON:0003929
+name: digestive tract epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004111
+name: anatomical conduit
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0004120
+name: mesoderm-derived structure
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: develops_from UBERON:0000926 ! mesoderm
+relationship: develops_from UBERON:0000926 ! mesoderm
+
+[Term]
+id: UBERON:0004121
+name: ectoderm-derived structure
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+relationship: develops_from UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0004220
+name: large intestine smooth muscle
+is_a: UBERON:0004221 ! intestine smooth muscle
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+
+[Term]
+id: UBERON:0004221
+name: intestine smooth muscle
+is_a: UBERON:0004226 ! gastrointestinal system smooth muscle
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0004226
+name: gastrointestinal system smooth muscle
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004231
+name: anal region smooth muscle
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0001353 ! anal region
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0004253
+name: skin muscle
+is_a: UBERON:0001630 ! muscle organ
+intersection_of: UBERON:0001630 ! muscle organ
+intersection_of: part_of UBERON:0002416 ! integumental system
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0004290
+name: dermomyotome
+is_a: UBERON:0000486 ! multilaminar epithelium
+is_a: UBERON:0012275 ! meso-epithelium
+is_a: UBERON:0016888 ! transitional anatomical structure
+relationship: develops_from UBERON:0002329 ! somite
+
+[Term]
+id: UBERON:0004456
+name: entire sense organ system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0004734
+name: gastrula
+is_a: UBERON:0000922 ! embryo
+relationship: develops_from UBERON:0000307 ! blastula
+
+[Term]
+id: UBERON:0004735
+name: archenteron
+is_a: UBERON:0002050 ! embryonic structure
+relationship: part_of UBERON:0004734 ! gastrula
+relationship: part_of UBERON:0007026 ! presumptive gut
+
+[Term]
+id: UBERON:0004786
+name: gastrointestinal system mucosa
+is_a: UBERON:0000344 ! mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004808
+name: gastrointestinal system epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004906
+name: ectodermal part of digestive tract
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0004921 ! subdivision of digestive tract
+intersection_of: UBERON:0004921 ! subdivision of digestive tract
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: develops_from UBERON:0000924 ! ectoderm
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004907
+name: lower digestive tract
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: develops_from UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004921
+name: subdivision of digestive tract
+is_a: UBERON:0013522 ! subdivision of tube
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004923
+name: organ component layer
+is_a: UBERON:0000064 ! organ part
+relationship: part_of UBERON:0000060 ! anatomical wall
+
+[Term]
+id: UBERON:0005090
+name: muscle structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0005162
+name: multi cell part structure
+is_a: UBERON:0000477 ! anatomical cluster
+
+[Term]
+id: UBERON:0005291
+name: embryonic tissue
+is_a: UBERON:0000479 ! tissue
+is_a: UBERON:0002050 ! embryonic structure
+intersection_of: UBERON:0000479 ! tissue
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0002050 ! embryonic structure
+
+[Term]
+id: UBERON:0005409
+name: alimentary part of gastrointestinal system
+is_a: UBERON:0000467 ! anatomical system
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0005423
+name: developing anatomical structure
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0006134
+name: nerve fiber
+is_a: UBERON:0005162 ! multi cell part structure
+union_of: UBERON:0006135 ! myelinated nerve fiber
+union_of: UBERON:0006136 ! unmyelinated nerve fiber
+relationship: part_of UBERON:0001019 ! nerve fasciculus
+
+[Term]
+id: UBERON:0006135
+name: myelinated nerve fiber
+is_a: UBERON:0006134 ! nerve fiber
+
+[Term]
+id: UBERON:0006136
+name: unmyelinated nerve fiber
+is_a: UBERON:0006134 ! nerve fiber
+
+[Term]
+id: UBERON:0006562
+name: pharynx
+is_a: UBERON:0004921 ! subdivision of digestive tract
+
+[Term]
+id: UBERON:0006582
+name: statolith
+is_a: UBERON:0000476 ! acellular anatomical structure
+relationship: part_of UBERON:0006583 ! statocyst
+
+[Term]
+id: UBERON:0006583
+name: statocyst
+is_a: UBERON:0000020 ! sense organ
+
+[Term]
+id: UBERON:0006598
+name: presumptive structure
+is_a: UBERON:0005423 ! developing anatomical structure
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0006846
+name: surface groove
+is_a: UBERON:0003102 ! surface structure
+
+[Term]
+id: UBERON:0007010
+name: cleaving embryo
+is_a: UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0007023
+name: adult organism
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0007026
+name: presumptive gut
+is_a: UBERON:0006598 ! presumptive structure
+
+[Term]
+id: UBERON:0007233
+name: 4 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000107 ! cleavage stage
+
+[Term]
+id: UBERON:0007236
+name: 8 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000107 ! cleavage stage
+
+[Term]
+id: UBERON:0007271
+name: appendage musculature
+is_a: UBERON:0001015 ! musculature
+intersection_of: UBERON:0001015 ! musculature
+intersection_of: part_of UBERON:0000026 ! appendage
+relationship: part_of UBERON:0000026 ! appendage
+
+[Term]
+id: UBERON:0007503
+name: epithelial vesicle
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0007524
+name: dense mesenchyme tissue
+is_a: UBERON:0003104 ! mesenchyme
+
+[Term]
+id: UBERON:0008876
+name: hypodermis skeletal muscle layer
+is_a: UBERON:0004253 ! skin muscle
+is_a: UBERON:0014892 ! skeletal muscle organ
+intersection_of: UBERON:0014892 ! skeletal muscle organ
+intersection_of: part_of UBERON:0002072 ! hypodermis
+relationship: part_of UBERON:0002072 ! hypodermis
+
+[Term]
+id: UBERON:0009503
+name: mesenchyme of hindgut
+is_a: UBERON:0003104 ! mesenchyme
+intersection_of: UBERON:0003104 ! mesenchyme
+intersection_of: part_of UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0001046 ! hindgut
+
+[Term]
+id: UBERON:0009566
+name: intestinal submucosa
+is_a: UBERON:0018257 ! submucosa of digestive tract
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0010000
+name: multicellular anatomical structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0010316
+name: germ layer / neural crest
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: develops_from UBERON:0002532 ! epiblast (generic)
+
+[Term]
+id: UBERON:0010371
+name: ecto-epithelium
+is_a: UBERON:0000483 ! epithelium
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+relationship: develops_from UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0011215
+name: central nervous system cell part cluster
+is_a: UBERON:0005162 ! multi cell part structure
+intersection_of: UBERON:0005162 ! multi cell part structure
+intersection_of: part_of UBERON:0001017 ! central nervous system
+relationship: part_of UBERON:0001017 ! central nervous system
+
+[Term]
+id: UBERON:0011216
+name: organ system subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0011272
+name: embryonic skin basal layer
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0010371 ! ecto-epithelium
+relationship: develops_from UBERON:0000076 ! external ectoderm
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0012125
+name: dermatological-muscosal system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0012274
+name: columnar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0012275
+name: meso-epithelium
+is_a: UBERON:0000483 ! epithelium
+is_a: UBERON:0004120 ! mesoderm-derived structure
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: develops_from UBERON:0000926 ! mesoderm
+relationship: develops_from UBERON:0000926 ! mesoderm
+
+[Term]
+id: UBERON:0013522
+name: subdivision of tube
+is_a: UBERON:0000064 ! organ part
+relationship: part_of UBERON:0000025 ! tube
+
+[Term]
+id: UBERON:0013754
+name: integumentary system layer
+is_a: UBERON:0004923 ! organ component layer
+intersection_of: UBERON:0004923 ! organ component layer
+intersection_of: part_of UBERON:0002416 ! integumental system
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0013765
+name: digestive system element
+is_a: UBERON:0000062 ! organ
+intersection_of: UBERON:0000062 ! organ
+intersection_of: part_of UBERON:0001007 ! digestive system
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0014703
+name: anal membrane ectodermal component
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0010371 ! ecto-epithelium
+intersection_of: UBERON:0000490 ! unilaminar epithelium
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+intersection_of: part_of UBERON:0001353 ! anal region
+relationship: develops_from UBERON:0000924 ! ectoderm
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0014892
+name: skeletal muscle organ
+is_a: UBERON:0001630 ! muscle organ
+is_a: UBERON:0004120 ! mesoderm-derived structure
+relationship: develops_from UBERON:0003082 ! myotome
+relationship: part_of UBERON:0018254 ! skeletal musculature
+
+[Term]
+id: UBERON:0015212
+name: lateral structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0015716
+name: anal canal epithelium
+is_a: UBERON:0001278 ! epithelium of large intestine
+is_a: UBERON:0014703 ! anal membrane ectodermal component
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0015783
+name: smooth muscle layer in fatty layer of subcutaneous tissue
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0002072 ! hypodermis
+relationship: part_of UBERON:0002072 ! hypodermis
+
+[Term]
+id: UBERON:0016888
+name: transitional anatomical structure
+is_a: UBERON:0005423 ! developing anatomical structure
+
+[Term]
+id: UBERON:0017650
+name: developing mesenchymal structure
+is_a: UBERON:0005423 ! developing anatomical structure
+
+[Term]
+id: UBERON:0018254
+name: skeletal musculature
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0000383 ! musculature of body
+
+[Term]
+id: UBERON:0018257
+name: submucosa of digestive tract
+is_a: UBERON:0000009 ! submucosa
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0019304
+name: sensory organ epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000020 ! sense organ
+relationship: part_of UBERON:0000020 ! sense organ
+
+[Term]
+id: UBERON:3000961
+name: external integument structure
+is_a: UBERON:0003102 ! surface structure
+intersection_of: UBERON:0003102 ! surface structure
+intersection_of: part_of UBERON:0002199 ! integument
+relationship: part_of UBERON:0002199 ! integument
+
+[Typedef]
+id: :has_start_point
+name: has_start_point
+namespace: spatial
+def: "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis." [BSPO:cjm]
+comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a start and end point.
+xref: \:has_start_point
+domain: BSPO:0000010 ! anatomical axis
+range: CARO:0000000 ! anatomical entity
+
+[Typedef]
+id: BSPO:0000095
+name: anatomical_relation
+namespace: spatial
+xref: BSPO:0000095
+property_value: seeAlso FBql:00005860
+is_obsolete: true
+
+[Typedef]
+id: BSPO:0000096
+name: anterior_to
+namespace: spatial
+def: "x anterior_to y iff x is further along the antero-posterior axis than y, towards the head. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
+synonym: "rostral_to" EXACT []
+xref: BSPO:0000096
+property_value: seeAlso FBcv:0000039
+property_value: seeAlso FBql:00005863
+is_transitive: true
+inverse_of: BSPO:0000099 ! posterior_to
+
+[Typedef]
+id: BSPO:0000097
+name: distal_to
+namespace: spatial
+def: "x distal_to y iff x is further along the proximo-distal axis than y, towards the appendage tip. A proximo-distal axis extends from tip of an appendage (distal) to where it joins the body (proximal)." [BSPO:cjm]
+xref: BSPO:0000097
+property_value: seeAlso FBcv:0000040
+property_value: seeAlso FBql:00005867
+is_transitive: true
+inverse_of: BSPO:0000100 ! proximal_to
+
+[Typedef]
+id: BSPO:0000098
+name: dorsal_to
+namespace: spatial
+def: "x dorsal_to y iff x is further along the dorso-ventral axis than y, towards the back. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+xref: BSPO:0000098
+property_value: seeAlso FBcv:0000041
+property_value: seeAlso FBql:00005865
+is_transitive: true
+inverse_of: BSPO:0000102 ! ventral_to
+
+[Typedef]
+id: BSPO:0000099
+name: posterior_to
+namespace: spatial
+def: "x posterior_to y iff x is further along the antero-posterior axis than y, towards the body/tail. An antero-posterior axis is an axis that extends through an organism from head end to opposite end of body or tail." [BSPO:cjm]
+synonym: "caudal_to" NARROW vertebrate []
+xref: BSPO:0000099
+property_value: seeAlso FBcv:0000045
+property_value: seeAlso FBql:00005864
+is_transitive: true
+
+[Typedef]
+id: BSPO:0000100
+name: proximal_to
+namespace: spatial
+def: "x proximal_to y iff x is closer to the point of attachment with the body than y." [BSPO:cjm]
+comment: The elbow is proximal to the hand, but distal to the shoulder.
+xref: BSPO:0000100
+property_value: seeAlso FBcv:0000047
+property_value: seeAlso FBql:00005868
+is_transitive: true
+
+[Typedef]
+id: BSPO:0000101
+name: obsolete surrounds
+namespace: spatial
+xref: BSPO:0000101
+property_value: seeAlso FBcv:0000048
+property_value: seeAlso FBql:00005861
+is_obsolete: true
+replaced_by: RO:0002221
+
+[Typedef]
+id: BSPO:0000102
+name: ventral_to
+namespace: spatial
+def: "x ventral_to y iff x is further along the dorso-ventral axis than y, towards the front. A dorso-ventral axis is an axis that extends through an organism from back (e.g. spinal column) to front (e.g. belly)." [BSPO:cjm]
+xref: BSPO:0000102
+property_value: seeAlso FBcv:0000049
+property_value: seeAlso FBql:00005866
+is_transitive: true
+
+[Typedef]
+id: BSPO:0000103
+name: vicinity_of
+namespace: spatial
+xref: BSPO:0000103
+property_value: seeAlso FBcv:0000050
+property_value: seeAlso FBql:00005862
+
+[Typedef]
+id: BSPO:0000104
+name: approximately_perpendicular_to
+namespace: spatial
+def: "Crosses at an angle that is 90 degrees, or close to 90 degrees. In any non-linear organism, the main axes are rarely perpendicular when taken through the organism as a whole." [BSPO:cjm]
+xref: BSPO:0000104
+domain: BSPO:0000010 ! anatomical axis
+range: BSPO:0000010 ! anatomical axis
+
+[Typedef]
+id: BSPO:0000105
+name: ipsilateral_to
+namespace: spatial
+def: "On the same side as. For example, the left arm is ipsilateral to the left leg." [BSPO:cjm]
+xref: BSPO:0000105
+property_value: seeAlso FBql:00005850
+is_symmetric: true
+is_a: BSPO:0000126 ! in_lateral_side_of
+disjoint_from: BSPO:0000106 ! contralateral_to
+
+[Typedef]
+id: BSPO:0000106
+name: contralateral_to
+namespace: spatial
+def: "On the opposite side from. For example, the left arm is contralateral to the right arm (and the right leg)." [BSPO:cjm]
+xref: BSPO:0000106
+property_value: seeAlso FBql:00005851
+is_symmetric: true
+is_a: BSPO:0000126 ! in_lateral_side_of
+
+[Typedef]
+id: BSPO:0000107
+name: deep_to
+namespace: spatial
+def: "Further away from the surface of the organism. Thus, the muscular layer is deep to the skin, but superficial to the intestines." [BSPO:cjm]
+xref: BSPO:0000107
+is_transitive: true
+inverse_of: BSPO:0000108 ! superficial_to
+
+[Typedef]
+id: BSPO:0000108
+name: superficial_to
+namespace: spatial
+def: "Near the outer surface of the organism. Thus, skin is superficial to the muscle layer." [BSPO:cjm]
+xref: BSPO:0000108
+is_transitive: true
+
+[Typedef]
+id: BSPO:0000109
+name: obsolete surrounded_by
+namespace: spatial
+xref: BSPO:0000109
+is_obsolete: true
+replaced_by: RO:0002219
+
+[Typedef]
+id: BSPO:0000110
+name: left_of
+namespace: spatial
+def: "Closer to the left side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left_of Y <=> every instance x of X is left_of some instance y of Y, and there exists some organism o such that x part_of o and y part_of o." [BSPO:cjm]
+xref: BSPO:0000110
+is_transitive: true
+inverse_of: BSPO:0000111 ! right_of
+
+[Typedef]
+id: BSPO:0000111
+name: right_of
+namespace: spatial
+def: "Closer to the right side of the organism. Example: The dorsal fin is right of the left pectoral fin, but is left of the right eye. On the type level: X left_of Y <=> every instance x of X is right_of some instance y of Y, and there exists some organism o such that x part_of o and y part_of o." [BSPO:cjm]
+xref: BSPO:0000111
+is_transitive: true
+
+[Typedef]
+id: BSPO:0000113
+name: opposite_to
+namespace: spatial
+def: "Direcly opposite to. i.e. on the opposite side through the axis." [BSPO:cjm]
+xref: BSPO:0000113
+is_a: BSPO:0000105 ! ipsilateral_to
+
+[Typedef]
+id: BSPO:0000120
+name: in_left_side_of
+namespace: spatial
+def: "X in_left_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the left portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000120
+is_a: BSPO:0000126 ! in_lateral_side_of
+inverse_of: BSPO:0000121 ! in_right_side_of
+
+[Typedef]
+id: BSPO:0000121
+name: in_right_side_of
+namespace: spatial
+def: "X in_right_side_of Y <=> if Y is subdivided into two left and right portions, X is part_of the right portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000121
+is_a: BSPO:0000126 ! in_lateral_side_of
+
+[Typedef]
+id: BSPO:0000122
+name: in_posterior_side_of
+namespace: spatial
+def: "X posterior_side_of Y <=> if Y is subdivided into two anterior and posterior portions, X is part_of the posterior portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000122
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0000123
+name: in_anterior_side_of
+namespace: spatial
+def: "X anterior_side_of Y <=> if Y is subdivided into two anterior and posterior portions, X is part_of the anterior portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000123
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0000124
+name: in_proximal_side_of
+namespace: spatial
+def: "x in_proximal_side_of y <=> if y is subdivided into two proximal and distal portions, y is part_of the proximal portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000124
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0000125
+name: in_distal_side_of
+namespace: spatial
+def: "x in_distal_side_of y <=> if y is subdivided into two proximal and distal portions, y is part_of the distal portion." [BSPO:PATO_mtg_2009]
+xref: BSPO:0000125
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0000126
+name: in_lateral_side_of
+namespace: spatial
+def: "X in_lateral_side_of Y <=> if X is in_left_side_of Y or X is in_right_side_of Y. X is often, but not always a paired structure" [UBERON:cjm]
+xref: BSPO:0000126
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0001100
+name: in_superficial_part_of
+namespace: spatial
+def: "X superficial_part_of Y <=> if Y is subdivided into two superficial and deep portions, X is part_of the superficial portion." [BSPO:cjm]
+xref: BSPO:0001100
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0001101
+name: in_deep_part_of
+namespace: spatial
+def: "X superficial_part_of Y <=> if Y is subdivided into two superficial and deep portions, X is part_of the deep portion." [BSPO:cjm]
+xref: BSPO:0001101
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0001106
+name: proximalmost_part_of
+namespace: spatial
+def: "X proximalmost_part_of Y <=> X is in_proximal_side_of Y and X is adjacent_to the proximal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
+xref: BSPO:0001106
+is_a: BSPO:0000124 ! in_proximal_side_of
+
+[Typedef]
+id: BSPO:0001107
+name: immediately_deep_to
+namespace: spatial
+def: "x immediately_deep_to y iff x deep_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0001107
+is_a: BSPO:0000107 ! deep_to
+inverse_of: BSPO:0015014 ! immediately_superficial_to
+
+[Typedef]
+id: BSPO:0001108
+name: distalmost_part_of
+namespace: spatial
+def: "X distalmost_part_of Y <=> X is in_distal_side_of Y and X is adjacent_to the distal boundary of Y" [https://orcid.org/0000-0002-6601-2165]
+xref: BSPO:0001108
+is_a: BSPO:0000125 ! in_distal_side_of
+
+[Typedef]
+id: BSPO:0001113
+name: preaxialmost_part_of
+namespace: spatial
+xref: BSPO:0001113
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0001114
+name: postaxial_to
+namespace: spatial
+def: "x preaxial_to y iff x is further along the preaxial-postaxial axis than y, towards the postaxial side." [http://medical-dictionary.thefreedictionary.com/postaxial]
+synonym: "posterior_to (developmentally)" RELATED [MA:th]
+xref: BSPO:0001114
+is_transitive: true
+
+[Typedef]
+id: BSPO:0001115
+name: postaxialmost_part_of
+namespace: spatial
+xref: BSPO:0001115
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0005001
+name: intersects_midsagittal_plane_of
+namespace: spatial
+def: "X intersects_median_plane of iff X crosses the midine plane of Y." []
+xref: BSPO:0005001
+is_a: part_of ! part_of
+
+[Typedef]
+id: BSPO:0015001
+name: finishes_axis
+namespace: spatial
+comment: A directional axis can be divided by a plane. Following Allen Interval Algebra terminology we say that the side on which the axis initiates starts the axis, with the other side finishing the axis. If s finishes_axis x, and x has_end_point p, then x overlaps p
+xref: BSPO:0015001
+domain: BSPO:0000054 ! anatomical side
+range: BSPO:0000010 ! anatomical axis
+
+[Typedef]
+id: BSPO:0015002
+name: follows_axis
+namespace: spatial
+xref: BSPO:0015002
+range: BSPO:0000010 ! anatomical axis
+
+[Typedef]
+id: BSPO:0015003
+name: has_axis
+namespace: spatial
+xref: BSPO:0015003
+
+[Typedef]
+id: BSPO:0015004
+name: has_end_point
+namespace: spatial
+def: "A relation between an axis and a part of an organism, in which the part defines the initial point of the axis." [BSPO:cjm]
+comment: Axes can be defined in a given species by subtyping the relevant axis type and stating a end and end point
+xref: BSPO:0015004
+domain: BSPO:0000010 ! anatomical axis
+range: CARO:0000000 ! anatomical entity
+
+[Typedef]
+id: BSPO:0015005
+name: orthogonal_to
+namespace: spatial
+def: "crossing at right angles" [BSPO:cjm]
+xref: BSPO:0015005
+domain: BSPO:0000010 ! anatomical axis
+range: BSPO:0000400 ! anatomical plane
+
+[Typedef]
+id: BSPO:0015007
+name: starts_axis
+namespace: spatial
+comment: A directional axis can be divided by a plane. Following Allen Interval Algebra terminology we say that the side on which the axis initiates starts the axis, with the other side finishing the axis. . If s starts_axis x, and x has_start_point p, then x overlaps p
+xref: BSPO:0015007
+domain: BSPO:0000054 ! anatomical side
+range: BSPO:0000010 ! anatomical axis
+
+[Typedef]
+id: BSPO:0015008
+name: surface_of
+namespace: spatial
+comment: placeholder. used for relation between anatomical surface and an anatomical side.
+xref: BSPO:0015008
+domain: BSPO:0000005 ! anatomical surface
+
+[Typedef]
+id: BSPO:0015009
+name: immediately_anterior_to
+namespace: spatial
+def: "x immediately_anterior_to y iff x anterior_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015009
+is_a: BSPO:0000096 ! anterior_to
+inverse_of: BSPO:0015012 ! immediately_posterior_to
+
+[Typedef]
+id: BSPO:0015010
+name: immediately_distal_to
+namespace: spatial
+def: "x immediately_distal_to y iff x distal_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015010
+is_a: BSPO:0000097 ! distal_to
+inverse_of: BSPO:0015013 ! immediately_proximal_to
+
+[Typedef]
+id: BSPO:0015011
+name: immediately_dorsal_to
+namespace: spatial
+def: "x immediately_dorsal_to y iff x dorsal_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015011
+is_a: BSPO:0000098 ! dorsal_to
+inverse_of: BSPO:0015015 ! immediately_ventral_to
+
+[Typedef]
+id: BSPO:0015012
+name: immediately_posterior_to
+namespace: spatial
+def: "x immediately_posterior_to y iff x posterior_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015012
+is_a: BSPO:0000099 ! posterior_to
+
+[Typedef]
+id: BSPO:0015013
+name: immediately_proximal_to
+namespace: spatial
+def: "x immediately_proximal_to y iff x proximal_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015013
+is_a: BSPO:0000100 ! proximal_to
+
+[Typedef]
+id: BSPO:0015014
+name: immediately_superficial_to
+namespace: spatial
+def: "x immediately_superficial_to y iff x superficial_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015014
+is_a: BSPO:0000108 ! superficial_to
+
+[Typedef]
+id: BSPO:0015015
+name: immediately_ventral_to
+namespace: spatial
+def: "x immediately_ventral_to y iff x ventral_to y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015015
+is_a: BSPO:0000102 ! ventral_to
+
+[Typedef]
+id: BSPO:0015016
+name: immediately_left_of
+namespace: spatial
+def: "x immediately_left_of y iff x left_of y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015016
+is_a: BSPO:0000110 ! left_of
+inverse_of: BSPO:0015017 ! immediately_right_of
+
+[Typedef]
+id: BSPO:0015017
+name: immediately_right_of
+namespace: spatial
+def: "x immediately_right_of y iff x right_of y and x is contiguous with y." [BSPO:curators]
+xref: BSPO:0015017
+is_a: BSPO:0000111 ! right_of
+
+[Typedef]
+id: BSPO:1000000
+name: preaxial_to
+namespace: spatial
+def: "x preaxial_to y iff x is further along the preaxial-postaxial axis than y, towards the front." [http://medical-dictionary.thefreedictionary.com/preaxial]
+synonym: "anterior_to (developmentally)" RELATED [MA:th]
+synonym: "lateral (radial) to" RELATED []
+synonym: "medial (tibial) to" RELATED []
+xref: BSPO:1000000
+is_transitive: true
+
+[Typedef]
+id: RO:0002131
+name: overlaps
+namespace: spatial
+def: "x overlaps y iff they have some part in common." [BSPO:cjm]
+comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part_of z x) (part_of z y)))))" CLIF []
+xref: RO:0002131
+
+[Typedef]
+id: RO:0002220
+name: adjacent_to
+namespace: spatial
+xref: RO:0002220
+is_symmetric: true
+
+[Typedef]
+id: bearer_of
+xref: RO:0000053
+
+[Typedef]
+id: capable_of
+xref: RO:0002215
+
+[Typedef]
+id: develops_from
+name: develops_from
+xref: RO:0002202
+is_transitive: true
+
+[Typedef]
+id: develops_into
+xref: RO:0002203
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: spatial
+xref: BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: has_plasma_membrane_part
+xref: RO:0002104
+
+[Typedef]
+id: lacks_plasma_membrane_part
+name: lacks_plasma_membrane_part
+xref: lacks_plasma_membrane_part
+
+[Typedef]
+id: parallel_to
+name: parallel_to
+namespace: spatial
+def: "x is parallel t y iff x and y are lines or planes which when extended indefinitely do not cross." [BSPO:curators]
+
+[Typedef]
+id: part_of
+name: part of
+name: part_of
+namespace: spatial
+xref: BFO:0000050
+is_transitive: true
+inverse_of: has_part ! has_part
+
+[Typedef]
+id: passes_through
+name: passes_through
+namespace: spatial
+def: "Intersects at two points." [BSPO:cjm]
+xref: BSPO:0015006
+domain: BSPO:0000010 ! anatomical axis
 

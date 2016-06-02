@@ -1,0 +1,38 @@
+format-version: 1.2
+ontology: imports/bspo_import
+
+[Term]
+id: BSPO:0000010
+name: anatomical axis
+is_a: CARO:0000008 ! anatomical line
+relationship: passes_through CARO:0000000 ! anatomical entity
+
+[Term]
+id: BSPO:0000400
+name: anatomical plane
+is_a: CARO:0000010 ! anatomical boundary
+
+[Term]
+id: CARO:0000000
+name: anatomical entity
+
+[Term]
+id: CARO:0000007
+name: immaterial anatomical entity
+is_a: CARO:0000000 ! anatomical entity
+
+[Term]
+id: CARO:0000008
+name: anatomical line
+is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Term]
+id: CARO:0000010
+name: anatomical boundary
+is_a: CARO:0000007 ! immaterial anatomical entity
+
+[Typedef]
+id: passes_through
+name: passes_through
+xref: BSPO:0015006
+

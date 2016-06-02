@@ -7,10 +7,11 @@
 
 OBO = http://purl.obolibrary.org/obo
 ROBOT = robot
+USECAT = --use-catalog
 
 initial-build: cteno.obo
-build: cteno.obo minidiff
-release: cteno.obo diff
+build: all_imports cteno.obo 
+release: all_imports cteno.obo copy-release
 
 test: cteno.obo
 
@@ -24,20 +25,40 @@ copy-release:
 #	ontology-release-runner $< --reasoner elk --allow-overwrite --asserted --simple
 
 cteno.owl: cteno-edit.owl
-	owltools --use-catalog $< --assert-inferred-subclass-axioms $@
+	robot reason -i $< -r elk relax reduce -r elk -o $@
+#	owltools --use-catalog $< --assert-inferred-subclass-axioms $@
 
 cteno.obo: cteno.owl
-	owltools --use-catalog $< -o -f obo $@
+	owltools --use-catalog $< --merge-imports-closure -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 # ----------------------------------------
 # Imports
 # ----------------------------------------
-all_imports: imports/go_import.owl imports/pato_import.owl
+IMPS = uberon cl bspo ro
+all_imports: all_imports_obo all_imports_owl
 
-imports/%_import.owl: cteno-edit.owl
-	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O $(OBO)/$@ -o $@
+all_imports_owl: $(patsubst %,imports/%_import.owl,$(IMPS))
+all_imports_obo: $(patsubst %,imports/%_import.obo,$(IMPS))
+
+imports/seed.txt: cteno-edit.owl
+	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp > $@
+
+imports/%_seed.txt: cteno-edit.owl
+	owltools $(USECAT) $< --remove-import-declaration $(OBO)/cteno/imports/%_import.owl --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp > $@
+imports/ro_seed.txt:
+	echo using existing ro seed
+
+imports/%_import.owl: mirror/%.owl imports/%_seed.txt
+	$(ROBOT) extract -i $< -T imports/$*_seed.txt --method BOT -O $(OBO)/$@ -o $@
 .PRECIOUS: imports/%_import.owl
-##	owltools $< $(OBO)/$*.owl --add-imports-from-supports --extract-module -s $(OBO)/$*.owl -c --extract-mingraph  --set-ontology-id $(OBO)/go/extensions/$@ -o $@
+
+imports/%_import.obo: imports/%_import.owl
+	owltools $< -o -f obo $@
+##	$(ROBOT) convert -i $< -o $@.tmp.obo && mv $@.tmp.obo $@
+
+mirror/%.owl:
+	owltools $(OBO)/$*.owl --make-subset-by-properties BFO:0000050 RO:0002202  RO:0002207  // --extract-mingraph --set-ontology-id $(OBO)/$*.owl -o $@
+.PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
 # Bridges

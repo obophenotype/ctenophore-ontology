@@ -1,0 +1,1013 @@
+format-version: 1.2
+ontology: imports/uberon_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000009>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000010>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000068>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000092>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000104>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0000344>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001016>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0001017>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002072>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002097>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0002199>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/UBERON_0012125>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))\n\n\nEquivalentClasses(ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000009>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000344>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002072>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002097>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0012125>))\nEquivalentClasses(ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000010>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001017>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001016>))\nEquivalentClasses(ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000068>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000092>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0000104>))\nEquivalentClasses(ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002072>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002097>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002199>))\n)
+
+[Term]
+id: UBERON:0000000
+name: processual entity
+
+[Term]
+id: UBERON:0000009
+name: submucosa
+is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000010
+name: peripheral nervous system
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0000020
+name: sense organ
+is_a: UBERON:0000062 ! organ
+relationship: part_of UBERON:0001032 ! sensory system
+
+[Term]
+id: UBERON:0000025
+name: tube
+is_a: UBERON:0004111 ! anatomical conduit
+
+[Term]
+id: UBERON:0000026
+name: appendage
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: UBERON:0000059
+name: large intestine
+is_a: UBERON:0004921 ! subdivision of digestive tract
+is_a: UBERON:0013765 ! digestive system element
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0004907 ! lower digestive tract
+
+[Term]
+id: UBERON:0000060
+name: anatomical wall
+is_a: UBERON:0000064 ! organ part
+
+[Term]
+id: UBERON:0000061
+name: anatomical structure
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0000062
+name: organ
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0000064
+name: organ part
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0000066
+name: fully formed stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000092 ! post-embryonic stage
+
+[Term]
+id: UBERON:0000067
+name: embryo stage part
+is_a: UBERON:0000105 ! life cycle stage
+intersection_of: UBERON:0000105 ! life cycle stage
+intersection_of: part_of UBERON:0000068 ! embryo stage
+relationship: part_of UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0000068
+name: embryo stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000069
+name: larval stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000092 ! post-embryonic stage
+
+[Term]
+id: UBERON:0000076
+name: external ectoderm
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0000092
+name: post-embryonic stage
+is_a: UBERON:0000105 ! life cycle stage
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000100
+name: blastopore
+is_a: UBERON:0002050 ! embryonic structure
+relationship: part_of UBERON:0004735 ! archenteron
+
+[Term]
+id: UBERON:0000104
+name: life cycle
+is_a: UBERON:0000000 ! processual entity
+
+[Term]
+id: UBERON:0000105
+name: life cycle stage
+is_a: UBERON:0000000 ! processual entity
+relationship: part_of UBERON:0000104 ! life cycle
+
+[Term]
+id: UBERON:0000107
+name: cleavage stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0000109
+name: gastrula stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000068 ! embryo stage
+
+[Term]
+id: UBERON:0000122
+name: neuron projection bundle
+is_a: UBERON:0005162 ! multi cell part structure
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0000159
+name: anal canal
+is_a: UBERON:0004111 ! anatomical conduit
+is_a: UBERON:0004121 ! ectoderm-derived structure
+relationship: develops_from UBERON:0011272 ! embryonic skin basal layer
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0000160
+name: intestine
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0000161
+name: orifice
+is_a: UBERON:0004111 ! anatomical conduit
+
+[Term]
+id: UBERON:0000307
+name: blastula
+is_a: UBERON:0000922 ! embryo
+relationship: develops_from UBERON:0007010 ! cleaving embryo
+
+[Term]
+id: UBERON:0000328
+name: gut wall
+is_a: UBERON:0000060 ! anatomical wall
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0000344
+name: mucosa
+is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000383
+name: musculature of body
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0002204 ! musculoskeletal system
+
+[Term]
+id: UBERON:0000465
+name: material anatomical entity
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000467
+name: anatomical system
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000468
+name: multicellular organism
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0000475
+name: organism subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000476
+name: acellular anatomical structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0000477
+name: anatomical cluster
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000479
+name: tissue
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000483
+name: epithelium
+is_a: UBERON:0000479 ! tissue
+union_of: UBERON:0000486 ! multilaminar epithelium
+union_of: UBERON:0000490 ! unilaminar epithelium
+
+[Term]
+id: UBERON:0000485
+name: simple columnar epithelium
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0012274 ! columnar epithelium
+
+[Term]
+id: UBERON:0000486
+name: multilaminar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0000490
+name: unilaminar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0000922
+name: embryo
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0000923
+name: germ layer
+is_a: UBERON:0010316 ! germ layer / neural crest
+relationship: develops_from UBERON:0002532 ! epiblast (generic)
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0000924
+name: ectoderm
+is_a: UBERON:0000923 ! germ layer
+
+[Term]
+id: UBERON:0000926
+name: mesoderm
+is_a: UBERON:0000923 ! germ layer
+
+[Term]
+id: UBERON:0001007
+name: digestive system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0001015
+name: musculature
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0000383 ! musculature of body
+
+[Term]
+id: UBERON:0001016
+name: nervous system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0001017
+name: central nervous system
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0001016 ! nervous system
+
+[Term]
+id: UBERON:0001019
+name: nerve fasciculus
+is_a: UBERON:0000122 ! neuron projection bundle
+
+[Term]
+id: UBERON:0001021
+name: nerve
+is_a: UBERON:0000122 ! neuron projection bundle
+relationship: part_of UBERON:0000010 ! peripheral nervous system
+
+[Term]
+id: UBERON:0001032
+name: sensory system
+is_a: UBERON:0000467 ! anatomical system
+relationship: part_of UBERON:0004456 ! entire sense organ system
+
+[Term]
+id: UBERON:0001046
+name: hindgut
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: develops_from UBERON:0003104 ! mesenchyme
+
+[Term]
+id: UBERON:0001062
+name: anatomical entity
+
+[Term]
+id: UBERON:0001135
+name: smooth muscle tissue
+is_a: UBERON:0002385 ! muscle tissue
+
+[Term]
+id: UBERON:0001169
+name: wall of large intestine
+is_a: UBERON:0001262 ! wall of intestine
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+
+[Term]
+id: UBERON:0001207
+name: mucosa of large intestine
+is_a: UBERON:0001242 ! intestinal mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+relationship: part_of UBERON:0001242 ! intestinal mucosa
+
+[Term]
+id: UBERON:0001208
+name: submucosa of large intestine
+is_a: UBERON:0009566 ! intestinal submucosa
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+
+[Term]
+id: UBERON:0001242
+name: intestinal mucosa
+is_a: UBERON:0004786 ! gastrointestinal system mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0001262
+name: wall of intestine
+is_a: UBERON:0000328 ! gut wall
+intersection_of: UBERON:0000060 ! anatomical wall
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+
+[Term]
+id: UBERON:0001277
+name: intestinal epithelium
+is_a: UBERON:0000485 ! simple columnar epithelium
+is_a: UBERON:0003350 ! epithelium of mucosa
+is_a: UBERON:0003929 ! digestive tract epithelium
+is_a: UBERON:0004808 ! gastrointestinal system epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001242 ! intestinal mucosa
+
+[Term]
+id: UBERON:0001278
+name: epithelium of large intestine
+is_a: UBERON:0001277 ! intestinal epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001207 ! mucosa of large intestine
+
+[Term]
+id: UBERON:0001353
+name: anal region
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
+id: UBERON:0001555
+name: digestive tract
+is_a: UBERON:0000025 ! tube
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0001630
+name: muscle organ
+is_a: UBERON:0000062 ! organ
+is_a: UBERON:0005090 ! muscle structure
+relationship: part_of UBERON:0001015 ! musculature
+
+[Term]
+id: UBERON:0002036
+name: striated muscle tissue
+is_a: UBERON:0002385 ! muscle tissue
+
+[Term]
+id: UBERON:0002050
+name: embryonic structure
+is_a: UBERON:0000061 ! anatomical structure
+is_a: UBERON:0005423 ! developing anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0002072
+name: hypodermis
+is_a: UBERON:0004120 ! mesoderm-derived structure
+is_a: UBERON:0013754 ! integumentary system layer
+relationship: develops_from UBERON:0000926 ! mesoderm
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0002097
+name: skin of body
+is_a: UBERON:0000062 ! organ
+is_a: UBERON:0004121 ! ectoderm-derived structure
+relationship: develops_from UBERON:0011272 ! embryonic skin basal layer
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0002199
+name: integument
+is_a: UBERON:0003102 ! surface structure
+is_a: UBERON:0011216 ! organ system subdivision
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0002204
+name: musculoskeletal system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0002329
+name: somite
+is_a: UBERON:0005423 ! developing anatomical structure
+is_a: UBERON:0007503 ! epithelial vesicle
+is_a: UBERON:0012275 ! meso-epithelium
+relationship: develops_from UBERON:0003059 ! presomitic mesoderm
+
+[Term]
+id: UBERON:0002385
+name: muscle tissue
+is_a: UBERON:0000479 ! tissue
+is_a: UBERON:0004120 ! mesoderm-derived structure
+relationship: develops_from UBERON:0000926 ! mesoderm
+relationship: part_of UBERON:0001015 ! musculature
+
+[Term]
+id: UBERON:0002416
+name: integumental system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0002532
+name: epiblast (generic)
+is_a: UBERON:0002050 ! embryonic structure
+
+[Term]
+id: UBERON:0002548
+name: larva
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0003059
+name: presomitic mesoderm
+is_a: UBERON:0006598 ! presumptive structure
+relationship: part_of UBERON:0003077 ! paraxial mesoderm
+
+[Term]
+id: UBERON:0003077
+name: paraxial mesoderm
+is_a: UBERON:0004120 ! mesoderm-derived structure
+is_a: UBERON:0005291 ! embryonic tissue
+is_a: UBERON:0007524 ! dense mesenchyme tissue
+is_a: UBERON:0015212 ! lateral structure
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0003082
+name: myotome
+is_a: UBERON:0017650 ! developing mesenchymal structure
+relationship: develops_from UBERON:0002329 ! somite
+relationship: develops_from UBERON:0004290 ! dermomyotome
+
+[Term]
+id: UBERON:0003102
+name: surface structure
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0003104
+name: mesenchyme
+is_a: UBERON:0000479 ! tissue
+
+[Term]
+id: UBERON:0003329
+name: submucosa of anal canal
+is_a: UBERON:0001208 ! submucosa of large intestine
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0003342
+name: mucosa of anal canal
+is_a: UBERON:0001207 ! mucosa of large intestine
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0003350
+name: epithelium of mucosa
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000344 ! mucosa
+relationship: part_of UBERON:0000344 ! mucosa
+
+[Term]
+id: UBERON:0003353
+name: epithelium of hindgut
+is_a: UBERON:0003929 ! digestive tract epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0001046 ! hindgut
+
+[Term]
+id: UBERON:0003929
+name: digestive tract epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004111
+name: anatomical conduit
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0004120
+name: mesoderm-derived structure
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: develops_from UBERON:0000926 ! mesoderm
+relationship: develops_from UBERON:0000926 ! mesoderm
+
+[Term]
+id: UBERON:0004121
+name: ectoderm-derived structure
+is_a: UBERON:0000061 ! anatomical structure
+intersection_of: UBERON:0000061 ! anatomical structure
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+relationship: develops_from UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0004220
+name: large intestine smooth muscle
+is_a: UBERON:0004221 ! intestine smooth muscle
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0000059 ! large intestine
+relationship: part_of UBERON:0001169 ! wall of large intestine
+
+[Term]
+id: UBERON:0004221
+name: intestine smooth muscle
+is_a: UBERON:0004226 ! gastrointestinal system smooth muscle
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0004226
+name: gastrointestinal system smooth muscle
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004231
+name: anal region smooth muscle
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0001353 ! anal region
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0004253
+name: skin muscle
+is_a: UBERON:0001630 ! muscle organ
+intersection_of: UBERON:0001630 ! muscle organ
+intersection_of: part_of UBERON:0002416 ! integumental system
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0004290
+name: dermomyotome
+is_a: UBERON:0000486 ! multilaminar epithelium
+is_a: UBERON:0012275 ! meso-epithelium
+is_a: UBERON:0016888 ! transitional anatomical structure
+relationship: develops_from UBERON:0002329 ! somite
+
+[Term]
+id: UBERON:0004456
+name: entire sense organ system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0004734
+name: gastrula
+is_a: UBERON:0000922 ! embryo
+relationship: develops_from UBERON:0000307 ! blastula
+
+[Term]
+id: UBERON:0004735
+name: archenteron
+is_a: UBERON:0002050 ! embryonic structure
+relationship: part_of UBERON:0004734 ! gastrula
+relationship: part_of UBERON:0007026 ! presumptive gut
+
+[Term]
+id: UBERON:0004786
+name: gastrointestinal system mucosa
+is_a: UBERON:0000344 ! mucosa
+intersection_of: UBERON:0000344 ! mucosa
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004808
+name: gastrointestinal system epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004906
+name: ectodermal part of digestive tract
+is_a: UBERON:0004121 ! ectoderm-derived structure
+is_a: UBERON:0004921 ! subdivision of digestive tract
+intersection_of: UBERON:0004921 ! subdivision of digestive tract
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: develops_from UBERON:0000924 ! ectoderm
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004907
+name: lower digestive tract
+is_a: UBERON:0004921 ! subdivision of digestive tract
+relationship: develops_from UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0005409 ! alimentary part of gastrointestinal system
+
+[Term]
+id: UBERON:0004921
+name: subdivision of digestive tract
+is_a: UBERON:0013522 ! subdivision of tube
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0004923
+name: organ component layer
+is_a: UBERON:0000064 ! organ part
+relationship: part_of UBERON:0000060 ! anatomical wall
+
+[Term]
+id: UBERON:0005090
+name: muscle structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0005162
+name: multi cell part structure
+is_a: UBERON:0000477 ! anatomical cluster
+
+[Term]
+id: UBERON:0005291
+name: embryonic tissue
+is_a: UBERON:0000479 ! tissue
+is_a: UBERON:0002050 ! embryonic structure
+intersection_of: UBERON:0000479 ! tissue
+intersection_of: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0000922 ! embryo
+relationship: part_of UBERON:0002050 ! embryonic structure
+
+[Term]
+id: UBERON:0005409
+name: alimentary part of gastrointestinal system
+is_a: UBERON:0000467 ! anatomical system
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0005423
+name: developing anatomical structure
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0006134
+name: nerve fiber
+is_a: UBERON:0005162 ! multi cell part structure
+union_of: UBERON:0006135 ! myelinated nerve fiber
+union_of: UBERON:0006136 ! unmyelinated nerve fiber
+relationship: part_of UBERON:0001019 ! nerve fasciculus
+
+[Term]
+id: UBERON:0006135
+name: myelinated nerve fiber
+is_a: UBERON:0006134 ! nerve fiber
+
+[Term]
+id: UBERON:0006136
+name: unmyelinated nerve fiber
+is_a: UBERON:0006134 ! nerve fiber
+
+[Term]
+id: UBERON:0006562
+name: pharynx
+is_a: UBERON:0004921 ! subdivision of digestive tract
+
+[Term]
+id: UBERON:0006582
+name: statolith
+is_a: UBERON:0000476 ! acellular anatomical structure
+relationship: part_of UBERON:0006583 ! statocyst
+
+[Term]
+id: UBERON:0006583
+name: statocyst
+is_a: UBERON:0000020 ! sense organ
+
+[Term]
+id: UBERON:0006598
+name: presumptive structure
+is_a: UBERON:0005423 ! developing anatomical structure
+relationship: part_of UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0006846
+name: surface groove
+is_a: UBERON:0003102 ! surface structure
+
+[Term]
+id: UBERON:0007010
+name: cleaving embryo
+is_a: UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0007023
+name: adult organism
+is_a: UBERON:0000468 ! multicellular organism
+
+[Term]
+id: UBERON:0007026
+name: presumptive gut
+is_a: UBERON:0006598 ! presumptive structure
+
+[Term]
+id: UBERON:0007233
+name: 4 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000107 ! cleavage stage
+
+[Term]
+id: UBERON:0007236
+name: 8 cell stage
+is_a: UBERON:0000067 ! embryo stage part
+relationship: part_of UBERON:0000107 ! cleavage stage
+
+[Term]
+id: UBERON:0007271
+name: appendage musculature
+is_a: UBERON:0001015 ! musculature
+intersection_of: UBERON:0001015 ! musculature
+intersection_of: part_of UBERON:0000026 ! appendage
+relationship: part_of UBERON:0000026 ! appendage
+
+[Term]
+id: UBERON:0007503
+name: epithelial vesicle
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0007524
+name: dense mesenchyme tissue
+is_a: UBERON:0003104 ! mesenchyme
+
+[Term]
+id: UBERON:0008876
+name: hypodermis skeletal muscle layer
+is_a: UBERON:0004253 ! skin muscle
+is_a: UBERON:0014892 ! skeletal muscle organ
+intersection_of: UBERON:0014892 ! skeletal muscle organ
+intersection_of: part_of UBERON:0002072 ! hypodermis
+relationship: part_of UBERON:0002072 ! hypodermis
+
+[Term]
+id: UBERON:0009503
+name: mesenchyme of hindgut
+is_a: UBERON:0003104 ! mesenchyme
+intersection_of: UBERON:0003104 ! mesenchyme
+intersection_of: part_of UBERON:0001046 ! hindgut
+relationship: part_of UBERON:0001046 ! hindgut
+
+[Term]
+id: UBERON:0009566
+name: intestinal submucosa
+is_a: UBERON:0018257 ! submucosa of digestive tract
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0000160 ! intestine
+relationship: part_of UBERON:0001262 ! wall of intestine
+
+[Term]
+id: UBERON:0010000
+name: multicellular anatomical structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0010316
+name: germ layer / neural crest
+is_a: UBERON:0005291 ! embryonic tissue
+relationship: develops_from UBERON:0002532 ! epiblast (generic)
+
+[Term]
+id: UBERON:0010371
+name: ecto-epithelium
+is_a: UBERON:0000483 ! epithelium
+is_a: UBERON:0004121 ! ectoderm-derived structure
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+relationship: develops_from UBERON:0000924 ! ectoderm
+
+[Term]
+id: UBERON:0011215
+name: central nervous system cell part cluster
+is_a: UBERON:0005162 ! multi cell part structure
+intersection_of: UBERON:0005162 ! multi cell part structure
+intersection_of: part_of UBERON:0001017 ! central nervous system
+relationship: part_of UBERON:0001017 ! central nervous system
+
+[Term]
+id: UBERON:0011216
+name: organ system subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
+relationship: part_of UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0011272
+name: embryonic skin basal layer
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0010371 ! ecto-epithelium
+relationship: develops_from UBERON:0000076 ! external ectoderm
+relationship: part_of UBERON:0002199 ! integument
+
+[Term]
+id: UBERON:0012125
+name: dermatological-muscosal system
+is_a: UBERON:0000467 ! anatomical system
+
+[Term]
+id: UBERON:0012274
+name: columnar epithelium
+is_a: UBERON:0000483 ! epithelium
+
+[Term]
+id: UBERON:0012275
+name: meso-epithelium
+is_a: UBERON:0000483 ! epithelium
+is_a: UBERON:0004120 ! mesoderm-derived structure
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: develops_from UBERON:0000926 ! mesoderm
+relationship: develops_from UBERON:0000926 ! mesoderm
+
+[Term]
+id: UBERON:0013522
+name: subdivision of tube
+is_a: UBERON:0000064 ! organ part
+relationship: part_of UBERON:0000025 ! tube
+
+[Term]
+id: UBERON:0013754
+name: integumentary system layer
+is_a: UBERON:0004923 ! organ component layer
+intersection_of: UBERON:0004923 ! organ component layer
+intersection_of: part_of UBERON:0002416 ! integumental system
+relationship: part_of UBERON:0002416 ! integumental system
+
+[Term]
+id: UBERON:0013765
+name: digestive system element
+is_a: UBERON:0000062 ! organ
+intersection_of: UBERON:0000062 ! organ
+intersection_of: part_of UBERON:0001007 ! digestive system
+relationship: part_of UBERON:0001007 ! digestive system
+
+[Term]
+id: UBERON:0014703
+name: anal membrane ectodermal component
+is_a: UBERON:0000490 ! unilaminar epithelium
+is_a: UBERON:0010371 ! ecto-epithelium
+intersection_of: UBERON:0000490 ! unilaminar epithelium
+intersection_of: develops_from UBERON:0000924 ! ectoderm
+intersection_of: part_of UBERON:0001353 ! anal region
+relationship: develops_from UBERON:0000924 ! ectoderm
+relationship: part_of UBERON:0001353 ! anal region
+
+[Term]
+id: UBERON:0014892
+name: skeletal muscle organ
+is_a: UBERON:0001630 ! muscle organ
+is_a: UBERON:0004120 ! mesoderm-derived structure
+relationship: develops_from UBERON:0003082 ! myotome
+relationship: part_of UBERON:0018254 ! skeletal musculature
+
+[Term]
+id: UBERON:0015212
+name: lateral structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0015716
+name: anal canal epithelium
+is_a: UBERON:0001278 ! epithelium of large intestine
+is_a: UBERON:0014703 ! anal membrane ectodermal component
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000159 ! anal canal
+relationship: part_of UBERON:0000159 ! anal canal
+
+[Term]
+id: UBERON:0015783
+name: smooth muscle layer in fatty layer of subcutaneous tissue
+is_a: UBERON:0001135 ! smooth muscle tissue
+intersection_of: UBERON:0001135 ! smooth muscle tissue
+intersection_of: part_of UBERON:0002072 ! hypodermis
+relationship: part_of UBERON:0002072 ! hypodermis
+
+[Term]
+id: UBERON:0016888
+name: transitional anatomical structure
+is_a: UBERON:0005423 ! developing anatomical structure
+
+[Term]
+id: UBERON:0017650
+name: developing mesenchymal structure
+is_a: UBERON:0005423 ! developing anatomical structure
+
+[Term]
+id: UBERON:0018254
+name: skeletal musculature
+is_a: UBERON:0000061 ! anatomical structure
+relationship: part_of UBERON:0000383 ! musculature of body
+
+[Term]
+id: UBERON:0018257
+name: submucosa of digestive tract
+is_a: UBERON:0000009 ! submucosa
+intersection_of: UBERON:0000009 ! submucosa
+intersection_of: part_of UBERON:0001555 ! digestive tract
+relationship: part_of UBERON:0001555 ! digestive tract
+
+[Term]
+id: UBERON:0019304
+name: sensory organ epithelium
+is_a: UBERON:0000483 ! epithelium
+intersection_of: UBERON:0000483 ! epithelium
+intersection_of: part_of UBERON:0000020 ! sense organ
+relationship: part_of UBERON:0000020 ! sense organ
+
+[Term]
+id: UBERON:3000961
+name: external integument structure
+is_a: UBERON:0003102 ! surface structure
+intersection_of: UBERON:0003102 ! surface structure
+intersection_of: part_of UBERON:0002199 ! integument
+relationship: part_of UBERON:0002199 ! integument
+
+[Typedef]
+id: develops_from
+name: develops_from
+xref: RO:0002202
+is_transitive: true
+
+[Typedef]
+id: part_of
+name: part of
+xref: BFO:0000050
+is_transitive: true
+
