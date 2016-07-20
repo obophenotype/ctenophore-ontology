@@ -1,4 +1,5 @@
 format-version: 1.2
+data-version: releases/2016-07-16
 synonymtypedef: acronym "acronym" broad
 synonymtypedef: anamorph "anamorph" related
 synonymtypedef: blast_name "blast name" related
@@ -16,6 +17,7 @@ synonymtypedef: scientific_name "scientific name" exact
 synonymtypedef: synonym "synonym" related
 synonymtypedef: teleomorph "teleomorph" related
 synonymtypedef: vertebrate "synonym typically used in the context of vertebrate anatomy" NARROW
+remark: CTENO is an ontology describing the anatomy and developmet of ctenophores.
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/bspo.owl>) VersionIRI(<http://purl.obolibrary.org/obo/bspo/releases/2014-02-03/bspo.owl>))) [Axioms: 1874 Logical Axioms: 473]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/cteno/taxonomy.owl>) VersionIRI(<null>))) [Axioms: 552 Logical Axioms: 89]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/bspo_import.owl>) VersionIRI(<null>))) [Axioms: 24 Logical Axioms: 6]

@@ -6,6 +6,8 @@
 # To make a release, type 'make release' in this directory
 
 OBO = http://purl.obolibrary.org/obo
+ONT=cteno
+BASE=$(OBO)/$(ONT)
 ROBOT = robot
 USECAT = --use-catalog
 
@@ -25,8 +27,7 @@ copy-release:
 #	ontology-release-runner $< --reasoner elk --allow-overwrite --asserted --simple
 
 cteno.owl: cteno-edit.owl
-	robot reason -i $< -r elk relax reduce -r elk -o $@
-#	owltools --use-catalog $< --assert-inferred-subclass-axioms $@
+	robot reason -i $< -r elk relax reduce -r elk annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
 cteno.obo: cteno.owl
 	owltools --use-catalog $< --merge-imports-closure -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@

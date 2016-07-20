@@ -13,6 +13,7 @@ Import(<http://purl.obolibrary.org/obo/cteno/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/imports/cl_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/imports/bspo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/cteno/imports/ro_import.owl>)
+Annotation(rdfs:comment "CTENO is an ontology describing the anatomy and developmet of ctenophores."^^xsd:string)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CTENO_0000002>))
