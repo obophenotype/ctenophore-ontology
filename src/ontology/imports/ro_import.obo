@@ -1,0 +1,83 @@
+format-version: 1.2
+ontology: imports/ro_import
+
+[Typedef]
+id: capable_of
+name: capable of
+xref: RO:0002215
+is_a: capable_of_part_of ! capable of part of
+
+[Typedef]
+id: capable_of_part_of
+name: capable of part of
+xref: RO:0002216
+is_a: causal_agent_in ! causal agent in
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: causal_agent_in
+name: causal agent in
+xref: RO:0002500
+is_a: causal_relation_between_material_entity_and_a_process ! causal relation between material entity and a process
+
+[Typedef]
+id: causal_relation_between_material_entity_and_a_process
+name: causal relation between material entity and a process
+xref: RO:0002595
+is_a: causally_related_to ! causally related to
+
+[Typedef]
+id: causally_related_to
+name: causally related to
+xref: RO:0002410
+is_a: related_via_dependence_to ! related via dependence to
+
+[Typedef]
+id: developmentally_preceded_by
+name: developmentally preceded by
+xref: RO:0002258
+is_a: developmentally_related_to ! developmentally related to
+
+[Typedef]
+id: developmentally_related_to
+name: developmentally related to
+xref: RO:0002324
+
+[Typedef]
+id: develops_from
+name: develops from
+xref: RO:0002202
+is_transitive: true
+is_a: developmentally_preceded_by ! developmentally preceded by
+
+[Typedef]
+id: functionally_related_to
+name: functionally related to
+xref: RO:0002328
+
+[Typedef]
+id: has_part
+xref: BFO:0000051
+is_a: overlaps ! overlaps
+
+[Typedef]
+id: mereotopologically_related_to
+name: mereotopologically related to
+xref: RO:0002323
+
+[Typedef]
+id: overlaps
+name: overlaps
+xref: RO:0002131
+is_a: mereotopologically_related_to ! mereotopologically related to
+
+[Typedef]
+id: part_of
+xref: BFO:0000050
+is_a: overlaps ! overlaps
+
+[Typedef]
+id: related_via_dependence_to
+name: related via dependence to
+xref: RO:0002609
+

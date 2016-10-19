@@ -1,0 +1,409 @@
+format-version: 1.2
+ontology: imports/cl_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005634>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001405>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002505>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))\n\n\nEquivalentClasses(ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001405>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002505>))\n)
+
+[Term]
+id: CL:0000000
+name: cell
+is_a: GO:0005575
+equivalent_to: GO:0005623
+
+[Term]
+id: CL:0000003
+name: native cell
+is_a: CL:0000000 ! cell
+is_a: GO:0005623
+
+[Term]
+id: CL:0000006
+name: neuronal receptor cell
+is_a: CL:0000101 ! sensory neuron
+is_a: CL:0000197 ! receptor cell
+intersection_of: CL:0000197 ! receptor cell
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000007
+name: early embryonic cell
+is_a: CL:0002321 ! embryonic cell
+
+[Term]
+id: CL:0000031
+name: neuroblast
+is_a: CL:0000047 ! neuronal stem cell
+is_a: CL:0000055 ! non-terminally differentiated cell
+
+[Term]
+id: CL:0000034
+name: stem cell
+is_a: CL:0011115 ! precursor cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0017145
+relationship: capable_of GO:0017145
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:0000047
+name: neuronal stem cell
+is_a: CL:0000048 ! multi fate stem cell
+is_a: CL:0002319 ! neural cell
+intersection_of: CL:0000048 ! multi fate stem cell
+intersection_of: part_of UBERON:0001017
+relationship: develops_from CL:0000133 ! neurectodermal cell
+relationship: part_of UBERON:0001017
+
+[Term]
+id: CL:0000048
+name: multi fate stem cell
+is_a: CL:0000034 ! stem cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0002371 ! somatic cell
+intersection_of: bearer_of PATO:0001402
+intersection_of: capable_of GO:0017145
+relationship: bearer_of PATO:0001402
+relationship: capable_of GO:0017145
+
+[Term]
+id: CL:0000055
+name: non-terminally differentiated cell
+is_a: CL:0011115 ! precursor cell
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:0000056
+name: myoblast
+is_a: CL:0000680 ! muscle precursor cell
+
+[Term]
+id: CL:0000064
+name: ciliated cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: has_plasma_membrane_part GO:0005929
+relationship: has_plasma_membrane_part GO:0005929
+
+[Term]
+id: CL:0000066
+name: epithelial cell
+is_a: CL:0000548 ! animal cell
+intersection_of: CL:0000548 ! animal cell
+intersection_of: part_of UBERON:0000483
+relationship: part_of UBERON:0000483
+
+[Term]
+id: CL:0000067
+name: ciliated epithelial cell
+is_a: CL:0000064 ! ciliated cell
+is_a: CL:0000075 ! columnar/cuboidal epithelial cell
+intersection_of: CL:0000075 ! columnar/cuboidal epithelial cell
+intersection_of: has_plasma_membrane_part GO:0005929
+relationship: has_plasma_membrane_part GO:0005929
+
+[Term]
+id: CL:0000075
+name: columnar/cuboidal epithelial cell
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+
+[Term]
+id: CL:0000098
+name: sensory epithelial cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0000197 ! receptor cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000101
+name: sensory neuron
+is_a: CL:0000526 ! afferent neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050906
+relationship: capable_of GO:0050906
+
+[Term]
+id: CL:0000133
+name: neurectodermal cell
+is_a: CL:0000221 ! ectodermal cell
+
+[Term]
+id: CL:0000134
+name: mesenchymal stem cell
+is_a: CL:0000048 ! multi fate stem cell
+is_a: CL:0000219 ! motile cell
+is_a: CL:0002320 ! connective tissue cell
+intersection_of: CL:0002320 ! connective tissue cell
+intersection_of: capable_of GO:0001649
+intersection_of: capable_of GO:0016477
+intersection_of: capable_of GO:0030182
+intersection_of: capable_of GO:0030855
+intersection_of: capable_of GO:0045444
+intersection_of: capable_of GO:0055007
+intersection_of: capable_of GO:0060591
+intersection_of: has_plasma_membrane_part PR:000001345
+intersection_of: has_plasma_membrane_part PR:000001800
+intersection_of: has_plasma_membrane_part PR:000001843
+intersection_of: lacks_plasma_membrane_part GO:0042613
+intersection_of: lacks_plasma_membrane_part PR:000001003
+intersection_of: lacks_plasma_membrane_part PR:000001006
+relationship: capable_of GO:0001649
+relationship: capable_of GO:0016477
+relationship: capable_of GO:0030182
+relationship: capable_of GO:0030855
+relationship: capable_of GO:0045444
+relationship: capable_of GO:0055007
+relationship: capable_of GO:0060591
+relationship: has_plasma_membrane_part PR:000001345
+relationship: has_plasma_membrane_part PR:000001800
+relationship: has_plasma_membrane_part PR:000001843
+relationship: lacks_plasma_membrane_part GO:0042613
+relationship: lacks_plasma_membrane_part PR:000001003
+relationship: lacks_plasma_membrane_part PR:000001006
+
+[Term]
+id: CL:0000183
+name: contractile cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000187
+name: muscle cell
+is_a: BFO:0000004
+is_a: CL:0000183 ! contractile cell
+is_a: CL:0000393 ! electrically responsive cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+relationship: develops_from CL:0000056 ! myoblast
+
+[Term]
+id: CL:0000197
+name: receptor cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000199
+name: mechanoreceptor cell
+is_a: CL:0000101 ! sensory neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050974
+relationship: capable_of GO:0050974
+
+[Term]
+id: CL:0000210
+name: photoreceptor cell
+is_a: CL:0000006 ! neuronal receptor cell
+intersection_of: CL:0000540 ! neuron
+intersection_of: capable_of GO:0050962
+relationship: capable_of GO:0050962
+
+[Term]
+id: CL:0000211
+name: electrically active cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000219
+name: motile cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0048870
+relationship: capable_of GO:0048870
+
+[Term]
+id: CL:0000221
+name: ectodermal cell
+is_a: BFO:0000004
+is_a: CL:0002321 ! embryonic cell
+relationship: part_of UBERON:0000924
+
+[Term]
+id: CL:0000222
+name: mesodermal cell
+is_a: BFO:0000004
+is_a: CL:0002321 ! embryonic cell
+relationship: part_of UBERON:0000926
+
+[Term]
+id: CL:0000225
+name: anucleate cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: bearer_of PATO:0001405
+relationship: bearer_of PATO:0001405
+
+[Term]
+id: CL:0000255
+name: eukaryotic cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0000353
+name: blastoderm cell
+is_a: CL:0000007 ! early embryonic cell
+
+[Term]
+id: CL:0000393
+name: electrically responsive cell
+is_a: CL:0000211 ! electrically active cell
+
+[Term]
+id: CL:0000404
+name: electrically signaling cell
+is_a: CL:0000211 ! electrically active cell
+
+[Term]
+id: CL:0000526
+name: afferent neuron
+is_a: CL:0000540 ! neuron
+
+[Term]
+id: CL:0000540
+name: neuron
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000393 ! electrically responsive cell
+is_a: CL:0000404 ! electrically signaling cell
+is_a: CL:0002319 ! neural cell
+relationship: capable_of GO:0019226
+relationship: develops_from CL:0000031 ! neuroblast
+
+[Term]
+id: CL:0000548
+name: animal cell
+is_a: CL:0000255 ! eukaryotic cell
+relationship: has_part GO:0005902
+
+[Term]
+id: CL:0000680
+name: muscle precursor cell
+is_a: CL:0000055 ! non-terminally differentiated cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: GO:0005623
+intersection_of: develops_into CL:0000187 ! muscle cell
+relationship: develops_from CL:0000222 ! mesodermal cell
+relationship: develops_into CL:0000187 ! muscle cell
+
+[Term]
+id: CL:0000710
+name: neurecto-epithelial cell
+is_a: CL:0000075 ! columnar/cuboidal epithelial cell
+is_a: CL:0002077 ! ecto-epithelial cell
+intersection_of: CL:0002077 ! ecto-epithelial cell
+intersection_of: develops_from CL:0000133 ! neurectodermal cell
+relationship: develops_from CL:0000133 ! neurectodermal cell
+
+[Term]
+id: CL:0002077
+name: ecto-epithelial cell
+is_a: BFO:0000004
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: develops_from CL:0000221 ! ectodermal cell
+relationship: develops_from CL:0000221 ! ectodermal cell
+
+[Term]
+id: CL:0002078
+name: meso-epithelial cell
+is_a: BFO:0000004
+is_a: CL:0000066 ! epithelial cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000066 ! epithelial cell
+intersection_of: develops_from CL:0000222 ! mesodermal cell
+relationship: develops_from CL:0000222 ! mesodermal cell
+
+[Term]
+id: CL:0002242
+name: nucleate cell
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: has_part GO:0005634
+relationship: has_part GO:0005634
+
+[Term]
+id: CL:0002319
+name: neural cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0000000 ! cell
+intersection_of: part_of UBERON:0001016
+relationship: part_of UBERON:0001016
+
+[Term]
+id: CL:0002320
+name: connective tissue cell
+is_a: CL:0000548 ! animal cell
+is_a: CL:0002371 ! somatic cell
+intersection_of: CL:0002371 ! somatic cell
+intersection_of: part_of UBERON:0002384
+relationship: part_of UBERON:0002384
+
+[Term]
+id: CL:0002321
+name: embryonic cell
+is_a: CL:0000548 ! animal cell
+
+[Term]
+id: CL:0002371
+name: somatic cell
+is_a: CL:0000003 ! native cell
+
+[Term]
+id: CL:0011115
+name: precursor cell
+is_a: BFO:0000004
+is_a: BFO:0000040
+is_a: CL:0000003 ! native cell
+intersection_of: CL:0000003 ! native cell
+intersection_of: capable_of GO:0030154
+relationship: capable_of GO:0030154
+
+[Term]
+id: CL:2000029
+name: central nervous system neuron
+is_a: CL:0000540 ! neuron
+intersection_of: CL:0000540 ! neuron
+intersection_of: part_of UBERON:0001017
+relationship: part_of UBERON:0001017
+
+[Typedef]
+id: bearer_of
+xref: RO:0000053
+
+[Typedef]
+id: capable_of
+xref: RO:0002215
+
+[Typedef]
+id: develops_from
+xref: RO:0002202
+
+[Typedef]
+id: develops_into
+xref: RO:0002203
+
+[Typedef]
+id: has_part
+xref: BFO:0000051
+
+[Typedef]
+id: has_plasma_membrane_part
+xref: RO:0002104
+
+[Typedef]
+id: lacks_plasma_membrane_part
+name: lacks_plasma_membrane_part
+xref: lacks_plasma_membrane_part
+
+[Typedef]
+id: part_of
+xref: BFO:0000050
+
