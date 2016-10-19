@@ -1,0 +1,58 @@
+format-version: 1.2
+ontology: imports/chebi_import
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:33694
+name: biomacromolecule
+is_a: CHEBI:33839 ! macromolecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33695
+name: information biomacromolecule
+is_a: CHEBI:33694 ! biomacromolecule
+
+[Term]
+id: CHEBI:33839
+name: macromolecule
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:36080
+name: protein
+is_a: CHEBI:33695 ! information biomacromolecule
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+is_a: CHEBI:33582 ! carbon group molecular entity
+

@@ -5,5 +5,7 @@
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/ro_import.owl" uri="imports/ro_import.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/cl_import.owl" uri="imports/cl_import.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/go_import.owl" uri="imports/go_import.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/chebi_import.owl" uri="imports/chebi_import.owl"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/cteno/imports/bspo_import.owl" uri="imports/bspo_import.owl"/>
 </catalog>

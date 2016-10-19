@@ -35,7 +35,7 @@ cteno.obo: cteno.owl
 # ----------------------------------------
 # Imports
 # ----------------------------------------
-IMPS = uberon cl bspo ro
+IMPS = go chebi uberon cl bspo ro
 all_imports: all_imports_obo all_imports_owl
 
 all_imports_owl: $(patsubst %,imports/%_import.owl,$(IMPS))

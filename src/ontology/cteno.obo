@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2016-07-16
+data-version: releases/2016-10-19
 synonymtypedef: acronym "acronym" broad
 synonymtypedef: anamorph "anamorph" related
 synonymtypedef: blast_name "blast name" related
@@ -21,8 +21,10 @@ remark: CTENO is an ontology describing the anatomy and developmet of ctenophore
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/bspo.owl>) VersionIRI(<http://purl.obolibrary.org/obo/bspo/releases/2014-02-03/bspo.owl>))) [Axioms: 1874 Logical Axioms: 473]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/cteno/taxonomy.owl>) VersionIRI(<null>))) [Axioms: 552 Logical Axioms: 89]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/bspo_import.owl>) VersionIRI(<null>))) [Axioms: 24 Logical Axioms: 6]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/chebi_import.owl>) VersionIRI(<null>))) [Axioms: 33 Logical Axioms: 11]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/cl_import.owl>) VersionIRI(<null>))) [Axioms: 313 Logical Axioms: 153]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/ro_import.owl>) VersionIRI(<null>))) [Axioms: 11 Logical Axioms: 3]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/go_import.owl>) VersionIRI(<null>))) [Axioms: 99 Logical Axioms: 49]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/ro_import.owl>) VersionIRI(<null>))) [Axioms: 68 Logical Axioms: 12]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/imports/uberon_import.owl>) VersionIRI(<null>))) [Axioms: 666 Logical Axioms: 354]
 ontology: cteno
 
@@ -317,10 +319,10 @@ synonym: "anterodorsal region " EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:01:38Z
 
@@ -333,10 +335,10 @@ synonym: "anteroventral region " EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:04:59Z
 
@@ -349,10 +351,10 @@ synonym: "posterolateral region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:06:01Z
 
@@ -365,10 +367,10 @@ synonym: "anterolateral region" EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:07:18Z
 
@@ -381,10 +383,10 @@ synonym: "posterodorsal region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:08:13Z
 
@@ -394,8 +396,8 @@ name: upper region
 namespace: spatial
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000001 ! overlaps upper side
-relationship: RO:0002131 BSPO:0000001 ! overlaps upper side
+intersection_of: overlaps BSPO:0000001 ! upper side
+relationship: overlaps BSPO:0000001 ! upper side
 
 [Term]
 id: BSPO:0000032
@@ -403,8 +405,8 @@ name: lower region
 namespace: spatial
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000002 ! overlaps lower side
-relationship: RO:0002131 BSPO:0000002 ! overlaps lower side
+intersection_of: overlaps BSPO:0000002 ! lower side
+relationship: overlaps BSPO:0000002 ! lower side
 
 [Term]
 id: BSPO:0000033
@@ -413,8 +415,8 @@ namespace: spatial
 def: "Anatomical region located deep within an organism or structure." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000003 ! overlaps deep side
-relationship: RO:0002131 BSPO:0000003 ! overlaps deep side
+intersection_of: overlaps BSPO:0000003 ! deep side
+relationship: overlaps BSPO:0000003 ! deep side
 
 [Term]
 id: BSPO:0000034
@@ -423,8 +425,8 @@ namespace: spatial
 def: "Anatomical region superficially located on the body or body part." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000004 ! overlaps superficial side
-relationship: RO:0002131 BSPO:0000004 ! overlaps superficial side
+intersection_of: overlaps BSPO:0000004 ! superficial side
+relationship: overlaps BSPO:0000004 ! superficial side
 
 [Term]
 id: BSPO:0000035
@@ -435,10 +437,10 @@ synonym: "posteroventral region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-06-15T01:08:38Z
 
@@ -510,10 +512,10 @@ is_a: BSPO:0000050 ! antero-medial region
 is_a: BSPO:0000671 ! anterior margin
 is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:49:57Z
 
@@ -545,10 +547,10 @@ is_a: BSPO:0000029 ! antero-lateral region
 is_a: BSPO:0000671 ! anterior margin
 is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:50:37Z
 
@@ -562,10 +564,10 @@ is_a: BSPO:0000064 ! postero-medial region
 is_a: BSPO:0000672 ! posterior margin
 is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:51:07Z
 
@@ -579,10 +581,10 @@ is_a: BSPO:0000028 ! postero-lateral region
 is_a: BSPO:0000672 ! posterior margin
 is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000066 ! lateral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:51:42Z
 
@@ -596,10 +598,10 @@ is_a: BSPO:0000069 ! dorso-medial region
 is_a: BSPO:0000679 ! dorsal margin
 is_a: BSPO:0000683 ! medial margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:52:04Z
 
@@ -613,10 +615,10 @@ is_a: BSPO:0000112 ! ventro-medial region
 is_a: BSPO:0000683 ! medial margin
 is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000067 ! medial side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:52:48Z
 
@@ -629,10 +631,10 @@ synonym: "anteromedial region" EXACT []
 is_a: BSPO:0000071 ! anterior region
 is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:55:32Z
 
@@ -686,6 +688,7 @@ synonym: "rostral" EXACT []
 xref: FBcv:0000053
 xref: FBql:00005848
 is_a: BSPO:0000054 ! anatomical side
+is_a: BSPO:0000072 ! posterior region
 relationship: BSPO:0000096 BSPO:0000056 ! anterior_to posterior side
 relationship: BSPO:0000113 BSPO:0000056 ! opposite_to posterior side
 relationship: BSPO:0015007 BSPO:0000013 ! starts_axis anterior-posterior axis
@@ -712,6 +715,7 @@ synonym: "apical" EXACT []
 xref: FBcv:0000054
 xref: FBql:00005854
 is_a: BSPO:0000054 ! anatomical side
+is_a: BSPO:0000074 ! basal region
 relationship: BSPO:0000113 BSPO:0000058 ! opposite_to basal side
 relationship: BSPO:0015007 BSPO:0000014 ! starts_axis apical-basal axis relative to substrate
 
@@ -757,6 +761,7 @@ synonym: "proximal" EXACT []
 xref: FBcv:0000066
 xref: FBql:00005852
 is_a: BSPO:0000054 ! anatomical side
+is_a: BSPO:0000078 ! distal region
 relationship: BSPO:0000113 BSPO:0000062 ! opposite_to distal side
 relationship: BSPO:0015007 BSPO:0000015 ! starts_axis proximal-distal axis
 
@@ -781,6 +786,7 @@ synonym: "dorsal" EXACT []
 xref: FBcv:0000059
 xref: FBql:00005842
 is_a: BSPO:0000054 ! anatomical side
+is_a: BSPO:0000084 ! ventral region
 relationship: BSPO:0000098 BSPO:0000066 ! dorsal_to lateral side
 relationship: BSPO:0000113 BSPO:0000068 ! opposite_to ventral side
 relationship: BSPO:0015007 BSPO:0000016 ! starts_axis dorsal-ventral axis
@@ -794,10 +800,10 @@ synonym: "posteromedial region" EXACT []
 is_a: BSPO:0000072 ! posterior region
 is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:56:39Z
 
@@ -851,10 +857,10 @@ synonym: "dorsomedial region" EXACT []
 is_a: BSPO:0000079 ! dorsal region
 is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000067 ! medial side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:57:22Z
 
@@ -875,8 +881,8 @@ def: "Anatomical region anteriorly located on the body or body part." [BSPO:wd]
 xref: FBql:00005848
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000055 ! anterior side
 
 [Term]
 id: BSPO:0000072
@@ -886,8 +892,8 @@ def: "Anatomical region posteriorly located on the body or body part." [BSPO:wd]
 xref: FBql:00005849
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000056 ! posterior side
 
 [Term]
 id: BSPO:0000073
@@ -897,8 +903,8 @@ def: "Anatomical region located on the apical end on the body or body part." [BS
 xref: FBql:00005854
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000057 ! overlaps apical side
-relationship: RO:0002131 BSPO:0000057 ! overlaps apical side
+intersection_of: overlaps BSPO:0000057 ! apical side
+relationship: overlaps BSPO:0000057 ! apical side
 
 [Term]
 id: BSPO:0000074
@@ -908,8 +914,8 @@ def: "Anatomical region located basally on the body or body part." [BSPO:wd]
 xref: FBql:00005855
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000058 ! overlaps basal side
-relationship: RO:0002131 BSPO:0000058 ! overlaps basal side
+intersection_of: overlaps BSPO:0000058 ! basal side
+relationship: overlaps BSPO:0000058 ! basal side
 
 [Term]
 id: BSPO:0000075
@@ -919,8 +925,8 @@ def: "Anatomical region centrally located on the body or body part." [BSPO:wd]
 xref: FBql:00015851
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000059 ! overlaps central side
-relationship: RO:0002131 BSPO:0000059 ! overlaps central side
+intersection_of: overlaps BSPO:0000059 ! central side
+relationship: overlaps BSPO:0000059 ! central side
 
 [Term]
 id: BSPO:0000076
@@ -930,8 +936,8 @@ comment: inherited from flybase cv. not clear how this would be used
 xref: FBql:00005851
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000060 ! overlaps contralateral side
-relationship: RO:0002131 BSPO:0000060 ! overlaps contralateral side
+intersection_of: overlaps BSPO:0000060 ! contralateral side
+relationship: overlaps BSPO:0000060 ! contralateral side
 
 [Term]
 id: BSPO:0000077
@@ -941,8 +947,8 @@ def: "Anatomical region proximally located on the body or body part." [BSPO:wd]
 xref: FBql:00005852
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000061 ! overlaps proximal side
-relationship: RO:0002131 BSPO:0000061 ! overlaps proximal side
+intersection_of: overlaps BSPO:0000061 ! proximal side
+relationship: overlaps BSPO:0000061 ! proximal side
 
 [Term]
 id: BSPO:0000078
@@ -952,8 +958,8 @@ def: "Anatomical region distally located on the body or body part." [BSPO:wd]
 xref: FBql:00005853
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000062 ! overlaps distal side
-relationship: RO:0002131 BSPO:0000062 ! overlaps distal side
+intersection_of: overlaps BSPO:0000062 ! distal side
+relationship: overlaps BSPO:0000062 ! distal side
 
 [Term]
 id: BSPO:0000079
@@ -963,8 +969,8 @@ def: "Anatomical region dorsally located on the body or body part." [BSPO:wd]
 xref: FBql:00005842
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000080
@@ -976,10 +982,10 @@ xref: FBql:00005845
 is_a: BSPO:0000079 ! dorsal region
 is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000081
@@ -988,8 +994,8 @@ namespace: spatial
 xref: FBql:00005850
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000065 ! overlaps ipsilateral side
-relationship: RO:0002131 BSPO:0000065 ! overlaps ipsilateral side
+intersection_of: overlaps BSPO:0000065 ! ipsilateral side
+relationship: overlaps BSPO:0000065 ! ipsilateral side
 
 [Term]
 id: BSPO:0000082
@@ -999,8 +1005,8 @@ def: "Anatomical region laterally located on the body or body part." [BSPO:wd]
 xref: FBql:00005844
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000083
@@ -1010,8 +1016,8 @@ def: "Anatomical region medially located on the body or body part." [BSPO:wd]
 xref: FBql:00005847
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000067 ! medial side
 
 [Term]
 id: BSPO:0000084
@@ -1021,8 +1027,8 @@ def: "Anatomical region ventrally located on the body or body part." [BSPO:wd]
 xref: FBql:00005843
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000085
@@ -1035,10 +1041,10 @@ xref: FBql:00005846
 is_a: BSPO:0000082 ! lateral region
 is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000086
@@ -1123,10 +1129,10 @@ synonym: "ventromedial region" EXACT []
 is_a: BSPO:0000083 ! medial region
 is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000067 ! medial side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000068 ! ventral side
 created_by: Melissa  Haendel
 creation_date: 2009-09-10T08:57:54Z
 
@@ -1137,8 +1143,8 @@ namespace: spatial
 def: "Anatomical region peripherally located on the body or body part." [BSPO:wd]
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000129 ! overlaps peripheral side
-relationship: RO:0002131 BSPO:0000129 ! overlaps peripheral side
+intersection_of: overlaps BSPO:0000129 ! peripheral side
+relationship: overlaps BSPO:0000129 ! peripheral side
 
 [Term]
 id: BSPO:0000128
@@ -1146,8 +1152,8 @@ name: axial region
 namespace: spatial
 is_a: BSPO:0000070 ! anatomical region
 intersection_of: BSPO:0000070 ! anatomical region
-intersection_of: RO:0002131 BSPO:0000130 ! overlaps axial side
-relationship: RO:0002131 BSPO:0000130 ! overlaps axial side
+intersection_of: overlaps BSPO:0000130 ! axial side
+relationship: overlaps BSPO:0000130 ! axial side
 
 [Term]
 id: BSPO:0000129
@@ -1416,8 +1422,8 @@ def: "Anatomical margin that is located on the anterior side of a body or body p
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000071 ! anterior region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000055 ! anterior side
 
 [Term]
 id: BSPO:0000672
@@ -1427,8 +1433,8 @@ def: "Anatomical margin that is located on the posterior side of the body or bod
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000072 ! posterior region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000056 ! posterior side
 
 [Term]
 id: BSPO:0000673
@@ -1438,8 +1444,8 @@ def: "Anatomical margin that is located on the apical side of the body or body p
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000073 ! apical region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000057 ! overlaps apical side
-relationship: RO:0002131 BSPO:0000057 ! overlaps apical side
+intersection_of: overlaps BSPO:0000057 ! apical side
+relationship: overlaps BSPO:0000057 ! apical side
 
 [Term]
 id: BSPO:0000674
@@ -1449,8 +1455,8 @@ def: "Anatomical margin that is located on the basal side of the body or body pa
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000074 ! basal region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000058 ! overlaps basal side
-relationship: RO:0002131 BSPO:0000058 ! overlaps basal side
+intersection_of: overlaps BSPO:0000058 ! basal side
+relationship: overlaps BSPO:0000058 ! basal side
 
 [Term]
 id: BSPO:0000677
@@ -1460,8 +1466,8 @@ def: "Anatomical margin that is located on the proximal region of the body or bo
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000077 ! proximal region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000061 ! overlaps proximal side
-relationship: RO:0002131 BSPO:0000061 ! overlaps proximal side
+intersection_of: overlaps BSPO:0000061 ! proximal side
+relationship: overlaps BSPO:0000061 ! proximal side
 
 [Term]
 id: BSPO:0000678
@@ -1471,8 +1477,8 @@ def: "Anatomical margin that is located on the distal side of the body or body p
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000078 ! distal region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000062 ! overlaps distal side
-relationship: RO:0002131 BSPO:0000062 ! overlaps distal side
+intersection_of: overlaps BSPO:0000062 ! distal side
+relationship: overlaps BSPO:0000062 ! distal side
 
 [Term]
 id: BSPO:0000679
@@ -1482,8 +1488,8 @@ def: "Anatomical margin that is located on the dorsal side of body or body part.
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000079 ! dorsal region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000680
@@ -1495,10 +1501,10 @@ is_a: BSPO:0000080 ! dorso-lateral region
 is_a: BSPO:0000679 ! dorsal margin
 is_a: BSPO:0000682 ! lateral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000682
@@ -1508,8 +1514,8 @@ def: "Anatomical margin that is located on the lateral side of the body or body 
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000082 ! lateral region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000066 ! lateral side
 
 [Term]
 id: BSPO:0000683
@@ -1519,8 +1525,8 @@ def: "Anatomical margin that is located on the medial side of the body or body p
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000083 ! medial region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000067 ! overlaps medial side
-relationship: RO:0002131 BSPO:0000067 ! overlaps medial side
+intersection_of: overlaps BSPO:0000067 ! medial side
+relationship: overlaps BSPO:0000067 ! medial side
 
 [Term]
 id: BSPO:0000684
@@ -1530,8 +1536,8 @@ def: "Anatomical margin that is located on the ventral side of the body or body 
 is_a: BSPO:0000006 ! anatomical margin
 is_a: BSPO:0000084 ! ventral region
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000685
@@ -1544,10 +1550,10 @@ is_a: BSPO:0000085 ! ventro-lateral region
 is_a: BSPO:0000682 ! lateral margin
 is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000066 ! overlaps lateral side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000066 ! overlaps lateral side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000066 ! lateral side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000066 ! lateral side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000686
@@ -1559,10 +1565,10 @@ is_a: BSPO:0000026 ! antero-dorsal region
 is_a: BSPO:0000671 ! anterior margin
 is_a: BSPO:0000679 ! dorsal margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000687
@@ -1574,10 +1580,10 @@ is_a: BSPO:0000030 ! postero-dorsal region
 is_a: BSPO:0000672 ! posterior margin
 is_a: BSPO:0000679 ! dorsal margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000063 ! overlaps dorsal side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000063 ! overlaps dorsal side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000063 ! dorsal side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000063 ! dorsal side
 
 [Term]
 id: BSPO:0000688
@@ -1589,10 +1595,10 @@ is_a: BSPO:0000027 ! antero-ventral region
 is_a: BSPO:0000671 ! anterior margin
 is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000055 ! overlaps anterior side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000055 ! overlaps anterior side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000055 ! anterior side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000055 ! anterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0000689
@@ -1604,10 +1610,10 @@ is_a: BSPO:0000035 ! postero-ventral region
 is_a: BSPO:0000672 ! posterior margin
 is_a: BSPO:0000684 ! ventral margin
 intersection_of: BSPO:0000006 ! anatomical margin
-intersection_of: RO:0002131 BSPO:0000056 ! overlaps posterior side
-intersection_of: RO:0002131 BSPO:0000068 ! overlaps ventral side
-relationship: RO:0002131 BSPO:0000056 ! overlaps posterior side
-relationship: RO:0002131 BSPO:0000068 ! overlaps ventral side
+intersection_of: overlaps BSPO:0000056 ! posterior side
+intersection_of: overlaps BSPO:0000068 ! ventral side
+relationship: overlaps BSPO:0000056 ! posterior side
+relationship: overlaps BSPO:0000068 ! ventral side
 
 [Term]
 id: BSPO:0001001
@@ -1641,7 +1647,6 @@ id: CARO:0000006
 name: material anatomical entity
 namespace: spatial
 def: "An anatomical entity that has mass." [CC:DOS]
-is_a: BFO:0000040
 is_a: CARO:0000000 ! anatomical entity
 
 [Term]
@@ -1666,17 +1671,71 @@ def: "A non-material anatomical entity of two dimensions. Anatomical boundaries 
 is_a: CARO:0000007 ! immaterial anatomical entity
 
 [Term]
+id: CHEBI:23367
+name: molecular entity
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:33694
+name: biomacromolecule
+is_a: CHEBI:33839 ! macromolecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33695
+name: information biomacromolecule
+is_a: CHEBI:33694 ! biomacromolecule
+
+[Term]
+id: CHEBI:33839
+name: macromolecule
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:36080
+name: protein
+is_a: CHEBI:33695 ! information biomacromolecule
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+is_a: CHEBI:33582 ! carbon group molecular entity
+
+[Term]
 id: CL:0000000
 name: cell
-is_a: CARO:0000003 ! anatomical structure
-is_a: GO:0005575
-equivalent_to: GO:0005623
+is_a: GO:0005575 ! cellular_component
+equivalent_to: GO:0005623 ! cell
 
 [Term]
 id: CL:0000003
 name: native cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 
 [Term]
 id: CL:0000006
@@ -1745,8 +1804,8 @@ id: CL:0000064
 name: ciliated cell
 is_a: CL:0000003 ! native cell
 intersection_of: CL:0000003 ! native cell
-intersection_of: has_plasma_membrane_part GO:0005929
-relationship: has_plasma_membrane_part GO:0005929
+intersection_of: has_plasma_membrane_part GO:0005929 ! cilium
+relationship: has_plasma_membrane_part GO:0005929 ! cilium
 
 [Term]
 id: CL:0000066
@@ -1762,8 +1821,8 @@ name: ciliated epithelial cell
 is_a: CL:0000064 ! ciliated cell
 is_a: CL:0000075 ! columnar/cuboidal epithelial cell
 intersection_of: CL:0000075 ! columnar/cuboidal epithelial cell
-intersection_of: has_plasma_membrane_part GO:0005929
-relationship: has_plasma_membrane_part GO:0005929
+intersection_of: has_plasma_membrane_part GO:0005929 ! cilium
+relationship: has_plasma_membrane_part GO:0005929 ! cilium
 
 [Term]
 id: CL:0000075
@@ -1950,7 +2009,7 @@ id: CL:0000680
 name: muscle precursor cell
 is_a: CL:0000055 ! non-terminally differentiated cell
 is_a: CL:0002371 ! somatic cell
-intersection_of: GO:0005623
+intersection_of: GO:0005623 ! cell
 intersection_of: develops_into CL:0000187 ! muscle cell
 relationship: develops_from CL:0000222 ! mesodermal cell
 relationship: develops_into CL:0000187 ! muscle cell
@@ -2046,11 +2105,11 @@ comment: The move- ment of the ctene plates are controlled by the apical organ, 
 synonym: "comb plate" RELATED []
 synonym: "ctene" BROAD []
 is_a: UBERON:0000062 ! organ
+relationship: capable_of_part_of GO:0040011 ! locomotion
 relationship: part_of CTENO:0000137 ! ctene row
-relationship: RO:0002216 GO:0040011
 relationship: RO:0002254 CTENO:0000099 ! e1 micromere
 relationship: RO:0002254 CTENO:0000103 ! m12 micromere
-relationship: RO:0002473 GO:0005929
+relationship: RO:0002473 GO:0005929 ! cilium
 property_value: UBPROP:0000008 "lost in Platyctenida" xsd:string
 
 [Term]
@@ -2076,49 +2135,49 @@ property_value: seeAlso https://en.wikipedia.org/wiki/Mesoglea xsd:anyURI
 [Term]
 id: CTENO:0000005
 name: comb plate cilium
-is_a: GO:0005929
-intersection_of: GO:0005929
+is_a: GO:0005929 ! cilium
+intersection_of: GO:0005929 ! cilium
 intersection_of: part_of CTENO:0000001 ! ctene plate
 relationship: part_of CTENO:0000001 ! ctene plate
 
 [Term]
 id: CTENO:0000006
 name: sensory cell cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000007
 name: tentacle sheath cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000008
 name: polar field cilium
-is_a: GO:0005929
-intersection_of: GO:0005929
+is_a: GO:0005929 ! cilium
+intersection_of: GO:0005929 ! cilium
 intersection_of: part_of CTENO:0000145 ! polar field
 relationship: part_of CTENO:0000145 ! polar field
 
 [Term]
 id: CTENO:0000009
 name: auricular cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000010
 name: pharyngeal cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000011
 name: good groove cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000012
 name: balancer cilium
 is_a: CTENO:0000006 ! sensory cell cilium
-intersection_of: GO:0005929
+intersection_of: GO:0005929 ! cilium
 intersection_of: part_of CTENO:0000057 ! balancer cell
 relationship: part_of CTENO:0000057 ! balancer cell
 
@@ -2126,20 +2185,20 @@ relationship: part_of CTENO:0000057 ! balancer cell
 id: CTENO:0000013
 name: dome cilium
 comment: The statocyst is protected by a transparent dome made of long, immobile cilia.
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 relationship: part_of CTENO:0000017 ! apical sense organ
 
 [Term]
 id: CTENO:0000014
 name: aboral groove cilium
-is_a: GO:0005929
+is_a: GO:0005929 ! cilium
 
 [Term]
 id: CTENO:0000015
 name: extracellular matrix of mesoglea
 synonym: "mesogleal extracellular matrix" EXACT []
-is_a: GO:0031012
-intersection_of: GO:0031012
+is_a: GO:0031012 ! extracellular matrix
+intersection_of: GO:0031012 ! extracellular matrix
 intersection_of: part_of CTENO:0000004 ! mesoglea
 relationship: part_of CTENO:0000004 ! mesoglea
 
@@ -2147,7 +2206,7 @@ relationship: part_of CTENO:0000004 ! mesoglea
 id: CTENO:0000016
 name: polster cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 
 [Term]
 id: CTENO:0000017
@@ -2171,7 +2230,7 @@ id: CTENO:0000019
 name: photocyte
 def: "Light-producing cell present in nearly all ctenophores" []
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 relationship: develops_from CTENO:0000067 ! 2M macromere
 
 [Term]
@@ -2179,7 +2238,7 @@ id: CTENO:0000020
 name: colloblast
 def: "A specialized adhesive cell found in ctenophores" []
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 relationship: develops_from CTENO:0000104 ! e2 micromere
 relationship: part_of CTENO:0000018 ! tentacle
 property_value: seeAlso https://en.wikipedia.org/wiki/Colloblast xsd:anyURI
@@ -2230,31 +2289,30 @@ id: CTENO:0000027
 name: nurse cell
 comment: connected to the oocyte by cytoplasmic bridges that transport cytoplasm and yolk to the oocyte (Dunlap Pianka 1974)
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 property_value: UBPROP:0000008 "In Bolinopsis microptera each oocyte is associated with as many as 100 nurse cells." xsd:string
 
 [Term]
 id: CTENO:0000028
 name: ectoplasm
-is_a: GO:0005575
-relationship: part_of GO:0005737
+is_a: GO:0044444 ! cytoplasmic part
 
 [Term]
 id: CTENO:0000029
 name: endoplasm
-is_a: GO:0005575
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: CTENO:0000030
 name: subcortical plasm
-is_a: GO:0005575
+is_a: GO:0005575 ! cellular_component
 relationship: RO:0002220 CTENO:0000028 ! adjacent_to ectoplasm
 relationship: RO:0002220 CTENO:0000029 ! adjacent_to endoplasm
 
 [Term]
 id: CTENO:0000031
 name: periodic acid Schiff positive yolk particles
-is_a: GO:0005575
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: CTENO:0000032
@@ -2474,7 +2532,7 @@ id: CTENO:0000061
 name: photoprotein
 comment: emits light in the presence of calcium ions (Ward and Seliger 1974).
 synonym: "mnemiopsin" RELATED []
-is_a: CHEBI:36080
+is_a: CHEBI:36080 ! protein
 
 [Term]
 id: CTENO:0000062
@@ -2884,7 +2942,7 @@ relationship: develops_from CTENO:0000156 ! ctenophore blastopore
 id: CTENO:0000123
 name: tentacle sheath cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: part_of CTENO:0000121 ! tentacle sheath
 relationship: develops_from CTENO:0000099 ! e1 micromere
@@ -2947,7 +3005,7 @@ relationship: develops_from CTENO:0000068 ! 3E macromere
 id: CTENO:0000132
 name: E-lineage cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: develops_from CTENO:0000064 ! E macromere, 8 cell stage
 relationship: develops_from CTENO:0000064 ! E macromere, 8 cell stage
@@ -2956,7 +3014,7 @@ relationship: develops_from CTENO:0000064 ! E macromere, 8 cell stage
 id: CTENO:0000133
 name: M-lineage cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: develops_from CTENO:0000081 ! M macromere, 8 cell stage
 relationship: develops_from CTENO:0000081 ! M macromere, 8 cell stage
@@ -3031,8 +3089,8 @@ is_a: CTENO:0000062 ! quadrant
 id: CTENO:0000143
 name: tentacle bulb
 is_a: UBERON:0000479 ! tissue
+relationship: overlaps CTENO:0000140 ! tentacular plane
 relationship: part_of CTENO:0000152 ! tentacle apparatus
-relationship: RO:0002131 CTENO:0000140 ! overlaps tentacular plane
 relationship: RO:0002254 CTENO:0000099 ! e1 micromere
 
 [Term]
@@ -3045,7 +3103,7 @@ is_a: UBERON:0000475 ! organism subdivision
 id: CTENO:0000146
 name: polar field cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: part_of CTENO:0000145 ! polar field
 relationship: develops_from CTENO:0000102 ! m11 micromere
@@ -3061,7 +3119,7 @@ relationship: develops_from CTENO:0000093 ! 2M-backslash macromere
 id: CTENO:0000148
 name: anal canal cell
 is_a: CL:0000000 ! cell
-is_a: GO:0005623
+is_a: GO:0005623 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: part_of UBERON:0000159 ! anal canal
 relationship: develops_from CTENO:0000093 ! 2M-backslash macromere
@@ -3117,9 +3175,151 @@ comment: Genes: MlLhx1/5
 is_a: UBERON:0000100 ! blastopore
 
 [Term]
+id: GO:0005575
+name: cellular_component
+
+[Term]
+id: GO:0005576
+name: extracellular region
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005622
+name: intracellular
+is_a: GO:0044464 ! cell part
+
+[Term]
 id: GO:0005623
-is_a: CARO:0000003 ! anatomical structure
-is_a: GO:0005575
+name: cell
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+is_a: GO:0044424 ! intracellular part
+
+[Term]
+id: GO:0005929
+name: cilium
+is_a: GO:0042995 ! cell projection
+is_a: GO:0043226 ! organelle
+
+[Term]
+id: GO:0008150
+name: biological_process
+
+[Term]
+id: GO:0031012
+name: extracellular matrix
+is_a: GO:0044421 ! extracellular region part
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0032838
+name: cell projection cytoplasm
+is_a: GO:0044463 ! cell projection part
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0042995 ! cell projection
+relationship: part_of GO:0042995 ! cell projection
+
+[Term]
+id: GO:0040011
+name: locomotion
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0042995
+name: cell projection
+is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0043226
+name: organelle
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0043230
+name: extracellular organelle
+is_a: GO:0043226 ! organelle
+is_a: GO:0044421 ! extracellular region part
+intersection_of: GO:0043226 ! organelle
+intersection_of: part_of GO:0005576 ! extracellular region
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0044420
+name: extracellular matrix component
+is_a: GO:0044421 ! extracellular region part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0031012 ! extracellular matrix
+relationship: part_of GO:0031012 ! extracellular matrix
+
+[Term]
+id: GO:0044421
+name: extracellular region part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005576 ! extracellular region
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0044422
+name: organelle part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0043226 ! organelle
+relationship: part_of GO:0043226 ! organelle
+
+[Term]
+id: GO:0044424
+name: intracellular part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005622 ! intracellular
+relationship: part_of GO:0005622 ! intracellular
+
+[Term]
+id: GO:0044441
+name: ciliary part
+is_a: GO:0044422 ! organelle part
+is_a: GO:0044463 ! cell projection part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005929 ! cilium
+relationship: part_of GO:0005929 ! cilium
+
+[Term]
+id: GO:0044444
+name: cytoplasmic part
+is_a: GO:0044424 ! intracellular part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0044463
+name: cell projection part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0042995 ! cell projection
+relationship: part_of GO:0042995 ! cell projection
+
+[Term]
+id: GO:0044464
+name: cell part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005623 ! cell
+relationship: part_of GO:0005623 ! cell
+
+[Term]
+id: GO:0099568
+name: cytoplasmic region
+is_a: GO:0005737 ! cytoplasm
+is_a: GO:0044444 ! cytoplasmic part
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
 
 [Term]
 id: NCBITaxon:10197
@@ -5146,14 +5346,6 @@ xref: BSPO:1000000
 is_transitive: true
 
 [Typedef]
-id: RO:0002131
-name: overlaps
-namespace: spatial
-def: "x overlaps y iff they have some part in common." [BSPO:cjm]
-comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part_of z x) (part_of z y)))))" CLIF []
-xref: RO:0002131
-
-[Typedef]
 id: RO:0002220
 name: adjacent_to
 namespace: spatial
@@ -5166,17 +5358,62 @@ xref: RO:0000053
 
 [Typedef]
 id: capable_of
+name: capable of
 xref: RO:0002215
+is_a: capable_of_part_of ! capable of part of
+
+[Typedef]
+id: capable_of_part_of
+name: capable of part of
+xref: RO:0002216
+is_a: causal_agent_in ! causal agent in
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: causal_agent_in
+name: causal agent in
+xref: RO:0002500
+is_a: causal_relation_between_material_entity_and_a_process ! causal relation between material entity and a process
+
+[Typedef]
+id: causal_relation_between_material_entity_and_a_process
+name: causal relation between material entity and a process
+xref: RO:0002595
+is_a: causally_related_to ! causally related to
+
+[Typedef]
+id: causally_related_to
+name: causally related to
+xref: RO:0002410
+is_a: related_via_dependence_to ! related via dependence to
+
+[Typedef]
+id: developmentally_preceded_by
+name: developmentally preceded by
+xref: RO:0002258
+is_a: developmentally_related_to ! developmentally related to
+
+[Typedef]
+id: developmentally_related_to
+name: developmentally related to
+xref: RO:0002324
 
 [Typedef]
 id: develops_from
+name: develops from
 name: develops_from
 xref: RO:0002202
 is_transitive: true
+is_a: developmentally_preceded_by ! developmentally preceded by
 
 [Typedef]
 id: develops_into
 xref: RO:0002203
+
+[Typedef]
+id: functionally_related_to
+name: functionally related to
+xref: RO:0002328
 
 [Typedef]
 id: has_part
@@ -5184,6 +5421,7 @@ name: has_part
 namespace: spatial
 xref: BFO:0000051
 is_transitive: true
+is_a: overlaps ! overlaps
 
 [Typedef]
 id: has_plasma_membrane_part
@@ -5193,6 +5431,20 @@ xref: RO:0002104
 id: lacks_plasma_membrane_part
 name: lacks_plasma_membrane_part
 xref: lacks_plasma_membrane_part
+
+[Typedef]
+id: mereotopologically_related_to
+name: mereotopologically related to
+xref: RO:0002323
+
+[Typedef]
+id: overlaps
+name: overlaps
+namespace: spatial
+def: "x overlaps y iff they have some part in common." [BSPO:cjm]
+comment: "(forall (x y) (iff (overlaps x y) (exists (z) (and (part_of z x) (part_of z y)))))" CLIF []
+xref: RO:0002131
+is_a: mereotopologically_related_to ! mereotopologically related to
 
 [Typedef]
 id: parallel_to
@@ -5207,6 +5459,7 @@ name: part_of
 namespace: spatial
 xref: BFO:0000050
 is_transitive: true
+is_a: overlaps ! overlaps
 inverse_of: has_part ! has_part
 
 [Typedef]
@@ -5216,4 +5469,9 @@ namespace: spatial
 def: "Intersects at two points." [BSPO:cjm]
 xref: BSPO:0015006
 domain: BSPO:0000010 ! anatomical axis
+
+[Typedef]
+id: related_via_dependence_to
+name: related via dependence to
+xref: RO:0002609
 

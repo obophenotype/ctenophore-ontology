@@ -1,12 +1,12 @@
 http://purl.obolibrary.org/obo/UBERON_0002036	striated muscle tissue	null
 http://purl.obolibrary.org/obo/CL_0000210	photoreceptor cell	null
-http://purl.obolibrary.org/obo/GO_0040011	null	null
+http://purl.obolibrary.org/obo/GO_0040011	locomotion	null
 http://purl.obolibrary.org/obo/UBERON_0001630	muscle organ	null
 http://purl.obolibrary.org/obo/UBERON_0011216	organ system subdivision	null
 http://purl.obolibrary.org/obo/UBERON_0004111	anatomical conduit	null
 http://purl.obolibrary.org/obo/CL_0000353	blastoderm cell	null
 http://purl.obolibrary.org/obo/CL_0000000	cell	null
-http://purl.obolibrary.org/obo/GO_0005737	null	null
+http://purl.obolibrary.org/obo/GO_0005737	cytoplasm	null
 http://purl.obolibrary.org/obo/UBERON_0004923	organ component layer	null
 http://purl.obolibrary.org/obo/CTENO_0000119	micromere, formed during gastulation	null
 http://purl.obolibrary.org/obo/CTENO_0000117	ctenophore 32 cell stage	null
@@ -56,7 +56,7 @@ http://purl.obolibrary.org/obo/CTENO_0000132	E-lineage cell	null
 http://purl.obolibrary.org/obo/CTENO_0000016	polster cell	null
 http://purl.obolibrary.org/obo/CTENO_0000137	ctene row	A row that is composed of individual ctene plates, which are arranged in longitudinal rows parallel to the oral–aboral axis
 http://purl.obolibrary.org/obo/CTENO_0000017	apical sense organ	null
-http://purl.obolibrary.org/obo/GO_0031012	null	null
+http://purl.obolibrary.org/obo/GO_0031012	extracellular matrix	null
 http://purl.obolibrary.org/obo/CTENO_0000138	apical organ statocyst	null
 http://purl.obolibrary.org/obo/CTENO_0000014	aboral groove cilium	null
 http://purl.obolibrary.org/obo/CTENO_0000135	adesophageal plane	null
@@ -129,7 +129,7 @@ http://purl.obolibrary.org/obo/CTENO_0000061	photoprotein	null
 http://purl.obolibrary.org/obo/CTENO_0000062	quadrant	One of of four nearly identical quadrants organized along the oral-aboral axis. Each of the four quadrants is derived largely from one cell of the four-cell-stage embryo. At the eight-cell stage each quadrant contains a single E ("end") and M ("middle") blastomere. Subsequently, micromeres are formed first at the aboral pole and later at the oral pole.
 http://purl.obolibrary.org/obo/UBERON_0006134	nerve fiber	null
 http://purl.obolibrary.org/obo/CTENO_0000056	lithocyte	A mineralized cell generated and constantly replaced in the floor of the apical organ. They are supported on top of the balancing cilia that make up the gravity-sensing statocyst of the apical organ.
-http://purl.obolibrary.org/obo/CHEBI_36080	null	null
+http://purl.obolibrary.org/obo/CHEBI_36080	protein	null
 http://purl.obolibrary.org/obo/CTENO_0000057	balancer cell	null
 http://purl.obolibrary.org/obo/CTENO_0000054	oral pole	null
 http://purl.obolibrary.org/obo/CL_0000199	mechanoreceptor cell	null
@@ -142,7 +142,7 @@ http://purl.obolibrary.org/obo/CTENO_0000053	nerve fiber of mesoglea of tentacle
 http://purl.obolibrary.org/obo/CTENO_0000050	tastborsten cell	null
 http://purl.obolibrary.org/obo/CTENO_0000051	taststiften cell	null
 http://purl.obolibrary.org/obo/UBERON_0001135	smooth muscle tissue	null
-http://purl.obolibrary.org/obo/GO_0005575	null	null
+http://purl.obolibrary.org/obo/GO_0005575	cellular_component	null
 http://purl.obolibrary.org/obo/UBERON_0000161	orifice	null
 http://purl.obolibrary.org/obo/CTENO_0000045	striated muscle of tentilla	null
 http://purl.obolibrary.org/obo/UBERON_0007233	4 cell stage	null
@@ -188,7 +188,7 @@ http://purl.obolibrary.org/obo/UBERON_0002416	integumental system	null
 http://purl.obolibrary.org/obo/CTENO_0000098	micromere, 60 cell stage	null
 http://purl.obolibrary.org/obo/CTENO_0000099	e1 micromere	null
 http://purl.obolibrary.org/obo/UBERON_0000477	anatomical cluster	null
-http://purl.obolibrary.org/obo/GO_0005929	null	null
+http://purl.obolibrary.org/obo/GO_0005929	cilium	null
 http://purl.obolibrary.org/obo/UBERON_0000479	tissue	null
 http://purl.obolibrary.org/obo/CTENO_0000092	2M-slash macromere	null
 http://purl.obolibrary.org/obo/CTENO_0000093	2M-backslash macromere	null

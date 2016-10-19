@@ -1,0 +1,156 @@
+format-version: 1.2
+ontology: imports/go_import
+
+[Term]
+id: GO:0005575
+name: cellular_component
+
+[Term]
+id: GO:0005576
+name: extracellular region
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005622
+name: intracellular
+is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0005623
+name: cell
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+is_a: GO:0044424 ! intracellular part
+
+[Term]
+id: GO:0005929
+name: cilium
+is_a: GO:0042995 ! cell projection
+is_a: GO:0043226 ! organelle
+
+[Term]
+id: GO:0008150
+name: biological_process
+
+[Term]
+id: GO:0031012
+name: extracellular matrix
+is_a: GO:0044421 ! extracellular region part
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0032838
+name: cell projection cytoplasm
+is_a: GO:0044463 ! cell projection part
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0042995 ! cell projection
+relationship: part_of GO:0042995 ! cell projection
+
+[Term]
+id: GO:0040011
+name: locomotion
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0042995
+name: cell projection
+is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0043226
+name: organelle
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0043230
+name: extracellular organelle
+is_a: GO:0043226 ! organelle
+is_a: GO:0044421 ! extracellular region part
+intersection_of: GO:0043226 ! organelle
+intersection_of: part_of GO:0005576 ! extracellular region
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0044420
+name: extracellular matrix component
+is_a: GO:0044421 ! extracellular region part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0031012 ! extracellular matrix
+relationship: part_of GO:0031012 ! extracellular matrix
+
+[Term]
+id: GO:0044421
+name: extracellular region part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005576 ! extracellular region
+relationship: part_of GO:0005576 ! extracellular region
+
+[Term]
+id: GO:0044422
+name: organelle part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0043226 ! organelle
+relationship: part_of GO:0043226 ! organelle
+
+[Term]
+id: GO:0044424
+name: intracellular part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005622 ! intracellular
+relationship: part_of GO:0005622 ! intracellular
+
+[Term]
+id: GO:0044441
+name: ciliary part
+is_a: GO:0044422 ! organelle part
+is_a: GO:0044463 ! cell projection part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005929 ! cilium
+relationship: part_of GO:0005929 ! cilium
+
+[Term]
+id: GO:0044444
+name: cytoplasmic part
+is_a: GO:0044424 ! intracellular part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0044463
+name: cell projection part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0042995 ! cell projection
+relationship: part_of GO:0042995 ! cell projection
+
+[Term]
+id: GO:0044464
+name: cell part
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0005623 ! cell
+relationship: part_of GO:0005623 ! cell
+
+[Term]
+id: GO:0099568
+name: cytoplasmic region
+is_a: GO:0005737 ! cytoplasm
+is_a: GO:0044444 ! cytoplasmic part
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Typedef]
+id: part_of
+name: part of
+xref: BFO:0000050
+is_transitive: true
+
