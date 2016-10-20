@@ -17,7 +17,7 @@ release: all_imports cteno.obo copy-release
 
 test: cteno.obo
 
-TARGETS = cteno.obo cteno.owl imports diffs
+TARGETS = cteno.obo cteno.owl taxonomy.owl imports diffs
 copy-release:
 	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
 
